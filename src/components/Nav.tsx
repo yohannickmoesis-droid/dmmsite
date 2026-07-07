@@ -26,7 +26,7 @@ export default function Nav() {
         scrolled ? "bg-navy/95 backdrop-blur shadow-md" : "bg-transparent"
       }`}
     >
-      <nav className="max-w-6xl mx-auto flex items-center justify-between px-5 sm:px-8 h-16">
+      <nav className="max-w-[1440px] mx-auto flex items-center justify-between px-5 sm:px-8 h-16">
         <a
           href="#top"
           className="font-display text-cream text-2xl tracking-wide leading-none"

@@ -30,7 +30,7 @@ export default function Hero() {
         />
       </div>
 
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-5 sm:px-8 pb-16 sm:pb-24 pt-32">
+      <div className="relative z-10 w-full max-w-[1440px] mx-auto px-5 sm:px-8 pb-16 sm:pb-24 pt-32">
         <p className="text-gold font-semibold tracking-[0.15em] text-sm sm:text-base uppercase mb-4">
           Votre transition. Votre identité. Votre avenir.
         </p>

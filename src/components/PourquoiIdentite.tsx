@@ -1,4 +1,4 @@
-const REPERES = ["Votre rôle", "Votre collectif", "Votre mission"];
+const REPERES = ["votre rôle,", "votre collectif,", "votre mission."];
 
 const QUESTIONS = [
   "Qui suis-je sans mon uniforme ?",
@@ -16,20 +16,20 @@ const STATS = [
 export default function PourquoiIdentite() {
   return (
     <section className="bg-cream">
-      <div className="max-w-6xl mx-auto px-5 sm:px-8 pt-10 sm:pt-14 pb-20 sm:pb-28">
+      <div className="max-w-[1440px] mx-auto px-5 sm:px-8 pt-10 sm:pt-14 pb-20 sm:pb-28">
         <h2 className="font-display text-navy text-4xl sm:text-5xl tracking-wide mb-6">
           La reconversion ne se résume pas à trouver un emploi.
         </h2>
 
         <p className="text-navy/85 text-base sm:text-lg leading-relaxed mb-4 max-w-3xl">
-          Pendant des années, votre identité s&rsquo;est construite autour de&nbsp;:
+          Pendant des années, votre identité s&apos;est construite autour de :
         </p>
 
         <ul className="mb-6 space-y-2">
           {REPERES.map((r) => (
             <li
               key={r}
-              className="flex items-start gap-3 text-navy/85 text-base sm:text-lg leading-relaxed"
+              className="flex items-start gap-4 text-navy/85 text-base sm:text-lg leading-relaxed"
             >
               <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-navy shrink-0" />
               {r}
@@ -38,16 +38,16 @@ export default function PourquoiIdentite() {
         </ul>
 
         <p className="text-navy/85 text-base sm:text-lg leading-relaxed mb-8 max-w-3xl">
-          Le jour où vous quittez l&rsquo;armée, ces trois repères changent
-          simultanément et c&rsquo;est souvent là que commencent des questions que
-          l&rsquo;emploi seul ne résout pas.
+          Le jour où vous quittez l&apos;armée, ces trois repères changent
+          simultanément et c&apos;est souvent là que commencent des questions que
+          l&apos;emploi seul ne résout pas.
         </p>
 
         <ul className="mb-16 space-y-3">
           {QUESTIONS.map((q) => (
             <li
               key={q}
-              className="flex items-start gap-3 text-navy/85 text-base sm:text-lg leading-relaxed"
+              className="flex items-start gap-4 text-navy/85 text-base sm:text-lg leading-relaxed"
             >
               <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-navy shrink-0" />
               {q}

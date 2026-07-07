@@ -10,7 +10,7 @@ export default function BookingCta() {
           retrouver votre place, commençons par un échange simple pour clarifier votre
           situation.
         </p>
-        
+        <a
           href="mailto:yohannick.moesis@gmail.com"
           className="inline-flex items-center justify-center rounded-full bg-gold px-8 py-3.5 text-sm font-semibold text-navy hover:bg-gold-light transition-colors"
         >

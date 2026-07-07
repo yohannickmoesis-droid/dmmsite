@@ -9,7 +9,7 @@ export default function FaqCta() {
           Vous vous demandez si cet accompagnement est fait pour vous&nbsp;? Consultez les
           questions les plus fréquemment posées.
         </p>
-        
+        <a
           href="/questions-frequentes"
           className="inline-flex items-center justify-center rounded-full bg-navy px-8 py-3.5 text-sm font-semibold text-cream hover:bg-navy/85 transition-colors"
         >

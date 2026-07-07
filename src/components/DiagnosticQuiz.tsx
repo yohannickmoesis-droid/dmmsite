@@ -390,7 +390,7 @@ function ResultBlock({
         <button type="button" className={buttonCls} onClick={onBackHome}>
           Retour à l&rsquo;accueil
         </button>
-        
+        <a
           href="mailto:yohannick.moesis@gmail.com"
           className="block w-full text-center rounded-lg py-3 text-sm font-semibold text-cream border border-cream/40 hover:bg-cream/10 transition-colors"
         >

@@ -27,7 +27,7 @@ export default function Nav() {
       }`}
     >
       <nav className="max-w-6xl mx-auto flex items-center justify-between px-5 sm:px-8 h-16">
-        
+        <a
           href="#top"
           className="font-display text-cream text-2xl tracking-wide leading-none"
         >
@@ -37,7 +37,7 @@ export default function Nav() {
         <ul className="hidden md:flex items-center gap-8">
           {LINKS.map((l) => (
             <li key={l.href}>
-              
+              <a
                 href={l.href}
                 className="text-cream/85 hover:text-gold text-sm font-medium tracking-wide transition-colors"
               >
@@ -47,7 +47,7 @@ export default function Nav() {
           ))}
         </ul>
 
-        
+        <a
           href="#reserver"
           className="hidden md:inline-flex items-center rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-navy hover:bg-gold-light transition-colors"
         >
@@ -81,7 +81,7 @@ export default function Nav() {
           <ul className="flex flex-col px-5 py-4 gap-1">
             {LINKS.map((l) => (
               <li key={l.href}>
-                
+                <a
                   href={l.href}
                   onClick={() => setOpen(false)}
                   className="block py-3 text-cream/90 text-base font-medium"
@@ -91,7 +91,7 @@ export default function Nav() {
               </li>
             ))}
             <li className="pt-2">
-              
+              <a
                 href="#reserver"
                 onClick={() => setOpen(false)}
                 className="block text-center rounded-full bg-gold px-5 py-3 text-sm font-semibold text-navy"

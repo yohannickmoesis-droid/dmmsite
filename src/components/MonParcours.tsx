@@ -59,7 +59,7 @@ export default function MonParcours() {
           </p>
         </div>
 
-        
+        <a
           href="#aide"
           className="inline-flex items-center justify-center rounded-full bg-navy px-8 py-3.5 text-sm font-semibold text-cream hover:bg-navy/85 transition-colors"
         >

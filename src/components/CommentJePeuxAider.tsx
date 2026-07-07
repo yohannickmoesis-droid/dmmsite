@@ -39,7 +39,7 @@ export default function CommentJePeuxAider() {
               Accompagnement individuel
             </h3>
             <div className="bg-cream border border-gold/20 rounded-xl p-6 sm:p-7">
-              <p className="font-display text-gold-dark text-2xl tracking-wide mb-3">
+              <p className="text-gold-dark font-semibold text-sm mb-1.5">
                 {INDIVIDUEL.title}
               </p>
               <p className="text-navy/80 text-sm leading-relaxed mb-5">

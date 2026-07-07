@@ -16,51 +16,49 @@ const STATS = [
 export default function PourquoiIdentite() {
   return (
     <section className="bg-cream">
-      <div className="max-w-6xl mx-auto px-5 sm:px-8 pt-10 sm:pt-14 pb-20 sm:pb-28">
-        <div className="max-w-3xl">
-          <h2
-            className="font-display text-navy tracking-wide mb-6 whitespace-nowrap"
-            style={{ fontSize: "clamp(1.15rem, 3.4vw, 2.75rem)" }}
-          >
-            La reconversion ne se résume pas à trouver un emploi.
-          </h2>
+      <div className="max-w-3xl mx-auto px-5 sm:px-8 pt-10 sm:pt-14 pb-20 sm:pb-28 text-center">
+        <h2
+          className="font-display text-navy tracking-wide mb-6 whitespace-nowrap"
+          style={{ fontSize: "clamp(1.5rem, 4.2vw, 3rem)" }}
+        >
+          La reconversion ne se résume pas à trouver un emploi.
+        </h2>
 
-          <p className="text-navy/85 text-base sm:text-lg leading-relaxed mb-4">
-            Pendant des années, votre identité s&rsquo;est construite autour de&nbsp;:
-          </p>
+        <p className="text-navy/85 text-base sm:text-lg leading-relaxed mb-4">
+          Pendant des années, votre identité s&rsquo;est construite autour de&nbsp;:
+        </p>
 
-          <ul className="mb-6 space-y-2">
-            {REPERES.map((r) => (
-              <li
-                key={r}
-                className="flex items-start gap-3 text-navy/85 text-base sm:text-lg leading-relaxed"
-              >
-                <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-navy shrink-0" />
-                {r}
-              </li>
-            ))}
-          </ul>
+        <ul className="inline-block text-left mx-auto mb-6 space-y-2">
+          {REPERES.map((r) => (
+            <li
+              key={r}
+              className="flex items-start gap-3 text-navy/85 text-base sm:text-lg leading-relaxed"
+            >
+              <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-navy shrink-0" />
+              {r}
+            </li>
+          ))}
+        </ul>
 
-          <p className="text-navy/85 text-base sm:text-lg leading-relaxed mb-8">
-            Le jour où vous quittez l&rsquo;armée, ces trois repères changent
-            simultanément et c&rsquo;est souvent là que commencent des questions que
-            l&rsquo;emploi seul ne résout pas.
-          </p>
+        <p className="text-navy/85 text-base sm:text-lg leading-relaxed mb-8">
+          Le jour où vous quittez l&rsquo;armée, ces trois repères changent
+          simultanément et c&rsquo;est souvent là que commencent des questions que
+          l&rsquo;emploi seul ne résout pas.
+        </p>
 
-          <ul className="mb-16 space-y-3">
-            {QUESTIONS.map((q) => (
-              <li
-                key={q}
-                className="flex items-start gap-3 text-navy/85 text-base sm:text-lg leading-relaxed"
-              >
-                <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-navy shrink-0" />
-                {q}
-              </li>
-            ))}
-          </ul>
-        </div>
+        <ul className="inline-block text-left mx-auto mb-16 space-y-3">
+          {QUESTIONS.map((q) => (
+            <li
+              key={q}
+              className="flex items-start gap-3 text-navy/85 text-base sm:text-lg leading-relaxed"
+            >
+              <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-navy shrink-0" />
+              {q}
+            </li>
+          ))}
+        </ul>
 
-        <div className="bg-[#E69419] rounded-2xl grid sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-cream/25 overflow-hidden">
+        <div className="bg-[#E69419] rounded-2xl grid sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-cream/25 overflow-hidden text-left">
           {STATS.map((s) => (
             <div
               key={s.legende}

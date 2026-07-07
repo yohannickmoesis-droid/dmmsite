@@ -1,6 +1,7 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import TransitionTimeline from "@/components/TransitionTimeline";
+import PourquoiIdentite from "@/components/PourquoiIdentite";
 import TenDefis from "@/components/TenDefis";
 import MonParcours from "@/components/MonParcours";
 import CommentJePeuxAider from "@/components/CommentJePeuxAider";
@@ -15,6 +16,7 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <TransitionTimeline />
+        <PourquoiIdentite />
         <TenDefis />
         <MonParcours />
         <CommentJePeuxAider />

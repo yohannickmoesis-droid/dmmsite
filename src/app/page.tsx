@@ -5,8 +5,7 @@ import PourquoiIdentite from "@/components/PourquoiIdentite";
 import TenDefis from "@/components/TenDefis";
 import MonParcours from "@/components/MonParcours";
 import CommentJePeuxAider from "@/components/CommentJePeuxAider";
-import FaqCta from "@/components/FaqCta";
-import BookingCta from "@/components/BookingCta";
+import FaqBookingSection from "@/components/FaqBookingSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -20,8 +19,7 @@ export default function Home() {
         <TenDefis />
         <MonParcours />
         <CommentJePeuxAider />
-        <FaqCta />
-        <BookingCta />
+        <FaqBookingSection />
       </main>
       <Footer />
     </>

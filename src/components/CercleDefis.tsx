@@ -90,7 +90,7 @@ export default function CercleDefis() {
 
   return (
     <div
-      className="relative w-full max-w-[600px] mx-auto aspect-square"
+      className="relative w-full max-w-[780px] mx-auto aspect-square"
       style={{ containerType: "inline-size" }}
     >
       <svg

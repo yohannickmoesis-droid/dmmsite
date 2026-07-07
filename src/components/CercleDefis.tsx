@@ -21,7 +21,7 @@ const DEFIS: Defi[] = [
   },
   {
     titre: "La légitimité à reconstruire",
-    lignes: ["Légitimité à", "reconstruire"],
+    lignes: ["La légitimité à", "reconstruire"],
     desc: "Sur quoi repose ma valeur lorsque l'institution n'est plus là ?",
   },
   {
@@ -51,7 +51,7 @@ const DEFIS: Defi[] = [
   },
   {
     titre: "Les comportements d'évitement",
-    lignes: ["Comportements", "d'évitement"],
+    lignes: ["Les comportements", "d'évitement"],
     desc: "Quand on cherche inconsciemment à recréer l'univers militaire ailleurs.",
   },
   {
@@ -72,7 +72,7 @@ export default function CercleDefis() {
   const cy = size / 2;
   const r = 320;
   const arrowSize = 22;
-  const lineH = 38;
+  const lineH = 36;
 
   function getArrow(aDeg: number) {
     const aMath = ((90 - aDeg) * Math.PI) / 180;
@@ -133,7 +133,7 @@ export default function CercleDefis() {
         {DEFIS.map((d, i) => {
           const { x, y, anchor } = getLabelPos(i);
           const isActif = actif === i;
-          const color = isActif ? "#C4A35A" : "#0E0857";
+          const color = isActif ? "#EFE7DD" : "#C4A35A";
           const totalH = d.lignes.length * lineH;
           const startY = y - totalH / 2 + lineH / 2;
           const hitX =
@@ -158,11 +158,14 @@ export default function CercleDefis() {
                   x={x}
                   y={startY + j * lineH}
                   textAnchor={anchor}
-                  fontFamily="Montserrat, sans-serif"
-                  fontSize={30}
-                  fontWeight={600}
+                  fontFamily="'Bebas Neue', sans-serif"
+                  fontSize={34}
+                  letterSpacing={0.5}
                   fill={color}
-                  style={{ transition: "fill 0.2s" }}
+                  style={{
+                    transition: "fill 0.2s",
+                    textTransform: "uppercase",
+                  }}
                 >
                   {ligne}
                 </text>
@@ -174,37 +177,35 @@ export default function CercleDefis() {
         {actif === null ? (
           <text
             x={cx}
-            y={cy + 14}
+            y={cy + 20}
             textAnchor="middle"
-            fontFamily="Montserrat, sans-serif"
-            fontSize={44}
-            fontWeight={700}
-            fill="#0E0857"
+            fontFamily="'Bebas Neue', sans-serif"
+            fontSize={64}
+            letterSpacing={1}
+            fill="#EFE7DD"
+            style={{ textTransform: "uppercase" }}
           >
             Mon identité
           </text>
         ) : (
           <text
             x={cx}
-            y={cy + 6}
+            y={cy + 10}
             textAnchor="middle"
-            fontFamily="Montserrat, sans-serif"
-            fontSize={20}
-            fontWeight={700}
+            fontFamily="'Bebas Neue', sans-serif"
+            fontSize={28}
             fill="#C4A35A"
+            style={{ textTransform: "uppercase" }}
           >
             {`Défi ${actif + 1}/10`}
           </text>
         )}
       </svg>
 
-      <div
-        className="min-h-[110px] mt-6 mx-4 px-5 py-4 rounded-xl transition-colors"
-        style={{ background: actif !== null ? "#0E0857" : "transparent" }}
-      >
+      <div className="min-h-[110px] mt-6 mx-4 px-5 py-4 rounded-xl bg-cream/5 transition-colors">
         {actif !== null ? (
           <>
-            <div className="text-gold text-sm font-bold mb-2 leading-snug">
+            <div className="font-display text-gold text-lg tracking-wide uppercase mb-2 leading-snug">
               {DEFIS[actif].titre}
             </div>
             <div className="text-cream text-sm leading-relaxed">
@@ -212,7 +213,7 @@ export default function CercleDefis() {
             </div>
           </>
         ) : (
-          <div className="text-navy/50 text-xs text-center pt-4">
+          <div className="text-cream/50 text-xs text-center pt-4">
             Touchez un défi pour en savoir plus
           </div>
         )}

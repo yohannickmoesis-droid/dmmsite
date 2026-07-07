@@ -16,19 +16,16 @@ const STATS = [
 export default function PourquoiIdentite() {
   return (
     <section className="bg-cream">
-      <div className="max-w-3xl mx-auto px-5 sm:px-8 pt-10 sm:pt-14 pb-20 sm:pb-28 text-center">
-        <h2
-          className="font-display text-navy tracking-wide mb-6 whitespace-nowrap"
-          style={{ fontSize: "clamp(1.5rem, 4.2vw, 3rem)" }}
-        >
+      <div className="max-w-6xl mx-auto px-5 sm:px-8 pt-10 sm:pt-14 pb-20 sm:pb-28">
+        <h2 className="font-display text-navy text-4xl sm:text-5xl tracking-wide mb-6">
           La reconversion ne se résume pas à trouver un emploi.
         </h2>
 
-        <p className="text-navy/85 text-base sm:text-lg leading-relaxed mb-4">
+        <p className="text-navy/85 text-base sm:text-lg leading-relaxed mb-4 max-w-3xl">
           Pendant des années, votre identité s&rsquo;est construite autour de&nbsp;:
         </p>
 
-        <ul className="inline-block text-left mx-auto mb-6 space-y-2">
+        <ul className="mb-6 space-y-2">
           {REPERES.map((r) => (
             <li
               key={r}
@@ -40,13 +37,13 @@ export default function PourquoiIdentite() {
           ))}
         </ul>
 
-        <p className="text-navy/85 text-base sm:text-lg leading-relaxed mb-8">
+        <p className="text-navy/85 text-base sm:text-lg leading-relaxed mb-8 max-w-3xl">
           Le jour où vous quittez l&rsquo;armée, ces trois repères changent
           simultanément et c&rsquo;est souvent là que commencent des questions que
           l&rsquo;emploi seul ne résout pas.
         </p>
 
-        <ul className="inline-block text-left mx-auto mb-16 space-y-3">
+        <ul className="mb-16 space-y-3">
           {QUESTIONS.map((q) => (
             <li
               key={q}
@@ -58,7 +55,7 @@ export default function PourquoiIdentite() {
           ))}
         </ul>
 
-        <div className="bg-[#E69419] rounded-2xl grid sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-cream/25 overflow-hidden text-left">
+        <div className="bg-[#E69419] rounded-2xl grid sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-cream/25 overflow-hidden">
           {STATS.map((s) => (
             <div
               key={s.legende}

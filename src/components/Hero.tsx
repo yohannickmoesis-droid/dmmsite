@@ -4,58 +4,78 @@ import Image from "next/image";
 
 function IconIdentite() {
   return (
-    <svg viewBox="0 0 48 48" fill="none" className="w-9 h-9 sm:w-11 sm:h-11">
-      <path
-        d="M24 8c-8 0-13 5.5-13 13 0 5 1.5 9 3.5 13M24 8c8 0 13 5.5 13 13 0 3-.5 6-1.5 9M24 14c-5.5 0-9 4-9 9 0 5 1.5 9 3.5 13M24 14c5.5 0 9 4 9 9 0 3-.5 6-1.5 9M24 20c-3 0-5 2.2-5 6 0 4 1.5 8 4 12M24 20c3 0 5 2.2 5 6 0 2-.3 4-1 6M24 26c-1 0-1.5.8-1.5 2.3 0 3 1 6 3 9"
-        stroke="currentColor"
-        strokeWidth="1.4"
-        strokeLinecap="round"
-      />
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="w-10 h-10 sm:w-12 sm:h-12"
+    >
+      <path d="M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4" />
+      <path d="M14 13.12c0 2.38 0 6.38-1 8.88" />
+      <path d="M17.29 21.02c.12-.6.43-2.3.5-3.02" />
+      <path d="M2 12a10 10 0 0 1 18-6" />
+      <path d="M2 16h.01" />
+      <path d="M21.8 16c.2-2 .131-5.354 0-6" />
+      <path d="M5 19.5C5.5 18 6 15 6 12a6 6 0 0 1 .34-2" />
+      <path d="M8.65 22c.21-.66.45-1.32.57-2" />
+      <path d="M9 6.8a6 6 0 0 1 9 5.2v2" />
     </svg>
   );
 }
 
 function IconSens() {
   return (
-    <svg viewBox="0 0 48 48" fill="none" className="w-9 h-9 sm:w-11 sm:h-11">
-      <circle cx="24" cy="24" r="15" stroke="currentColor" strokeWidth="1.4" />
-      <path
-        d="M29 19l-3 7-7 3 3-7 7-3z"
-        stroke="currentColor"
-        strokeWidth="1.4"
-        strokeLinejoin="round"
-      />
-      <circle cx="24" cy="6" r="1.4" fill="currentColor" />
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="w-10 h-10 sm:w-12 sm:h-12"
+    >
+      <circle cx="12" cy="12" r="10" />
+      <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
     </svg>
   );
 }
 
 function IconCollectif() {
   return (
-    <svg viewBox="0 0 48 48" fill="none" className="w-9 h-9 sm:w-11 sm:h-11">
-      <circle cx="24" cy="12" r="4.2" stroke="currentColor" strokeWidth="1.4" />
-      <circle cx="12" cy="16" r="3.4" stroke="currentColor" strokeWidth="1.4" />
-      <circle cx="36" cy="16" r="3.4" stroke="currentColor" strokeWidth="1.4" />
-      <path
-        d="M24 18c-5 0-9 3.5-9 9v6M24 18c5 0 9 3.5 9 9v6M12 21c-3.6 0-6.5 2.6-6.5 6.6V32M36 21c3.6 0 6.5 2.6 6.5 6.6V32"
-        stroke="currentColor"
-        strokeWidth="1.4"
-        strokeLinecap="round"
-      />
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="w-10 h-10 sm:w-12 sm:h-12"
+    >
+      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+      <circle cx="9" cy="7" r="4" />
+      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
     </svg>
   );
 }
 
 function IconAvenir() {
   return (
-    <svg viewBox="0 0 48 48" fill="none" className="w-9 h-9 sm:w-11 sm:h-11">
-      <path
-        d="M4 34l11-14 7 8 8-11 14 17H4z"
-        stroke="currentColor"
-        strokeWidth="1.4"
-        strokeLinejoin="round"
-      />
-      <path d="M30 17V7M30 7l7 4-7 3" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="w-10 h-10 sm:w-12 sm:h-12"
+    >
+      <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
+      <path d="M8 3v6" />
+      <path d="M8 3l5 2-5 2" />
     </svg>
   );
 }
@@ -118,10 +138,10 @@ export default function Hero() {
           Un accompagnement dédié à votre transition militaire-civile
         </p>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-10 max-w-2xl border-t border-cream/15 pt-8">
+        <div className="grid grid-cols-2 sm:grid-cols-4 max-w-2xl sm:divide-x sm:divide-cream/20 gap-y-8">
           {REPERES.map((item) => (
-            <div key={item.label}>
-              <div className="text-cream/80 mb-3">
+            <div key={item.label} className="text-center px-3 sm:px-6">
+              <div className="text-cream/85 mb-3 flex justify-center">
                 <item.Icon />
               </div>
               <div className="font-display text-gold text-2xl sm:text-3xl tracking-wide leading-none mb-1">

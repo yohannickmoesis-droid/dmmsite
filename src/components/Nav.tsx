@@ -3,10 +3,10 @@
 import { useEffect, useState } from "react";
 
 const LINKS = [
-  { href: "#defis", label: "Les défis" },
-  { href: "#parcours", label: "Mon parcours" },
-  { href: "#aide", label: "Comment je peux vous aider" },
-  { href: "#faq", label: "Questions" },
+  { href: "/#defis", label: "Les défis" },
+  { href: "/mon-parcours", label: "Mon parcours" },
+  { href: "/#aide", label: "Comment je peux vous aider" },
+  { href: "/#faq", label: "Questions" },
 ];
 
 export default function Nav() {
@@ -28,7 +28,7 @@ export default function Nav() {
     >
       <nav className="max-w-[1440px] mx-auto flex items-center justify-between px-5 sm:px-8 h-16">
         <a
-          href="#top"
+          href="/"
           className="font-display text-cream text-2xl tracking-wide leading-none"
         >
           De Militaire <span className="text-gold">à Monsieur</span>
@@ -48,7 +48,7 @@ export default function Nav() {
         </ul>
 
         <a
-          href="#reserver"
+          href="/#reserver"
           className="hidden md:inline-flex items-center rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-navy hover:bg-gold-light transition-colors"
         >
           Réserver un échange
@@ -92,7 +92,7 @@ export default function Nav() {
             ))}
             <li className="pt-2">
               <a
-                href="#reserver"
+                href="/#reserver"
                 onClick={() => setOpen(false)}
                 className="block text-center rounded-full bg-gold px-5 py-3 text-sm font-semibold text-navy"
               >

@@ -48,9 +48,6 @@ export default function MonParcoursPage() {
               fill
               sizes="(min-width: 768px) 50vw, 100vw"
               className="object-cover"
-              onError={(e) => {
-                (e.currentTarget as HTMLImageElement).style.display = "none";
-              }}
             />
           </div>
 

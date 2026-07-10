@@ -103,13 +103,13 @@ function computeDominantTheme(answers: number[]): ResultInfo {
 }
 
 const cardCls =
-  "bg-navy/95 border border-gold/25 rounded-xl p-6 sm:p-7 shadow-[3px_3px_10px_rgba(26,26,26,0.18)]";
+  "bg-cream border border-gold-dark/30 rounded-xl p-6 sm:p-7 shadow-[3px_3px_10px_rgba(26,26,26,0.18)]";
 const buttonCls =
-  "w-full rounded-lg py-3.5 font-semibold text-sm bg-gold text-navy hover:bg-gold-light transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cream";
+  "w-full rounded-lg py-3.5 font-semibold text-sm bg-[#FF6A00] text-white hover:bg-[#E65F00] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cream";
 const inputCls =
-  "w-full rounded-lg border border-cream/25 bg-cream/[0.06] px-3.5 py-2.5 text-sm text-cream placeholder:text-cream/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold";
+  "w-full rounded-lg border border-navy/20 bg-white px-3.5 py-2.5 text-sm text-navy placeholder:text-navy/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-dark";
 const optionCls =
-  "w-full text-left rounded-lg border border-cream/20 bg-cream/[0.06] px-4 py-3 text-sm text-cream hover:border-gold hover:bg-gold/10 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold";
+  "w-full text-left rounded-lg border border-navy/15 bg-white px-4 py-3 text-sm text-navy hover:border-gold-dark hover:bg-gold/10 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-dark";
 
 type Stage = "intro" | "question" | "form" | "result";
 
@@ -207,10 +207,10 @@ export default function DiagnosticQuiz() {
       <div className={cardCls}>
         {stage === "intro" && (
           <div>
-            <h3 className="text-cream text-lg font-semibold leading-snug mb-1.5">
+            <h3 className="text-navy text-lg font-semibold leading-snug mb-1.5">
               Quel défi est le plus présent dans votre transition aujourd&rsquo;hui&nbsp;?
             </h3>
-            <p className="text-cream/70 text-[13.5px] leading-relaxed mb-5">
+            <p className="text-navy/70 text-[13.5px] leading-relaxed mb-5">
               Répondez à 9 questions rapides pour identifier le défi qui mérite peut-être
               votre attention en ce moment.
             </p>
@@ -227,11 +227,11 @@ export default function DiagnosticQuiz() {
                 <span
                   key={i}
                   className="flex-1 h-[3.5px] rounded-full"
-                  style={{ background: i < step ? "#C4A35A" : "rgba(239,231,221,0.18)" }}
+                  style={{ background: i < step ? "#C4A35A" : "rgba(14,8,87,0.12)" }}
                 />
               ))}
             </div>
-            <p className="text-cream text-[15px] font-medium leading-snug mb-4">
+            <p className="text-navy text-[15px] font-medium leading-snug mb-4">
               {step + 1}. {QUESTIONS[step].text}
             </p>
             <div className="flex flex-col gap-2.5">
@@ -250,7 +250,7 @@ export default function DiagnosticQuiz() {
               <button
                 type="button"
                 onClick={handleBackQuestion}
-                className="mt-4 text-cream/55 text-xs hover:text-cream/80 transition-colors"
+                className="mt-4 text-navy/55 text-xs hover:text-navy/80 transition-colors"
               >
                 ← Question précédente
               </button>
@@ -260,9 +260,9 @@ export default function DiagnosticQuiz() {
 
         {stage === "form" && (
           <div>
-            <h3 className="text-cream text-lg font-semibold mb-4">Presque terminé</h3>
+            <h3 className="text-navy text-lg font-semibold mb-4">Presque terminé</h3>
             <div className="mb-3">
-              <label className="block text-cream/70 text-xs mb-1.5" htmlFor="quiz-firstname">
+              <label className="block text-navy/70 text-xs mb-1.5" htmlFor="quiz-firstname">
                 Prénom
               </label>
               <input
@@ -275,7 +275,7 @@ export default function DiagnosticQuiz() {
               />
             </div>
             <div className="mb-3">
-              <label className="block text-cream/70 text-xs mb-1.5" htmlFor="quiz-email">
+              <label className="block text-navy/70 text-xs mb-1.5" htmlFor="quiz-email">
                 Adresse e-mail
               </label>
               <input
@@ -287,7 +287,7 @@ export default function DiagnosticQuiz() {
                 className={inputCls}
               />
             </div>
-            <p className="text-cream/55 text-[11.5px] leading-relaxed my-3">
+            <p className="text-navy/55 text-[11.5px] leading-relaxed my-3">
               Indiquez votre prénom et votre e-mail pour recevoir votre résultat. Aucune
               autre information ne vous sera demandée.
             </p>
@@ -337,14 +337,14 @@ function ResultBlock({
     title = RESULTS.aucun.label;
     disclaimer =
       "Ce résultat ne constitue pas un diagnostic. Il reflète vos réponses à un instant donné ; d'autres dimensions de votre transition peuvent évoluer dans le temps.";
-    body = <p className="text-cream text-sm leading-relaxed mb-4">{RESULTS.aucun.text}</p>;
+    body = <p className="text-navy text-sm leading-relaxed mb-4">{RESULTS.aucun.text}</p>;
   } else if (info.mode === "single") {
     badge = "Défi identifié";
     title = RESULTS[info.theme].label;
     disclaimer =
       "Ce résultat ne constitue pas un diagnostic. Il met simplement en lumière un défi qui semble actuellement plus présent dans votre transition. D'autres mécanismes peuvent également être à l'œuvre.";
     showDefi10 = true;
-    body = <p className="text-cream text-sm leading-relaxed mb-4">{RESULTS[info.theme].text}</p>;
+    body = <p className="text-navy text-sm leading-relaxed mb-4">{RESULTS[info.theme].text}</p>;
   } else if (info.mode === "few") {
     title = "Plusieurs défis semblent vous concerner";
     const labels = info.themes.map((t) => RESULTS[t].label).join(" · ");
@@ -353,7 +353,7 @@ function ResultBlock({
         <p className="text-gold text-xs font-semibold mb-2 leading-relaxed">
           Thèmes les plus présents pour vous&nbsp;: {labels}
         </p>
-        <p className="text-cream text-sm leading-relaxed mb-4">
+        <p className="text-navy text-sm leading-relaxed mb-4">
           Vos réponses ne font pas clairement apparaître un défi qui se détache des autres :
           plusieurs semblent vous concerner à un niveau comparable aujourd&rsquo;hui. C&rsquo;est
           une situation fréquente, notamment en début de transition, car ces défis sont souvent
@@ -364,7 +364,7 @@ function ResultBlock({
   } else {
     title = "Une transition qui se travaille dans son ensemble";
     body = (
-      <p className="text-cream text-sm leading-relaxed mb-4">
+      <p className="text-navy text-sm leading-relaxed mb-4">
         Vos réponses font apparaître une préoccupation assez répartie entre plusieurs dimensions
         de votre transition, sans qu&rsquo;un défi précis ne se détache nettement. Un
         accompagnement structuré, qui prend les défis dans leur ensemble, a souvent plus de sens
@@ -375,15 +375,15 @@ function ResultBlock({
 
   return (
     <div>
-      <span className="inline-block bg-gold-light text-navy text-[11px] font-semibold uppercase tracking-wide px-2.5 py-1 rounded-full mb-3">
+      <span className="inline-block bg-navy text-cream text-[11px] font-semibold uppercase tracking-wide px-2.5 py-1 rounded-full mb-3">
         {badge}
       </span>
-      <h3 className="text-cream text-lg font-semibold leading-snug mb-1.5">{title}</h3>
+      <h3 className="text-navy text-lg font-semibold leading-snug mb-1.5">{title}</h3>
       {body}
       {showDefi10 && (
-        <p className="text-cream/85 text-sm leading-relaxed mb-4">{DEFI_10}</p>
+        <p className="text-navy/85 text-sm leading-relaxed mb-4">{DEFI_10}</p>
       )}
-      <p className="text-cream/65 text-xs italic leading-relaxed mb-5 border-l-2 border-gold pl-3">
+      <p className="text-navy/65 text-xs italic leading-relaxed mb-5 border-l-2 border-gold-dark pl-3">
         {disclaimer}
       </p>
       <div className="flex flex-col gap-2.5">
@@ -392,12 +392,12 @@ function ResultBlock({
         </button>
         <a
           href="mailto:yohannick.moesis@gmail.com"
-          className="block w-full text-center rounded-lg py-3 text-sm font-semibold text-cream border border-cream/40 hover:bg-cream/10 transition-colors"
+          className="block w-full text-center rounded-lg py-3 text-sm font-semibold text-navy border border-navy/30 hover:bg-navy/5 transition-colors"
         >
           Échangeons sur votre transition
         </a>
       </div>
-      <p className="text-cream/50 text-xs text-center mt-3.5">
+      <p className="text-navy/50 text-xs text-center mt-3.5">
         {emailSent
           ? "Votre résultat vient également de vous être envoyé par e-mail."
           : "Votre résultat est affiché ci-dessus. L'envoi par e-mail n'a pas pu être confirmé, vérifiez vos spams dans quelques minutes."}

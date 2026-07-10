@@ -169,21 +169,22 @@ export default function CercleDefis() {
         className="absolute left-1/2 top-1/2 text-center pointer-events-none px-6"
         style={{
           transform: "translate(-50%, -50%)",
-          width: actif === null ? "52cqw" : "42cqw",
+          width: actif === null ? "62cqw" : "42cqw",
         }}
       >
         {actif === null ? (
           <div
             style={{
               fontFamily: "'Bebas Neue', sans-serif",
-              fontSize: "11cqw",
+              fontSize: "17cqw",
               textTransform: "uppercase",
               color: "#EFE7DD",
-              whiteSpace: "nowrap",
-              lineHeight: 0.95,
+              lineHeight: 0.9,
             }}
           >
-            Mon identité
+            Mon
+            <br />
+            identité
           </div>
         ) : (
           <div

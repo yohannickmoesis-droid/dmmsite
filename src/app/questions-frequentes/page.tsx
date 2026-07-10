@@ -40,9 +40,9 @@ const QUESTIONS = [
 export default function QuestionsFrequentesPage() {
   return (
     <>
-      <section className="bg-cream pt-32 pb-16 sm:pb-20">
+      <section className="bg-navy pt-32 pb-16 sm:pb-20">
         <div className="max-w-[1440px] mx-auto px-5 sm:px-8">
-          <h1 className="font-display text-navy text-5xl sm:text-6xl tracking-wide">
+          <h1 className="font-display text-cream text-5xl sm:text-6xl tracking-wide">
             Questions fréquentes
           </h1>
         </div>

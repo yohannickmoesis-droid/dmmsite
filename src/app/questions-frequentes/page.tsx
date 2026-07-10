@@ -48,7 +48,7 @@ export default function QuestionsFrequentesPage() {
         </div>
       </section>
 
-      <section className="bg-cream pb-20 sm:pb-28">
+      <section className="bg-cream pt-16 sm:pt-20 pb-20 sm:pb-28">
         <div className="max-w-[1440px] mx-auto px-5 sm:px-8">
           <div className="max-w-3xl space-y-10">
             {QUESTIONS.map((item) => (

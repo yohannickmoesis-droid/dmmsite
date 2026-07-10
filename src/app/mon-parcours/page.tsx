@@ -95,7 +95,7 @@ export default function MonParcoursPage() {
               alt="Yohannick Moesis en opération, Armée de Terre"
               fill
               sizes="(min-width: 768px) 50vw, 100vw"
-              className="object-cover object-top"
+              className="object-cover object-[center_25%]"
             />
           </div>
 

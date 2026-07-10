@@ -24,7 +24,7 @@ export default function TransitionTimeline() {
           Où en êtes-vous dans votre transition&nbsp;?
         </h2>
 
-        <div className="grid sm:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-3 gap-6 mb-10">
           {STAGES.map((stage) => (
             <div
               key={stage.title}
@@ -41,6 +41,15 @@ export default function TransitionTimeline() {
               </p>
             </div>
           ))}
+        </div>
+
+        <div className="text-center">
+          <a
+            href="/#aide"
+            className="inline-flex items-center justify-center rounded-full bg-navy px-8 py-3.5 text-sm font-semibold text-cream hover:bg-navy/85 transition-colors"
+          >
+            Voir mes offres
+          </a>
         </div>
       </div>
     </section>

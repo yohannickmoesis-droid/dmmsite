@@ -3,10 +3,9 @@
 import { useEffect, useState } from "react";
 
 const LINKS = [
-  { href: "/#defis", label: "Les défis" },
+  { href: "/", label: "Accueil" },
   { href: "/mon-parcours", label: "Mon parcours" },
-  { href: "/#aide", label: "Comment je peux vous aider" },
-  { href: "/#faq", label: "Questions" },
+  { href: "/#faq", label: "FAQ" },
 ];
 
 export default function Nav() {
@@ -48,7 +47,7 @@ export default function Nav() {
         </ul>
 
         <a
-          href="/#reserver"
+          href="/contact"
           className="hidden md:inline-flex items-center rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-navy hover:bg-gold-light transition-colors"
         >
           Réserver un échange
@@ -92,7 +91,7 @@ export default function Nav() {
             ))}
             <li className="pt-2">
               <a
-                href="/#reserver"
+                href="/contact"
                 onClick={() => setOpen(false)}
                 className="block text-center rounded-full bg-gold px-5 py-3 text-sm font-semibold text-navy"
               >

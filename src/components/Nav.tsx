@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 const LINKS = [
   { href: "/", label: "Accueil" },
   { href: "/mon-parcours", label: "Mon parcours" },
-  { href: "/#faq", label: "FAQ" },
+  { href: "/questions-frequentes", label: "FAQ" },
 ];
 
 export default function Nav() {

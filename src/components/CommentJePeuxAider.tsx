@@ -42,7 +42,7 @@ export default function CommentJePeuxAider() {
               <p className="text-gold-dark font-semibold text-sm mb-1.5">
                 {INDIVIDUEL.title}
               </p>
-              <p className="text-navy/80 text-sm leading-relaxed mb-5">
+              <p className="text-navy/80 text-sm leading-relaxed mb-5 text-justify">
                 {INDIVIDUEL.text}
               </p>
               <ul className="space-y-2">

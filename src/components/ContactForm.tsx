@@ -157,7 +157,7 @@ export default function ContactForm() {
 
       {souhaiteRappel && (
         <div className="bg-navy/5 border border-navy/15 rounded-lg p-4">
-          <p className="text-navy/80 text-sm leading-relaxed mb-3">
+          <p className="text-navy/80 text-sm leading-relaxed mb-3 text-justify">
             Choisissez un créneau qui vous convient, il sera automatiquement
             réservé.
           </p>

@@ -18,7 +18,7 @@ const STAGES = [
 
 export default function TransitionTimeline() {
   return (
-    <section className="bg-cream py-20 sm:py-28">
+    <section className="bg-cream pt-20 sm:pt-28 pb-10 sm:pb-14">
       <div className="max-w-[1440px] mx-auto px-5 sm:px-8">
         <h2 className="font-display text-navy text-4xl sm:text-5xl tracking-wide mb-14 sm:mb-16">
           Où en êtes-vous dans votre transition&nbsp;?

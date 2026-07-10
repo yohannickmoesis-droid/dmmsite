@@ -1,6 +1,6 @@
 export default function MonParcours() {
   return (
-    <section id="parcours" className="bg-cream py-24 sm:py-32">
+    <section id="parcours" className="bg-cream py-20 sm:py-28">
       <div className="max-w-3xl mx-auto px-5 sm:px-8 text-center">
         <p className="font-display text-navy text-3xl sm:text-4xl md:text-5xl leading-tight tracking-wide mb-6">
           Je ne vous aide pas à trouver un emploi.

@@ -21,7 +21,7 @@ export default function MonParcours() {
 
         <div>
           <h2 className="font-display text-navy text-4xl sm:text-5xl tracking-wide text-center mb-3">
-            Mon parcours
+            Qui suis-je&nbsp;?
           </h2>
           <p className="text-navy/70 text-sm sm:text-base uppercase tracking-wide text-center mb-10">
             20 ans au sein de l&apos;Armée de Terre.
@@ -62,7 +62,7 @@ export default function MonParcours() {
 
           <div className="text-center">
             <a
-              href="#aide"
+              href="/mon-parcours"
               className="inline-flex items-center justify-center rounded-full bg-navy px-8 py-3.5 text-sm font-semibold text-cream hover:bg-navy/85 transition-colors"
             >
               En savoir plus

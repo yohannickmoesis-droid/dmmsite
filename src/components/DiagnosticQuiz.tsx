@@ -105,7 +105,7 @@ function computeDominantTheme(answers: number[]): ResultInfo {
 const cardCls =
   "bg-cream border border-gold-dark/30 rounded-xl p-6 sm:p-7 shadow-[3px_3px_10px_rgba(26,26,26,0.18)]";
 const buttonCls =
-  "w-full rounded-lg py-3.5 font-semibold text-sm bg-[#FF6A00] text-white hover:bg-[#E65F00] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cream";
+  "w-full rounded-lg py-3.5 font-semibold text-sm bg-gold text-navy hover:bg-gold-light transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy";
 const inputCls =
   "w-full rounded-lg border border-navy/20 bg-white px-3.5 py-2.5 text-sm text-navy placeholder:text-navy/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-dark";
 const optionCls =

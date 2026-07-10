@@ -12,7 +12,7 @@ export default function BookingCta() {
         </p>
         <div className="text-center">
           <a
-            href="mailto:yohannick.moesis@gmail.com"
+            href="/contact"
             className="inline-flex items-center justify-center rounded-full bg-gold px-8 py-3.5 text-sm font-semibold text-navy hover:bg-gold-light transition-colors"
           >
             Réserver un échange

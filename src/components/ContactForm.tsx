@@ -69,7 +69,7 @@ export default function ContactForm() {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-full bg-navy px-8 py-3.5 text-sm font-semibold text-cream hover:bg-navy/85 transition-colors mt-6"
           >
-            Choisir un créneau de rappel
+            Réserver un échange
           </a>
         )}
       </div>
@@ -150,8 +150,8 @@ export default function ContactForm() {
           className="mt-1 w-4 h-4 accent-navy"
         />
         <span className="text-navy text-sm leading-relaxed">
-          Je souhaite être rappelé(e) par téléphone à un créneau qui me
-          convient.
+          Je souhaite un échange, par téléphone ou en visio, à un créneau
+          qui me convient.
         </span>
       </label>
 
@@ -167,7 +167,7 @@ export default function ContactForm() {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-full bg-navy px-6 py-2.5 text-sm font-semibold text-cream hover:bg-navy/85 transition-colors"
           >
-            Choisir un créneau
+            Réserver un échange
           </a>
         </div>
       )}

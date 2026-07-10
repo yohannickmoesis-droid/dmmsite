@@ -50,7 +50,7 @@ export default function Nav() {
           href="/contact"
           className="hidden md:inline-flex items-center rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-navy hover:bg-gold-light transition-colors"
         >
-          Réserver un échange
+          Me contacter
         </a>
 
         <button
@@ -95,7 +95,7 @@ export default function Nav() {
                 onClick={() => setOpen(false)}
                 className="block text-center rounded-full bg-gold px-5 py-3 text-sm font-semibold text-navy"
               >
-                Réserver un échange
+                Me contacter
               </a>
             </li>
           </ul>

@@ -159,19 +159,16 @@ export default function MonParcoursPage() {
             Après avoir quitté l&apos;armée, j&apos;ai choisi de continuer à servir
             autrement. Pendant plus de dix ans, j&apos;ai accompagné des jeunes,
             des familles et des professionnels confrontés à des parcours de
-            vie complexes&nbsp;: à l&apos;EPIDE, chez SAMiNA, qui accueille des
-            mineurs non accompagnés, en Centre Éducatif Renforcé, puis dans la
-            protection de l&apos;enfance. Éducateur, chef de service, puis
-            directeur d&apos;établissements, j&apos;ai découvert une autre manière
-            d&apos;être utile. Cette seconde carrière m&apos;a appris que les plus
-            grands combats ne se mènent pas toujours sur un terrain
-            d&apos;opérations. Ils se jouent parfois à l&apos;intérieur de soi.
-            C&apos;est aussi durant ces années que j&apos;ai traversé ma propre
-            reconversion, ses doutes, ses remises en question et sa
-            reconstruction. Peu à peu, j&apos;ai compris que ce qui donnait le
-            plus de sens à mon parcours n&apos;était pas de diriger des
-            structures, mais d&apos;accompagner des personnes dans leur propre
-            transition.
+            vie complexes. Éducateur, chef de service, puis directeur
+            d&apos;établissements, j&apos;ai découvert une autre manière d&apos;être
+            utile. Cette seconde carrière m&apos;a appris que les plus grands
+            combats ne se mènent pas toujours sur un terrain d&apos;opérations.
+            Ils se jouent parfois à l&apos;intérieur de soi. C&apos;est aussi durant
+            ces années que j&apos;ai traversé ma propre reconversion, ses doutes,
+            ses remises en question et sa reconstruction. Peu à peu, j&apos;ai
+            compris que ce qui donnait le plus de sens à mon parcours
+            n&apos;était pas de diriger des structures, mais d&apos;accompagner des
+            personnes dans leur propre transition.
           </p>
         </div>
       </section>

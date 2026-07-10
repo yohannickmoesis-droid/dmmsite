@@ -5,9 +5,7 @@ import { useState } from "react";
 const APPS_SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbziMfCni5NCQ7DDeQh4q3-RQaKTCNU7X0FX8JiVBIU0m63qvutT0FJVM9Fpek5Ia0gA/exec";
 
-// Remplace ce lien par ton lien Calendly une fois ton compte configuré
-// (ex : https://calendly.com/ton-nom/echange-15min)
-const CALENDLY_LINK = "https://calendly.com/REMPLACE-MOI";
+const CALENDLY_LINK = "https://calendly.com/yohannick-moesis/30min";
 
 // Remplace par ton lien LinkedIn
 const LINKEDIN_URL = "https://www.linkedin.com/in/yohannick-moesis";

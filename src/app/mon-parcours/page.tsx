@@ -8,19 +8,18 @@ export const metadata: Metadata = {
 };
 
 const PARCOURS_MILITAIRE = [
-  "Sous-officier",
-  "13e Régiment de Dragons Parachutistes",
-  "Groupe Commando Parachutiste, 11e Brigade Parachutiste",
-  "15 opérations extérieures (OPEX)",
+  "Sous-officier parachutiste",
+  "13e Régiment de Dragons Parachutistes (13e RDP)",
+  "Groupe Commando Parachutiste / 11e Brigade Parachutiste",
+  "15 opérations extérieures",
 ];
 
 const PARCOURS_CIVIL = [
-  "10 ans d'accompagnement dans le civil",
-  "EPIDE (Établissement pour l'Insertion dans l'Emploi)",
-  "SAMiNA",
-  "CER (Centre Éducatif Renforcé)",
-  "Protection de l'enfance",
-  "Jusqu'à responsable de service et directeur d'établissement",
+  "Plus de 10 ans dans l'accompagnement et l'insertion",
+  "Éducateur, chef de service puis directeur d'établissement",
+  "Accompagnement de jeunes et de personnes en transition",
+  "Management d'équipes pluridisciplinaires",
+  "Conduite du changement et accompagnement des parcours",
 ];
 
 export default function MonParcoursPage() {
@@ -50,7 +49,7 @@ export default function MonParcoursPage() {
             />
           </div>
 
-          <div className="text-navy/85 text-[15px] sm:text-base leading-relaxed space-y-4">
+          <div className="text-navy/85 text-[15px] sm:text-base leading-relaxed text-justify space-y-4">
             <p>
               J&apos;ai vécu ce que vivent aujourd&apos;hui de nombreux militaires en
               transition.
@@ -119,15 +118,17 @@ export default function MonParcoursPage() {
               ))}
             </ul>
 
-            <p className="text-cream/80 text-[15px] sm:text-base leading-relaxed">
-              Militaire pendant 20 ans au sein de deux unités parachutistes de
-              l&apos;Armée de Terre, j&apos;ai au cours de ma carrière effectué de
-              nombreuses opérations extérieures, certaines plus marquantes que
-              d&apos;autres. J&apos;ai servi, commandé, accompagné des hommes dans des
-              contextes extrêmes. Engagé à 18 ans, l&apos;armée m&apos;a forgé, elle
-              m&apos;a donné une identité, un cadre, un collectif, un sens. Pendant
-              20 ans, je savais exactement qui j&apos;étais et pourquoi je me
-              levais le matin.
+            <p className="text-cream/80 text-[15px] sm:text-base leading-relaxed text-justify">
+              Sous-officier au sein de l&apos;Armée de Terre, j&apos;ai servi vingt ans
+              dans deux unités parachutistes&nbsp;: le 13e Régiment de Dragons
+              Parachutistes, puis le Groupe Commando Parachutiste de la 11e
+              Brigade Parachutiste. Un engagement marqué par 15 opérations
+              extérieures, certaines plus marquantes que d&apos;autres. J&apos;ai
+              servi, commandé, accompagné des hommes dans des contextes
+              extrêmes. Engagé à 18 ans, l&apos;armée m&apos;a forgé, elle m&apos;a donné
+              une identité, un cadre, un collectif, un sens. Pendant 20 ans,
+              je savais exactement qui j&apos;étais et pourquoi je me levais le
+              matin.
             </p>
           </div>
         </div>
@@ -135,10 +136,14 @@ export default function MonParcoursPage() {
 
       <section className="bg-cream py-20 sm:py-28">
         <div className="max-w-[1440px] mx-auto px-5 sm:px-8">
-          <h2 className="font-display text-navy text-3xl sm:text-4xl tracking-wide mb-8">
+          <h2 className="font-display text-navy text-3xl sm:text-4xl tracking-wide mb-2">
             Le parcours civil
           </h2>
-          <ul className="space-y-3 max-w-2xl">
+          <p className="text-gold-dark text-sm sm:text-base uppercase tracking-wide mb-8">
+            10 ans d&apos;accompagnement
+          </p>
+
+          <ul className="space-y-3 mb-8 max-w-2xl">
             {PARCOURS_CIVIL.map((item) => (
               <li
                 key={item}
@@ -149,6 +154,25 @@ export default function MonParcoursPage() {
               </li>
             ))}
           </ul>
+
+          <p className="text-navy/85 text-[15px] sm:text-base leading-relaxed max-w-2xl text-justify">
+            Après avoir quitté l&apos;armée, j&apos;ai choisi de continuer à servir
+            autrement. Pendant plus de dix ans, j&apos;ai accompagné des jeunes,
+            des familles et des professionnels confrontés à des parcours de
+            vie complexes&nbsp;: à l&apos;EPIDE, chez SAMiNA, qui accueille des
+            mineurs non accompagnés, en Centre Éducatif Renforcé, puis dans la
+            protection de l&apos;enfance. Éducateur, chef de service, puis
+            directeur d&apos;établissements, j&apos;ai découvert une autre manière
+            d&apos;être utile. Cette seconde carrière m&apos;a appris que les plus
+            grands combats ne se mènent pas toujours sur un terrain
+            d&apos;opérations. Ils se jouent parfois à l&apos;intérieur de soi.
+            C&apos;est aussi durant ces années que j&apos;ai traversé ma propre
+            reconversion, ses doutes, ses remises en question et sa
+            reconstruction. Peu à peu, j&apos;ai compris que ce qui donnait le
+            plus de sens à mon parcours n&apos;était pas de diriger des
+            structures, mais d&apos;accompagner des personnes dans leur propre
+            transition.
+          </p>
         </div>
       </section>
 

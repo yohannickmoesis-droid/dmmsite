@@ -88,13 +88,13 @@ export default function MonParcoursPage() {
 
       <section className="bg-navy py-20 sm:py-28">
         <div className="max-w-[1440px] mx-auto px-5 sm:px-8 grid md:grid-cols-2 gap-10 md:gap-16 items-stretch">
-          <div className="relative w-full aspect-[4/5] md:aspect-auto md:h-full min-h-[420px] rounded-lg overflow-hidden order-2 md:order-1">
+          <div className="relative w-full aspect-square rounded-lg overflow-hidden bg-navy order-2 md:order-1">
             <Image
               src="/images/militaire.jpg"
               alt="Yohannick Moesis en opération, Armée de Terre"
               fill
               sizes="(min-width: 768px) 50vw, 100vw"
-              className="object-cover object-[center_25%]"
+              className="object-contain"
             />
           </div>
 

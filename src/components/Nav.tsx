@@ -30,7 +30,7 @@ export default function Nav() {
           href="/"
           className="flex items-center gap-2.5 font-display text-cream text-2xl tracking-wide leading-none"
         >
-          <img src="/images/logo-dmm.png" alt="" className="h-8 w-8 shrink-0" />
+          <img src="/images/logo-dmm.png" alt="" className="h-11 w-auto shrink-0" />
           De Militaire <span className="text-gold">à Monsieur</span>
         </a>
 

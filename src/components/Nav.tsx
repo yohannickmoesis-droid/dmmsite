@@ -28,8 +28,9 @@ export default function Nav() {
       <nav className="max-w-[1440px] mx-auto flex items-center justify-between px-5 sm:px-8 h-16">
         <a
           href="/"
-          className="font-display text-cream text-2xl tracking-wide leading-none"
+          className="flex items-center gap-2.5 font-display text-cream text-2xl tracking-wide leading-none"
         >
+          <img src="/images/logo-dmm.png" alt="" className="h-8 w-8 shrink-0" />
           De Militaire <span className="text-gold">à Monsieur</span>
         </a>
 

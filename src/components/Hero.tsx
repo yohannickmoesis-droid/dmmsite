@@ -70,12 +70,12 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 w-full max-w-[1440px] mx-auto px-5 sm:px-8 pb-16 sm:pb-24 pt-32">
-        <p className="text-gold font-semibold tracking-[0.15em] text-sm sm:text-base uppercase mb-4">
-          Votre transition. Votre identité. Votre avenir.
-        </p>
-        <h1 className="font-display text-cream text-5xl sm:text-7xl lg:text-8xl leading-[0.95] tracking-wide mb-8 max-w-4xl">
+        <h1 className="font-display text-cream text-5xl sm:text-7xl lg:text-8xl leading-[0.95] tracking-wide mb-4 max-w-4xl">
           De Militaire <span className="text-gold">à Monsieur</span>
         </h1>
+        <p className="text-gold font-semibold tracking-[0.15em] text-sm sm:text-base uppercase mb-8">
+          Votre transition. Votre identité. Votre avenir.
+        </p>
         <p className="text-cream/90 text-lg sm:text-xl max-w-2xl italic leading-relaxed mb-3">
           La reconversion ne se résume pas à trouver un emploi.
         </p>

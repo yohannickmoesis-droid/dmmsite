@@ -65,7 +65,7 @@ const SIZE = 1000;
 const CX = SIZE / 2;
 const CY = SIZE / 2;
 const R = 320;
-const GAP = 100; // même écart pour tous les défis, aucun n'est plus loin ou plus proche du cercle
+const GAP = 130; // même écart pour tous les défis, aucun n'est plus loin ou plus proche du cercle
 const ARROW_ANGLES = [60, 180, 300];
 const ARROW_SIZE = 22;
 

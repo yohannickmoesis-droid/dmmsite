@@ -65,7 +65,7 @@ const SIZE = 1000;
 const CX = SIZE / 2;
 const CY = SIZE / 2;
 const R = 320;
-const GAP = 130; // même écart pour tous les défis, aucun n'est plus loin ou plus proche du cercle
+const GAPS = [90, 120, 110, 85, 90, 100, 90, 105, 125, 115]; // écart adapté à la longueur de chaque libellé
 const ARROW_ANGLES = [60, 180, 300];
 const ARROW_SIZE = 22;
 
@@ -124,8 +124,8 @@ export default function CercleDefis() {
         const py = CY + R * Math.sin(angle);
         const nx = Math.cos(angle);
         const ny = Math.sin(angle);
-        const ax = px + nx * GAP;
-        const ay = py + ny * GAP;
+        const ax = px + nx * GAPS[i];
+        const ay = py + ny * GAPS[i];
         const leftPct = (ax / SIZE) * 100;
         const topPct = (ay / SIZE) * 100;
 

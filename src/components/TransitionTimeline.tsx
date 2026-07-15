@@ -28,15 +28,15 @@ export default function TransitionTimeline() {
           {STAGES.map((stage) => (
             <div
               key={stage.title}
-              className="bg-navy rounded-xl p-7 flex flex-col"
+              className="bg-navy rounded-xl p-7 flex flex-col text-center"
             >
               <h3 className="font-display text-gold text-2xl tracking-wide mb-1">
                 {stage.title}
               </h3>
-              <p className="text-cream/60 text-xs uppercase tracking-wide mb-5">
+              <p className="text-cream/70 text-xs tracking-wide mb-5">
                 {stage.time}
               </p>
-              <p className="text-cream/90 text-sm leading-relaxed">
+              <p className="text-gold text-sm leading-relaxed">
                 {stage.text}
               </p>
             </div>

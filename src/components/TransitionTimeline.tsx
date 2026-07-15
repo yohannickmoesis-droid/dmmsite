@@ -36,7 +36,7 @@ export default function TransitionTimeline() {
               <p className="text-cream/70 text-xs tracking-wide mb-5">
                 {stage.time}
               </p>
-              <p className="text-gold text-sm leading-relaxed">
+              <p className="text-gold text-sm font-semibold leading-relaxed">
                 {stage.text}
               </p>
             </div>

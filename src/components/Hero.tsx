@@ -93,9 +93,12 @@ export default function Hero() {
         </p>
 
         <div className="grid grid-cols-2 sm:grid-cols-4 max-w-2xl sm:divide-x sm:divide-cream/20 gap-y-8">
-          {REPERES.map((item) => (
-            <div key={item.label} className="text-center px-3 sm:px-6">
-              <div className="text-cream/85 mb-3 flex justify-center">
+          {REPERES.map((item, i) => (
+            <div
+              key={item.label}
+              className={`text-left ${i === 0 ? "pr-3 sm:pr-6" : "px-3 sm:px-6"}`}
+            >
+              <div className="text-cream/85 mb-3 flex justify-start">
                 <item.Icon />
               </div>
               <div className="font-display text-gold text-2xl sm:text-3xl tracking-wide leading-none mb-1">

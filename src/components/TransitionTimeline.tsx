@@ -33,7 +33,7 @@ export default function TransitionTimeline() {
               <h3 className="font-display text-gold text-3xl sm:text-[2rem] tracking-wide mb-1">
                 {stage.title}
               </h3>
-              <p className="text-cream/70 text-xs tracking-wide mb-5 min-h-[2rem] flex items-center justify-center">
+              <p className="text-cream/85 text-sm tracking-wide mb-5 min-h-[2.5rem] flex items-start justify-center">
                 {stage.time}
               </p>
               <p className="text-gold text-sm font-semibold leading-relaxed flex-1 flex items-center justify-center">

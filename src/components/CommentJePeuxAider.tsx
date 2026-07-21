@@ -1,12 +1,16 @@
 const INDIVIDUEL = {
   title: "Trouver sa place",
   text:
-    "8 semaines pour retrouver votre place dans le civil. 4 séances individuelles d'1h30 toutes les 2 semaines. Présentiel ou visioconférence.",
+    "3 mois pour retrouver votre place dans le civil. 6 séances individuelles d'1h15 toutes les 2 semaines, un point d'étape et un bilan de suivi inclus. Présentiel ou visioconférence.",
   steps: [
-    "Séance 1 : Diagnostic (attentes, situation, blocages).",
-    "Séance 2 : Identifier les freins identitaires.",
-    "Séance 3 : Clarifier votre identité civile.",
-    "Séance 4 : Plan d'action concret.",
+    "Séance 1 : Comprendre où j'en suis (diagnostic identitaire).",
+    "Séance 2 : Ce que l'armée a construit (distinguer l'institution de la personne).",
+    "Séance 3 : Traverser la rupture (deuil, peur, colère).",
+    "Point d'étape gratuit, 30 min, après la séance 3.",
+    "Séance 4 : Construire la nouvelle identité (valeurs, mission).",
+    "Séance 5 : Mettre en cohérence (feuille de route).",
+    "Séance 6 : Devenir autonome (bilan complet).",
+    "Bilan de suivi, 30 min, un mois après la fin.",
   ],
 };
 
@@ -35,7 +39,7 @@ export default function CommentJePeuxAider() {
 
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-14">
           <div>
-            <h3 className="text-gold text-xs font-semibold uppercase tracking-wide mb-5">
+            <h3 className="text-gold text-base sm:text-lg font-semibold uppercase tracking-wide mb-5">
               Accompagnement individuel
             </h3>
             <div className="bg-cream border border-gold/20 rounded-xl p-6 sm:p-7">
@@ -57,7 +61,7 @@ export default function CommentJePeuxAider() {
           </div>
 
           <div>
-            <h3 className="text-gold text-xs font-semibold uppercase tracking-wide mb-5">
+            <h3 className="text-gold text-base sm:text-lg font-semibold uppercase tracking-wide mb-5">
               Interventions collectives à destination des partenaires
             </h3>
             <div className="grid sm:grid-cols-1 gap-4">

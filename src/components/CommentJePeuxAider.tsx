@@ -21,11 +21,11 @@ const COLLECTIVES = [
   },
   {
     title: "Atelier demi-journée (3h)",
-    text: "Travail identitaire approfondi avec workbook.",
+    text: "Travail identitaire approfondi avec workbook, centré sur 5 des 10 défis identitaires.",
   },
   {
     title: "Programme complet 2 demi-journées",
-    text: "Accompagnement collectif structuré.",
+    text: "Accompagnement collectif structuré, parcours complet des 10 défis identitaires.",
   },
 ];
 

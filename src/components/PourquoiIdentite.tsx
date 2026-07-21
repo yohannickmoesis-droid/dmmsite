@@ -55,16 +55,16 @@ export default function PourquoiIdentite() {
           ))}
         </ul>
 
-        <div className="bg-[#E69419] rounded-2xl grid sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-cream/25 overflow-hidden">
+        <div className="bg-navy rounded-2xl grid sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-cream/15 overflow-hidden">
           {STATS.map((s) => (
             <div
               key={s.legende}
               className="px-6 py-10 sm:py-12 text-center flex flex-col items-center"
             >
-              <div className="font-display text-cream text-6xl sm:text-7xl tracking-wide leading-none mb-3">
+              <div className="font-display text-gold text-6xl sm:text-7xl tracking-wide leading-none mb-3">
                 {s.chiffre}
               </div>
-              <p className="text-cream text-sm sm:text-base leading-snug">
+              <p className="text-cream/85 text-sm sm:text-base leading-snug">
                 {s.legende}
               </p>
             </div>

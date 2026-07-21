@@ -11,8 +11,9 @@ export default function MonParcours() {
         <p className="text-navy/60 text-sm sm:text-base uppercase tracking-wide mb-10">
           Yohannick Moesis
           <br />
-          Ancien sous-officier parachutiste, aujourd&apos;hui accompagnant de
-          transitions
+          Ancien sous-officier parachutiste,
+          <br />
+          aujourd&apos;hui accompagnant de transitions
         </p>
 
         <a

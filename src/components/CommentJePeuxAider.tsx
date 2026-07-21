@@ -1,7 +1,7 @@
 const INDIVIDUEL = {
   title: "Trouver sa place",
   text:
-    "3 mois pour retrouver votre place dans le civil. 6 séances individuelles d'1h15 toutes les 2 semaines, un point d'étape et un bilan de suivi inclus. Présentiel ou visioconférence.",
+    "3 mois pour retrouver votre place dans le civil. 6 séances individuelles d'1h15 toutes les 2 semaines, un point d'étape et un bilan de suivi inclus.",
   steps: [
     "Séance 1 : Comprendre où j'en suis (diagnostic identitaire).",
     "Séance 2 : Ce que l'armée a construit (distinguer l'institution de la personne).",

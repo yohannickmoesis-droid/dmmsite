@@ -100,7 +100,7 @@ export default function MonParcoursPage() {
 
           <div className="order-1 md:order-2">
             <h2 className="font-display text-cream text-3xl sm:text-4xl tracking-wide mb-2">
-              Le parcours militaire
+              Mon parcours militaire
             </h2>
             <p className="text-gold text-sm sm:text-base uppercase tracking-wide mb-8">
               Armée de Terre
@@ -137,7 +137,7 @@ export default function MonParcoursPage() {
       <section className="bg-cream py-20 sm:py-28">
         <div className="max-w-[1440px] mx-auto px-5 sm:px-8">
           <h2 className="font-display text-navy text-3xl sm:text-4xl tracking-wide mb-2">
-            Le parcours civil
+            Mon parcours civil
           </h2>
           <p className="text-gold-dark text-sm sm:text-base uppercase tracking-wide mb-8">
             10 ans d&apos;accompagnement

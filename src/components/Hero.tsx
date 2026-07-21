@@ -76,17 +76,19 @@ export default function Hero() {
         <p className="text-gold font-semibold tracking-[0.15em] text-sm sm:text-base uppercase mb-8">
           Votre transition. Votre identité. Votre avenir.
         </p>
-        <p className="text-cream/90 text-lg sm:text-xl max-w-2xl italic leading-relaxed mb-3">
-          La reconversion ne se résume pas à trouver un emploi.
-        </p>
-        <p className="text-cream/90 text-lg sm:text-xl max-w-2xl italic leading-relaxed mb-10">
-          Elle consiste aussi à retrouver une{" "}
-          <span className="text-gold not-italic font-semibold">identité</span>
-          , un <span className="text-gold not-italic font-semibold">sens</span>{" "}
-          et une{" "}
-          <span className="text-gold not-italic font-semibold">place</span>{" "}
-          dans le monde civil.
-        </p>
+
+        <div className="border-l-2 border-gold pl-5 sm:pl-6 max-w-2xl mb-10">
+          <p className="text-cream/90 text-lg sm:text-xl leading-relaxed mb-2">
+            La reconversion ne se résume pas à trouver un emploi.
+          </p>
+          <p className="text-cream/90 text-lg sm:text-xl leading-relaxed">
+            Elle consiste aussi à retrouver une{" "}
+            <span className="text-gold font-semibold">identité</span>, un{" "}
+            <span className="text-gold font-semibold">sens</span> et une{" "}
+            <span className="text-gold font-semibold">place</span> dans le
+            monde civil.
+          </p>
+        </div>
 
         <p className="text-cream/70 text-sm sm:text-base uppercase tracking-wide mb-8">
           Un accompagnement dédié à votre transition militaire-civile

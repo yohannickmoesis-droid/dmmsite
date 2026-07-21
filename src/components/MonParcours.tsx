@@ -9,8 +9,10 @@ export default function MonParcours() {
         </p>
 
         <p className="text-navy/60 text-sm sm:text-base uppercase tracking-wide mb-10">
-          Yohannick Moesis — Ancien sous-officier parachutiste, aujourd&apos;hui
-          accompagnant de transitions
+          Yohannick Moesis
+          <br />
+          Ancien sous-officier parachutiste, aujourd&apos;hui accompagnant de
+          transitions
         </p>
 
         <a

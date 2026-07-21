@@ -10,7 +10,7 @@ const STAGES = [
     text: "Vous construisez de nouveaux repères sans avoir encore trouvé votre équilibre.",
   },
   {
-    title: "Vous avez déjà quitté l'institution",
+    title: "Vous avez quitté l'institution",
     time: "Le changement est derrière vous",
     text: "Vous avez du mal à trouver votre place, mais certaines questions restent ouvertes.",
   },

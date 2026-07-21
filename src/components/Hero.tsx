@@ -90,7 +90,7 @@ export default function Hero() {
           </p>
         </div>
 
-        <p className="text-cream/70 text-sm sm:text-base uppercase tracking-wide mb-8">
+        <p className="text-gold font-semibold text-sm sm:text-base uppercase tracking-wide mb-8">
           Un accompagnement dédié à votre transition militaire-civile
         </p>
 

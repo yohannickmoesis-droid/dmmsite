@@ -39,7 +39,7 @@ export default function CommentJePeuxAider() {
 
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-14">
           <div>
-            <h3 className="text-gold text-base sm:text-lg font-semibold uppercase tracking-wide mb-5">
+            <h3 className="text-gold text-base sm:text-lg font-semibold uppercase tracking-wide mb-5 text-center">
               Accompagnement individuel
             </h3>
             <div className="bg-cream border border-gold/20 rounded-xl p-6 sm:p-7">
@@ -61,7 +61,7 @@ export default function CommentJePeuxAider() {
           </div>
 
           <div>
-            <h3 className="text-gold text-base sm:text-lg font-semibold uppercase tracking-wide mb-5">
+            <h3 className="text-gold text-base sm:text-lg font-semibold uppercase tracking-wide mb-5 text-center">
               Interventions collectives à destination des partenaires
             </h3>
             <div className="grid sm:grid-cols-1 gap-4">

@@ -21,7 +21,7 @@ export default function PourquoiIdentite() {
           La reconversion ne se résume pas à trouver un emploi.
         </h2>
 
-        <p className="text-navy/85 text-base sm:text-lg leading-relaxed mb-4 max-w-3xl text-justify">
+        <p className="text-navy/70 text-base sm:text-lg leading-relaxed mb-4 max-w-3xl text-justify">
           Pendant des années, votre identité s&apos;est construite autour de :
         </p>
 
@@ -29,27 +29,27 @@ export default function PourquoiIdentite() {
           {REPERES.map((r) => (
             <li
               key={r}
-              className="flex items-start gap-4 text-navy/85 text-base sm:text-lg leading-relaxed"
+              className="flex items-start gap-4 text-navy/70 text-base sm:text-lg leading-relaxed"
             >
-              <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-navy shrink-0" />
+              <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-navy/50 shrink-0" />
               {r}
             </li>
           ))}
         </ul>
 
-        <p className="text-navy/85 text-base sm:text-lg leading-relaxed mb-8 max-w-3xl text-justify">
+        <p className="text-navy/70 text-base sm:text-lg leading-relaxed mb-8 max-w-3xl text-justify">
           Le jour où vous quittez l&apos;armée, ces trois repères changent
           simultanément et c&apos;est souvent là que commencent des questions que
           l&apos;emploi seul ne résout pas.
         </p>
 
-        <ul className="mb-16 space-y-3">
+        <ul className="mb-16 space-y-4">
           {QUESTIONS.map((q) => (
             <li
               key={q}
-              className="flex items-start gap-4 text-navy/85 text-base sm:text-lg leading-relaxed"
+              className="flex items-start gap-4 text-navy font-semibold text-lg sm:text-xl leading-relaxed"
             >
-              <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-navy shrink-0" />
+              <span className="mt-2.5 w-2 h-2 rounded-full bg-gold shrink-0" />
               {q}
             </li>
           ))}

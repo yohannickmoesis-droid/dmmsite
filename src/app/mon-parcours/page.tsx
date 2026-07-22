@@ -176,12 +176,12 @@ export default function MonParcoursPage() {
       <section className="bg-navy py-20 sm:py-28">
         <div className="max-w-[1440px] mx-auto px-5 sm:px-8">
           <h2 className="font-display text-cream text-4xl sm:text-5xl tracking-wide mb-4">
-            Prêt à mettre des mots sur ce que vous traversez&nbsp;?
+            Parlons de votre transition.
           </h2>
           <p className="text-cream/80 text-base leading-relaxed mb-8 max-w-2xl">
-            Chaque transition est unique. Si vous sentez que l&rsquo;emploi ne
-            suffit pas à retrouver votre place, commençons par un échange
-            simple pour clarifier votre situation.
+            Mon parcours militaire et civil m&apos;a appris une chose&nbsp;: on
+            ne traverse pas une reconversion seul. Si vous sentez que quelque
+            chose vous échappe encore, commençons par en parler.
           </p>
           <div className="text-center">
             <a

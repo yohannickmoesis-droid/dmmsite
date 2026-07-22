@@ -37,9 +37,27 @@ const QUESTIONS = [
   },
 ];
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: QUESTIONS.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.r,
+    },
+  })),
+};
+
 export default function QuestionsFrequentesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+
       <section className="bg-navy pt-32 pb-16 sm:pb-20">
         <div className="max-w-[1440px] mx-auto px-5 sm:px-8">
           <h1 className="font-display text-cream text-5xl sm:text-6xl tracking-wide">
@@ -68,12 +86,12 @@ export default function QuestionsFrequentesPage() {
       <section className="bg-navy py-20 sm:py-28">
         <div className="max-w-[1440px] mx-auto px-5 sm:px-8">
           <h2 className="font-display text-cream text-4xl sm:text-5xl tracking-wide mb-4">
-            Prêt à mettre des mots sur ce que vous traversez&nbsp;?
+            Une question sans réponse ici&nbsp;?
           </h2>
           <p className="text-cream/80 text-base leading-relaxed mb-8 max-w-2xl">
-            Chaque transition est unique. Si vous sentez que l&rsquo;emploi ne
-            suffit pas à retrouver votre place, commençons par un échange
-            simple pour clarifier votre situation.
+            Chaque situation est différente. Si vous avez encore des doutes
+            après cette lecture, le plus simple reste d&apos;en discuter
+            directement.
           </p>
           <div className="text-center">
             <a

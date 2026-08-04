@@ -39,7 +39,7 @@ export default function CommentJePeuxAider() {
   return (
     <section id="aide" className="bg-navy py-20 sm:py-24">
       <div className="max-w-[1440px] mx-auto px-5 sm:px-8">
-        <div className="h-px w-full mb-8 bg-gradient-to-r from-transparent via-[#C4A35A]/40 to-transparent" />
+        <div className="h-[3px] w-full mb-8 bg-gradient-to-r from-transparent via-[#C4A35A]/70 to-transparent" />
 
         <h2 className="font-display text-cream text-4xl sm:text-5xl tracking-wide mb-14 sm:mb-16">
           Comment je peux vous aider&nbsp;?

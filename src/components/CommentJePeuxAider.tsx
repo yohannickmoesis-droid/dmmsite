@@ -56,10 +56,6 @@ export default function CommentJePeuxAider() {
               border: "2px solid #C4A35A",
             }}
           >
-            <span className="inline-block self-start bg-gold/15 text-gold text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full mb-4">
-              Parcours phare
-            </span>
-
             <h3 className="text-cream text-xs font-semibold uppercase tracking-wide mb-1">
               Accompagnement individuel
             </h3>
@@ -101,7 +97,10 @@ export default function CommentJePeuxAider() {
           {/* Colonne collective */}
           <div
             className="rounded-xl p-6 sm:p-8 flex flex-col"
-            style={CARD_BASE}
+            style={{
+              ...CARD_BASE,
+              border: "2px solid #C4A35A",
+            }}
           >
             <h3 className="text-cream text-xs font-semibold uppercase tracking-wide mb-5">
               Interventions collectives à destination des partenaires
@@ -134,9 +133,9 @@ export default function CommentJePeuxAider() {
 
             <a
               href="/contact"
-              className="mt-6 inline-flex items-center justify-center rounded-full border border-gold px-6 py-3 text-sm font-semibold text-cream hover:bg-gold/10 transition-colors"
+              className="mt-6 inline-flex items-center justify-center rounded-full bg-gold px-6 py-3 text-sm font-semibold text-navy hover:bg-gold-light transition-colors"
             >
-              Échanger sur votre structure
+              Échanger sur mes interventions
             </a>
           </div>
         </div>

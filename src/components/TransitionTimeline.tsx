@@ -25,9 +25,9 @@ const STAGES: { title: string; time: string; text: string; Icon: LucideIcon }[] 
 
 export default function TransitionTimeline() {
   return (
-    <section className="bg-cream pt-20 sm:pt-28 pb-10 sm:pb-14">
+    <section className="bg-navy pt-20 sm:pt-28 pb-10 sm:pb-14">
       <div className="max-w-[1440px] mx-auto px-5 sm:px-8">
-        <h2 className="font-display text-navy text-4xl sm:text-5xl tracking-wide mb-14 sm:mb-16">
+        <h2 className="font-display text-cream text-4xl sm:text-5xl tracking-wide mb-14 sm:mb-16">
           Où en êtes-vous dans votre transition&nbsp;?
         </h2>
 
@@ -90,7 +90,7 @@ export default function TransitionTimeline() {
         <div className="text-center">
           <a
             href="/#aide"
-            className="inline-flex items-center justify-center rounded-full bg-navy px-8 py-3.5 text-sm font-semibold text-cream hover:bg-navy/85 transition-colors"
+            className="inline-flex items-center justify-center rounded-full bg-gold px-8 py-3.5 text-sm font-semibold text-navy hover:bg-gold-light transition-colors"
           >
             Voir mes offres
           </a>

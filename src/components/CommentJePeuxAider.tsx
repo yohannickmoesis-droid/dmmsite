@@ -29,6 +29,14 @@ const COLLECTIVES = [
   },
 ];
 
+const CARD_STYLE = {
+  border: "1.5px solid #C4A35A",
+  background: "rgba(30, 26, 100, 0.5)",
+  backdropFilter: "blur(8px)",
+  WebkitBackdropFilter: "blur(8px)",
+  boxShadow: "0 12px 32px rgba(196,163,90,0.18)",
+} as const;
+
 export default function CommentJePeuxAider() {
   return (
     <section id="aide" className="bg-navy py-20 sm:py-28">
@@ -42,17 +50,17 @@ export default function CommentJePeuxAider() {
             <h3 className="text-gold text-base sm:text-lg font-semibold uppercase tracking-wide mb-5 text-center">
               Accompagnement individuel
             </h3>
-            <div className="bg-cream border border-gold/20 rounded-xl p-6 sm:p-7">
-              <p className="text-gold-dark font-semibold text-sm mb-1.5">
+            <div className="rounded-xl p-6 sm:p-7" style={CARD_STYLE}>
+              <p className="text-gold font-semibold text-sm mb-1.5">
                 {INDIVIDUEL.title}
               </p>
-              <p className="text-navy/80 text-sm leading-relaxed mb-5 text-justify">
+              <p className="text-cream/80 text-sm leading-relaxed mb-5 text-justify">
                 {INDIVIDUEL.text}
               </p>
               <ul className="space-y-2">
                 {INDIVIDUEL.steps.map((s) => (
-                  <li key={s} className="flex items-start gap-3 text-navy/70 text-sm leading-relaxed">
-                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-gold-dark shrink-0" />
+                  <li key={s} className="flex items-start gap-3 text-cream/70 text-sm leading-relaxed">
+                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-gold shrink-0" />
                     {s}
                   </li>
                 ))}
@@ -68,12 +76,13 @@ export default function CommentJePeuxAider() {
               {COLLECTIVES.map((c) => (
                 <div
                   key={c.title}
-                  className="bg-cream border border-gold/20 rounded-xl p-5 sm:p-6"
+                  className="rounded-xl p-5 sm:p-6"
+                  style={CARD_STYLE}
                 >
-                  <p className="text-gold-dark font-semibold text-sm mb-1.5">
+                  <p className="text-gold font-semibold text-sm mb-1.5">
                     {c.title}
                   </p>
-                  <p className="text-navy/80 text-sm leading-relaxed">{c.text}</p>
+                  <p className="text-cream/80 text-sm leading-relaxed">{c.text}</p>
                 </div>
               ))}
             </div>

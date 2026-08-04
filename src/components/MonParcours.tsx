@@ -22,12 +22,12 @@ export default function MonParcours() {
           Je vous aide à trouver votre place.
         </p>
 
-        <p className="relative text-cream/60 text-sm sm:text-base uppercase tracking-wide mb-10">
-          Yohannick Moesis
+        <p className="relative text-sm sm:text-base uppercase tracking-wide mb-10">
+          <span className="text-gold">Yohannick Moesis</span>
           <br />
-          Ancien sous-officier parachutiste,
+          <span className="text-cream">Ancien sous-officier parachutiste,</span>
           <br />
-          aujourd&apos;hui accompagnant de transitions
+          <span className="text-cream">aujourd&apos;hui accompagnant de transitions</span>
         </p>
 
         <a

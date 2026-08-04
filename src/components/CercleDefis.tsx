@@ -6,7 +6,7 @@ import {
   ArrowLeftRight,
   Award,
   Compass,
-  Link2Off,
+  Unlink,
   Anchor,
   ShieldAlert,
   Flag,
@@ -76,7 +76,7 @@ const ICONS_MILITARITE: LucideIcon[] = [
   ArrowLeftRight,
   Award,
   Compass,
-  Link2Off,
+  Unlink,
 ];
 const ICONS_POLARISATION: LucideIcon[] = [
   Anchor,

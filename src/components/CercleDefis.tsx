@@ -118,7 +118,7 @@ function FlipCard({
           className="absolute inset-0 rounded-lg px-5 py-4 flex items-center gap-4"
           style={{
             backfaceVisibility: "hidden",
-            border: `2px solid ${accent}`,
+            border: `3px solid ${accent}`,
             background: CARD_BG,
           }}
         >
@@ -155,7 +155,7 @@ function FlipCard({
           style={{
             backfaceVisibility: "hidden",
             transform: "rotateY(180deg)",
-            border: `2px solid ${accent}`,
+            border: `3px solid ${accent}`,
             background: GOLD_SOFT,
           }}
         >
@@ -186,12 +186,15 @@ export default function CercleDefis() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10">
         <div>
           <div
-            className="text-base sm:text-lg uppercase tracking-wide font-bold mb-1"
+            className="text-base sm:text-lg uppercase tracking-wide font-bold mb-1 text-center"
             style={{ color: "#C4A35A" }}
           >
             La militarité
           </div>
-          <p className="text-cream/60 text-xs sm:text-sm leading-relaxed mb-4 max-w-sm">
+          <p
+            className="text-xs sm:text-sm leading-relaxed mb-4 text-center"
+            style={{ color: "rgba(239,231,221,0.85)" }}
+          >
             Ce que l&apos;armée a construit en vous&nbsp;: votre identité,
             vos repères, votre façon de voir le monde.
           </p>
@@ -210,12 +213,15 @@ export default function CercleDefis() {
 
         <div>
           <div
-            className="text-base sm:text-lg uppercase tracking-wide font-bold mb-1"
+            className="text-base sm:text-lg uppercase tracking-wide font-bold mb-1 text-center"
             style={{ color: "#D39318" }}
           >
             La polarisation
           </div>
-          <p className="text-cream/60 text-xs sm:text-sm leading-relaxed mb-4 max-w-sm">
+          <p
+            className="text-xs sm:text-sm leading-relaxed mb-4 text-center"
+            style={{ color: "rgba(239,231,221,0.85)" }}
+          >
             Le tiraillement entre ce que vous étiez dans l&apos;armée et ce
             que vous devez devenir dans le civil.
           </p>

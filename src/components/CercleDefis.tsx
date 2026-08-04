@@ -186,11 +186,15 @@ export default function CercleDefis() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10">
         <div>
           <div
-            className="text-base sm:text-lg uppercase tracking-wide font-bold mb-4"
+            className="text-base sm:text-lg uppercase tracking-wide font-bold mb-1"
             style={{ color: "#C4A35A" }}
           >
             La militarité
           </div>
+          <p className="text-cream/60 text-xs sm:text-sm leading-relaxed mb-4 max-w-sm">
+            Ce que l&apos;armée a construit en vous&nbsp;: votre identité,
+            vos repères, votre façon de voir le monde.
+          </p>
           <div className="flex flex-col gap-4">
             {MILITARITE.map((d, i) => (
               <FlipCard
@@ -206,11 +210,15 @@ export default function CercleDefis() {
 
         <div>
           <div
-            className="text-base sm:text-lg uppercase tracking-wide font-bold mb-4"
+            className="text-base sm:text-lg uppercase tracking-wide font-bold mb-1"
             style={{ color: "#D39318" }}
           >
             La polarisation
           </div>
+          <p className="text-cream/60 text-xs sm:text-sm leading-relaxed mb-4 max-w-sm">
+            Le tiraillement entre ce que vous étiez dans l&apos;armée et ce
+            que vous devez devenir dans le civil.
+          </p>
           <div className="flex flex-col gap-4">
             {POLARISATION.map((d, i) => (
               <FlipCard

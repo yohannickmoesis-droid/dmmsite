@@ -108,38 +108,39 @@ function FlipCard({
       style={{ perspective: "1000px" }}
     >
       <div
-        className="relative w-full min-h-[140px] sm:min-h-[160px] transition-transform duration-500"
+        className="relative w-full min-h-[92px] sm:min-h-[100px] transition-transform duration-500"
         style={{
           transformStyle: "preserve-3d",
           transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
         }}
       >
         <div
-          className="absolute inset-0 rounded-lg p-5 flex flex-col justify-center"
+          className="absolute inset-0 rounded-lg px-5 py-4 flex items-center gap-4"
           style={{
             backfaceVisibility: "hidden",
             border: `2px solid ${accent}`,
             background: CARD_BG,
           }}
         >
-          <div className="flex items-center gap-3 mb-3">
-            <span className="text-xs sm:text-sm font-bold" style={{ color: accent }}>
-              {numero}
-            </span>
-            <Icon size={32} strokeWidth={1.5} color={accent} />
-          </div>
+          <span
+            className="text-xs sm:text-sm font-bold shrink-0"
+            style={{ color: accent }}
+          >
+            {numero}
+          </span>
+          <Icon size={26} strokeWidth={1.5} color={accent} className="shrink-0" />
           <span
             style={{
               fontFamily: "'Bebas Neue', sans-serif",
               color: CREAM,
-              lineHeight: 1.35,
+              lineHeight: 1.2,
             }}
-            className="text-2xl sm:text-3xl font-bold uppercase block pr-6"
+            className="text-lg sm:text-xl font-bold uppercase flex-1"
           >
             {defi.titre}
           </span>
           <span
-            className="absolute bottom-3 right-4 text-lg font-bold leading-none"
+            className="text-lg font-bold shrink-0"
             style={{ color: accent }}
           >
             +
@@ -147,7 +148,7 @@ function FlipCard({
         </div>
 
         <div
-          className="absolute inset-0 rounded-lg p-5 flex items-center justify-start text-left"
+          className="absolute inset-0 rounded-lg px-5 py-4 flex items-center justify-start text-left"
           style={{
             backfaceVisibility: "hidden",
             transform: "rotateY(180deg)",
@@ -156,7 +157,7 @@ function FlipCard({
           }}
         >
           <span
-            style={{ color: NAVY, lineHeight: 1.6 }}
+            style={{ color: NAVY, lineHeight: 1.5 }}
             className="text-sm sm:text-base font-medium block"
           >
             {defi.desc}

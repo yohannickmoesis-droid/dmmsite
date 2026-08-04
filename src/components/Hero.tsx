@@ -70,44 +70,64 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 w-full max-w-[1440px] mx-auto px-5 sm:px-8 pb-16 sm:pb-24 pt-32">
-        <h1 className="font-display text-cream text-5xl sm:text-7xl lg:text-8xl leading-[0.95] tracking-wide mb-4 max-w-4xl">
-          De Militaire <span className="text-gold">à Monsieur</span>
-        </h1>
-        <p className="inline-flex items-center bg-gold text-navy font-semibold tracking-[0.15em] text-sm sm:text-base uppercase px-3 py-2 mb-8 leading-none">
-          Votre transition. Votre identité. Votre avenir.
-        </p>
+        <div className="flex flex-col lg:flex-row lg:items-end gap-10 lg:gap-14 mb-10">
+          <div className="flex-1">
+            <h1 className="font-display text-cream text-5xl sm:text-7xl lg:text-8xl leading-[0.95] tracking-wide mb-4 max-w-4xl">
+              De Militaire <span className="text-gold">à Monsieur</span>
+            </h1>
+            <p className="inline-flex items-center bg-gold text-navy font-semibold tracking-[0.15em] text-sm sm:text-base uppercase px-3 py-2 mb-8 leading-none">
+              Votre transition. Votre identité. Votre avenir.
+            </p>
 
-        <div className="border-l-2 border-gold pl-5 sm:pl-6 max-w-2xl mb-10">
-          <p className="text-cream/90 text-lg sm:text-xl leading-relaxed mb-2">
-            La reconversion ne se résume pas à trouver un emploi.
-          </p>
-          <p className="text-cream/90 text-lg sm:text-xl leading-relaxed">
-            Elle consiste aussi à retrouver une{" "}
-            <span className="text-gold font-semibold">identité</span>, un{" "}
-            <span className="text-gold font-semibold">sens</span> et une{" "}
-            <span className="text-gold font-semibold">place</span> dans le
-            monde civil.
-          </p>
-        </div>
-
-        <p className="text-gold font-semibold text-sm sm:text-base uppercase tracking-wide mb-8">
-          Un accompagnement dédié à votre transition militaire-civile
-        </p>
-
-        <div className="flex flex-wrap gap-x-10 sm:gap-x-0 gap-y-8 sm:divide-x sm:divide-cream/20">
-          {REPERES.map((item) => (
-            <div key={item.label} className="text-center sm:px-8 first:sm:pl-0">
-              <div className="text-cream/85 mb-3 flex justify-center">
-                <item.Icon />
-              </div>
-              <div className="font-display text-gold text-2xl sm:text-3xl tracking-wide leading-none mb-1">
-                {item.label}
-              </div>
-              <div className="text-cream/60 text-xs sm:text-sm uppercase tracking-wide">
-                {item.sub}
-              </div>
+            <div className="border-l-2 border-gold pl-5 sm:pl-6 max-w-2xl mb-10">
+              <p className="text-cream/90 text-lg sm:text-xl leading-relaxed mb-2">
+                La reconversion ne se résume pas à trouver un emploi.
+              </p>
+              <p className="text-cream/90 text-lg sm:text-xl leading-relaxed">
+                Elle consiste aussi à retrouver une{" "}
+                <span className="text-gold font-semibold">identité</span>, un{" "}
+                <span className="text-gold font-semibold">sens</span> et une{" "}
+                <span className="text-gold font-semibold">place</span> dans le
+                monde civil.
+              </p>
             </div>
-          ))}
+
+            <p className="text-gold font-semibold text-sm sm:text-base uppercase tracking-wide mb-8">
+              Un accompagnement dédié à votre transition militaire-civile
+            </p>
+
+            <div className="flex flex-wrap gap-x-10 sm:gap-x-0 gap-y-8 sm:divide-x sm:divide-cream/20">
+              {REPERES.map((item) => (
+                <div key={item.label} className="text-center sm:px-8 first:sm:pl-0">
+                  <div className="text-cream/85 mb-3 flex justify-center">
+                    <item.Icon />
+                  </div>
+                  <div className="font-display text-gold text-2xl sm:text-3xl tracking-wide leading-none mb-1">
+                    {item.label}
+                  </div>
+                  <div className="text-cream/60 text-xs sm:text-sm uppercase tracking-wide">
+                    {item.sub}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="shrink-0 w-full max-w-[260px] sm:max-w-[320px] mx-auto lg:mx-0">
+            <div
+              className="relative w-full aspect-[3/4] rounded-xl overflow-hidden"
+              style={{ border: "2px solid #C4A35A" }}
+            >
+              <Image
+                src="/images/portrait.jpg"
+                alt="Yohannick Moesis"
+                fill
+                sizes="(min-width: 1024px) 320px, 260px"
+                className="object-cover"
+                style={{ objectPosition: "center 15%" }}
+              />
+            </div>
+          </div>
         </div>
 
         <div className="h-[3px] w-full mt-10 bg-gradient-to-r from-transparent via-[#C4A35A]/70 to-transparent" />

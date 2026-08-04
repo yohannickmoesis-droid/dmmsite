@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type Defi = {
   titre: string;
@@ -62,9 +62,23 @@ const GROUPS = [
 
 export default function CercleDefis() {
   const [actif, setActif] = useState<number | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(e.target as Node)
+      ) {
+        setActif(null);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
-    <div className="w-full max-w-4xl mx-auto">
+    <div ref={containerRef} className="w-full max-w-6xl mx-auto">
       <div className="text-center mb-10">
         <div
           style={{ fontFamily: "'Bebas Neue', sans-serif", color: CREAM }}
@@ -82,7 +96,7 @@ export default function CercleDefis() {
           >
             {group.label}
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 items-start">
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 items-start">
             {group.items.map((d, idx) => {
               const globalIndex = group.offset + idx;
               const isActive = actif === globalIndex;
@@ -91,9 +105,7 @@ export default function CercleDefis() {
                   key={d.titre}
                   type="button"
                   onClick={() => setActif(isActive ? null : globalIndex)}
-                  className={`text-left rounded-lg p-4 transition-all duration-200 ${
-                    isActive ? "col-span-2 sm:col-span-2" : "col-span-1"
-                  }`}
+                  className="text-left rounded-lg p-5 transition-all duration-200"
                   style={{
                     borderLeft: `3px solid ${group.accent}`,
                     background: isActive
@@ -106,7 +118,7 @@ export default function CercleDefis() {
                       fontFamily: "'Bebas Neue', sans-serif",
                       color: CREAM,
                     }}
-                    className="text-base sm:text-lg font-semibold uppercase leading-tight block"
+                    className="text-lg sm:text-xl font-semibold uppercase leading-tight block"
                   >
                     {d.titre}
                   </span>

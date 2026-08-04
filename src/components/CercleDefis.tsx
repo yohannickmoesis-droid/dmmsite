@@ -135,13 +135,16 @@ function FlipCard({
               color: CREAM,
               lineHeight: 1.2,
             }}
-            className="text-lg sm:text-xl font-bold uppercase flex-1"
+            className="text-lg sm:text-xl font-bold uppercase flex-1 text-left"
           >
             {defi.titre}
           </span>
           <span
-            className="text-lg font-bold shrink-0"
-            style={{ color: accent }}
+            className="text-lg font-bold shrink-0 transition-transform duration-500"
+            style={{
+              color: accent,
+              transform: flipped ? "rotate(45deg)" : "rotate(0deg)",
+            }}
           >
             +
           </span>

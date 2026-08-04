@@ -221,7 +221,14 @@ export default function CercleDefis() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse at 50% 30%, rgba(196,163,90,0.10), transparent 60%)",
+            "radial-gradient(ellipse 70% 55% at 50% 25%, rgba(212,175,110,0.16), transparent 65%)",
+        }}
+      />
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse 90% 80% at 50% 60%, transparent 40%, rgba(6,4,40,0.45) 100%)",
         }}
       />
 

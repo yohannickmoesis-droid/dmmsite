@@ -10,7 +10,7 @@ export default function MonParcours() {
             fontSize: "8rem",
             lineHeight: 1,
             color: "#C4A35A",
-            opacity: 0.3,
+            opacity: 0.6,
           }}
         >
           &ldquo;

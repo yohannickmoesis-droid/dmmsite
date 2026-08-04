@@ -4,7 +4,7 @@ import { useState } from "react";
 import {
   UserX,
   ArrowLeftRight,
-  BadgeHelp,
+  Award,
   Compass,
   Link2Off,
   Anchor,
@@ -74,7 +74,7 @@ const NAVY = "#0E0857";
 const ICONS_MILITARITE: LucideIcon[] = [
   UserX,
   ArrowLeftRight,
-  BadgeHelp,
+  Award,
   Compass,
   Link2Off,
 ];
@@ -128,14 +128,14 @@ function FlipCard({
           >
             {numero}
           </span>
-          <Icon size={26} strokeWidth={1.5} color={accent} className="shrink-0" />
+          <Icon size={30} strokeWidth={2.25} color={accent} className="shrink-0" />
           <span
             style={{
               fontFamily: "'Bebas Neue', sans-serif",
               color: CREAM,
               lineHeight: 1.2,
             }}
-            className="text-lg sm:text-xl font-bold uppercase flex-1 text-left"
+            className="text-lg sm:text-xl font-bold uppercase tracking-wide flex-1 text-left"
           >
             {defi.titre}
           </span>

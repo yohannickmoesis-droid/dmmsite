@@ -1,6 +1,19 @@
 "use client";
 
 import { useState } from "react";
+import {
+  UserX,
+  ArrowLeftRight,
+  BadgeHelp,
+  Compass,
+  Link2Off,
+  Anchor,
+  ShieldAlert,
+  Flag,
+  Route,
+  Handshake,
+  type LucideIcon,
+} from "lucide-react";
 
 type Defi = {
   titre: string;
@@ -58,116 +71,19 @@ const CARD_BG = "#171057";
 const GOLD_SOFT = "#F0C75D";
 const NAVY = "#0E0857";
 
-const ICON_PROPS = {
-  width: 24,
-  height: 24,
-  viewBox: "0 0 24 24",
-  fill: "none",
-  stroke: "currentColor",
-  strokeWidth: 1.5,
-  strokeLinecap: "round" as const,
-  strokeLinejoin: "round" as const,
-};
-
-function IconIdentite() {
-  return (
-    <svg {...ICON_PROPS}>
-      <circle cx="12" cy="7" r="3.5" strokeDasharray="2 2" />
-      <path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6" strokeDasharray="2 2" />
-    </svg>
-  );
-}
-function IconChocCulturel() {
-  return (
-    <svg {...ICON_PROPS}>
-      <path d="M3 8h7M10 8l-3-3M10 8l-3 3" />
-      <path d="M21 16h-7M14 16l3-3M14 16l3 3" />
-    </svg>
-  );
-}
-function IconLegitimite() {
-  return (
-    <svg {...ICON_PROPS}>
-      <path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" />
-      <path d="M12 9.5c1 0 1.6.6 1.6 1.3 0 1.2-1.6 1.2-1.6 2.5" />
-      <circle cx="12" cy="15.5" r="0.15" fill="currentColor" />
-    </svg>
-  );
-}
-function IconPerteSens() {
-  return (
-    <svg {...ICON_PROPS}>
-      <circle cx="12" cy="12" r="8" />
-      <path d="M14.5 8.5l-2 5-4 2.5 2-5 4-2.5z" />
-    </svg>
-  );
-}
-function IconPerteCollectif() {
-  return (
-    <svg {...ICON_PROPS}>
-      <rect x="3" y="10" width="6" height="4" rx="2" />
-      <rect x="15" y="4" width="6" height="4" rx="2" transform="rotate(20 18 6)" />
-      <path d="M9 12h3" strokeDasharray="1.5 2" />
-    </svg>
-  );
-}
-function IconValeurs() {
-  return (
-    <svg {...ICON_PROPS}>
-      <circle cx="12" cy="6" r="2" />
-      <path d="M12 8v8M8 12h8M9 20h6M12 16v4" />
-    </svg>
-  );
-}
-function IconPeur() {
-  return (
-    <svg {...ICON_PROPS}>
-      <path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" />
-      <path d="M12 3v18M9 9l3 2 3-2" />
-    </svg>
-  );
-}
-function IconDeuilInstitution() {
-  return (
-    <svg {...ICON_PROPS}>
-      <path d="M6 3v18" />
-      <path d="M6 4l6 2-6 2v-4z" opacity="0.5" />
-      <path d="M6 9l7 2.5-7 2.5V9z" />
-    </svg>
-  );
-}
-function IconEvitement() {
-  return (
-    <svg {...ICON_PROPS}>
-      <path d="M3 6h6v6H3zM15 6h6v6h-6zM9 9h6M18 12v3a3 3 0 0 1-3 3H9" />
-      <path d="M11 16l-2 2 2 2" />
-    </svg>
-  );
-}
-function IconAccompagne() {
-  return (
-    <svg {...ICON_PROPS}>
-      <path d="M3 13l4-1 3 1.5" />
-      <path d="M21 13l-4-1-3 1.5" />
-      <path d="M10 13.5l1 1.2c.6.7 1.8.7 2.4 0l1-1.2" />
-      <path d="M7 12l3 1.5M17 12l-3 1.5" />
-    </svg>
-  );
-}
-
-const ICONS_MILITARITE = [
-  IconIdentite,
-  IconChocCulturel,
-  IconLegitimite,
-  IconPerteSens,
-  IconPerteCollectif,
+const ICONS_MILITARITE: LucideIcon[] = [
+  UserX,
+  ArrowLeftRight,
+  BadgeHelp,
+  Compass,
+  Link2Off,
 ];
-const ICONS_POLARISATION = [
-  IconValeurs,
-  IconPeur,
-  IconDeuilInstitution,
-  IconEvitement,
-  IconAccompagne,
+const ICONS_POLARISATION: LucideIcon[] = [
+  Anchor,
+  ShieldAlert,
+  Flag,
+  Route,
+  Handshake,
 ];
 
 function FlipCard({
@@ -179,7 +95,7 @@ function FlipCard({
   defi: Defi;
   accent: string;
   numero: string;
-  Icon: () => React.JSX.Element;
+  Icon: LucideIcon;
 }) {
   const [flipped, setFlipped] = useState(false);
 
@@ -192,7 +108,7 @@ function FlipCard({
       style={{ perspective: "1000px" }}
     >
       <div
-        className="relative w-full min-h-[130px] sm:min-h-[150px] transition-transform duration-500"
+        className="relative w-full min-h-[140px] sm:min-h-[160px] transition-transform duration-500"
         style={{
           transformStyle: "preserve-3d",
           transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
@@ -206,13 +122,11 @@ function FlipCard({
             background: CARD_BG,
           }}
         >
-          <div className="flex items-center gap-2 mb-2">
+          <div className="flex items-center gap-3 mb-3">
             <span className="text-xs sm:text-sm font-bold" style={{ color: accent }}>
               {numero}
             </span>
-            <span style={{ color: accent }}>
-              <Icon />
-            </span>
+            <Icon size={32} strokeWidth={1.5} color={accent} />
           </div>
           <span
             style={{

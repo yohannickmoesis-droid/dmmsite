@@ -16,23 +16,27 @@ const INDIVIDUEL = {
 
 const COLLECTIVES = [
   {
-    title: "Sensibilisation 1h30",
+    title: "Sensibilisation",
+    duree: "1h30",
     text: "Sensibilisation aux défis identitaires de la transition.",
   },
   {
-    title: "Atelier demi-journée (3h)",
+    title: "Atelier thématique",
+    duree: "3h",
     text: "Travail identitaire approfondi avec workbook, centré sur 5 des 10 défis identitaires.",
   },
   {
-    title: "Programme complet 2 demi-journées",
+    title: "Programme complet",
+    duree: "2 demi-journées",
     text: "Accompagnement collectif structuré, parcours complet des 10 défis identitaires.",
   },
 ];
 
-const DARK_CARD_STYLE = {
-  border: "1.5px solid #C4A35A",
-  background: "#161066",
-  boxShadow: "0 12px 32px rgba(196,163,90,0.18)",
+const CARD_BASE = {
+  background: "rgba(255,255,255,0.05)",
+  backdropFilter: "blur(8px)",
+  WebkitBackdropFilter: "blur(8px)",
+  border: "1px solid rgba(196,163,90,0.3)",
 } as const;
 
 export default function CommentJePeuxAider() {
@@ -43,63 +47,97 @@ export default function CommentJePeuxAider() {
           Comment je peux vous aider&nbsp;?
         </h2>
 
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-14">
-          <div>
-            <h3 className="text-gold text-base sm:text-lg font-semibold uppercase tracking-wide mb-5 text-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
+          {/* Colonne individuelle — parcours phare */}
+          <div
+            className="rounded-xl p-6 sm:p-8 flex flex-col"
+            style={{
+              ...CARD_BASE,
+              border: "2px solid #C4A35A",
+            }}
+          >
+            <span className="inline-block self-start bg-gold/15 text-gold text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full mb-4">
+              Parcours phare
+            </span>
+
+            <h3 className="text-cream text-xs font-semibold uppercase tracking-wide mb-1">
               Accompagnement individuel
             </h3>
-            <div
-              className="rounded-xl p-6 sm:p-7"
-              style={{
-                background: "#EFE7DD",
-                border: "1.5px solid #C4A35A",
-                boxShadow: "0 12px 32px rgba(196,163,90,0.18)",
-              }}
-            >
-              <p className="text-gold-dark font-semibold text-sm mb-1.5">
-                {INDIVIDUEL.title}
-              </p>
-              <p className="text-navy/80 text-sm leading-relaxed mb-5 text-justify">
-                {INDIVIDUEL.text}
-              </p>
+            <p className="text-gold font-semibold text-lg mb-2">
+              {INDIVIDUEL.title}
+            </p>
+            <p className="text-cream/75 text-sm leading-relaxed mb-5 text-justify">
+              {INDIVIDUEL.text}
+            </p>
 
-              <details className="group">
-                <summary className="cursor-pointer list-none flex items-center justify-between text-gold-dark font-semibold text-sm py-2 border-t border-navy/10">
-                  <span>Voir le déroulé des 6 séances</span>
-                  <span className="transition-transform duration-200 group-open:rotate-180">
-                    ▾
-                  </span>
-                </summary>
-                <ul className="space-y-2 pt-3">
-                  {INDIVIDUEL.steps.map((s) => (
-                    <li key={s} className="flex items-start gap-3 text-navy/70 text-sm leading-relaxed">
-                      <span className="mt-2 w-1.5 h-1.5 rounded-full bg-gold-dark shrink-0" />
-                      {s}
-                    </li>
-                  ))}
-                </ul>
-              </details>
-            </div>
+            <details className="group mb-6">
+              <summary className="cursor-pointer list-none flex items-center justify-between text-gold font-semibold text-sm py-2.5 border-t border-gold/20">
+                <span>Voir le déroulé des 6 séances</span>
+                <span className="transition-transform duration-200 group-open:rotate-180">
+                  ▾
+                </span>
+              </summary>
+              <ul className="space-y-2 pt-3">
+                {INDIVIDUEL.steps.map((s) => (
+                  <li
+                    key={s}
+                    className="flex items-start gap-3 text-cream/70 text-sm leading-relaxed"
+                  >
+                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-gold shrink-0" />
+                    {s}
+                  </li>
+                ))}
+              </ul>
+            </details>
+
+            <a
+              href="/contact"
+              className="mt-auto inline-flex items-center justify-center rounded-full bg-gold px-6 py-3 text-sm font-semibold text-navy hover:bg-gold-light transition-colors"
+            >
+              Me contacter
+            </a>
           </div>
 
-          <div>
-            <h3 className="text-gold text-base sm:text-lg font-semibold uppercase tracking-wide mb-5 text-center">
+          {/* Colonne collective */}
+          <div
+            className="rounded-xl p-6 sm:p-8 flex flex-col"
+            style={CARD_BASE}
+          >
+            <h3 className="text-cream text-xs font-semibold uppercase tracking-wide mb-5">
               Interventions collectives à destination des partenaires
             </h3>
-            <div className="grid sm:grid-cols-1 gap-4">
+
+            <div className="flex flex-col gap-4 flex-1">
               {COLLECTIVES.map((c) => (
                 <div
                   key={c.title}
-                  className="rounded-xl p-5 sm:p-6"
-                  style={DARK_CARD_STYLE}
+                  className="rounded-lg p-5"
+                  style={{
+                    background: "rgba(255,255,255,0.04)",
+                    border: "1px solid rgba(196,163,90,0.2)",
+                  }}
                 >
-                  <p className="text-gold font-semibold text-sm mb-1.5">
-                    {c.title}
+                  <div className="flex items-baseline justify-between gap-3 mb-1.5">
+                    <p className="text-cream font-semibold text-sm">
+                      {c.title}
+                    </p>
+                    <span className="text-gold text-xs font-semibold uppercase tracking-wide shrink-0">
+                      {c.duree}
+                    </span>
+                  </div>
+                  <p className="text-cream/70 text-sm leading-relaxed">
+                    {c.text}
                   </p>
-                  <p className="text-cream/80 text-sm leading-relaxed">{c.text}</p>
                 </div>
               ))}
             </div>
+
+            <a
+              href="/contact"
+              className="mt-6 inline-flex items-center justify-center rounded-full border border-gold px-6 py-3 text-sm font-semibold text-cream hover:bg-gold/10 transition-colors"
+            >
+              Échanger sur votre structure
+            </a>
           </div>
         </div>
       </div>

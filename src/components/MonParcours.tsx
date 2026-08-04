@@ -4,13 +4,13 @@ export default function MonParcours() {
       <div className="max-w-3xl mx-auto px-5 sm:px-8 text-center relative">
         <span
           aria-hidden="true"
-          className="absolute -top-6 sm:-top-10 left-1/2 -translate-x-1/2 select-none pointer-events-none"
+          className="absolute -top-20 sm:-top-28 left-1/2 -translate-x-1/2 select-none pointer-events-none"
           style={{
             fontFamily: "'Bebas Neue', sans-serif",
-            fontSize: "12rem",
+            fontSize: "8rem",
             lineHeight: 1,
             color: "#C4A35A",
-            opacity: 0.35,
+            opacity: 0.3,
           }}
         >
           &ldquo;

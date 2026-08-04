@@ -29,18 +29,18 @@ const COLLECTIVES = [
   },
 ];
 
-const CARD_STYLE = {
+const DARK_CARD_STYLE = {
   border: "1.5px solid #C4A35A",
-  background: "rgba(30, 26, 100, 0.5)",
-  backdropFilter: "blur(8px)",
-  WebkitBackdropFilter: "blur(8px)",
+  background: "#161066",
   boxShadow: "0 12px 32px rgba(196,163,90,0.18)",
 } as const;
 
 export default function CommentJePeuxAider() {
   return (
-    <section id="aide" className="bg-navy py-20 sm:py-28">
+    <section id="aide" className="bg-navy py-20 sm:py-24">
       <div className="max-w-[1440px] mx-auto px-5 sm:px-8">
+        <div className="h-px w-full mb-8 bg-gradient-to-r from-transparent via-[#C4A35A]/40 to-transparent" />
+
         <h2 className="font-display text-cream text-4xl sm:text-5xl tracking-wide mb-14 sm:mb-16">
           Comment je peux vous aider&nbsp;?
         </h2>
@@ -50,17 +50,24 @@ export default function CommentJePeuxAider() {
             <h3 className="text-gold text-base sm:text-lg font-semibold uppercase tracking-wide mb-5 text-center">
               Accompagnement individuel
             </h3>
-            <div className="rounded-xl p-6 sm:p-7" style={CARD_STYLE}>
-              <p className="text-gold font-semibold text-sm mb-1.5">
+            <div
+              className="rounded-xl p-6 sm:p-7"
+              style={{
+                background: "#EFE7DD",
+                border: "1.5px solid #C4A35A",
+                boxShadow: "0 12px 32px rgba(196,163,90,0.18)",
+              }}
+            >
+              <p className="text-gold-dark font-semibold text-sm mb-1.5">
                 {INDIVIDUEL.title}
               </p>
-              <p className="text-cream/80 text-sm leading-relaxed mb-5 text-justify">
+              <p className="text-navy/80 text-sm leading-relaxed mb-5 text-justify">
                 {INDIVIDUEL.text}
               </p>
               <ul className="space-y-2">
                 {INDIVIDUEL.steps.map((s) => (
-                  <li key={s} className="flex items-start gap-3 text-cream/70 text-sm leading-relaxed">
-                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-gold shrink-0" />
+                  <li key={s} className="flex items-start gap-3 text-navy/70 text-sm leading-relaxed">
+                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-gold-dark shrink-0" />
                     {s}
                   </li>
                 ))}
@@ -77,7 +84,7 @@ export default function CommentJePeuxAider() {
                 <div
                   key={c.title}
                   className="rounded-xl p-5 sm:p-6"
-                  style={CARD_STYLE}
+                  style={DARK_CARD_STYLE}
                 >
                   <p className="text-gold font-semibold text-sm mb-1.5">
                     {c.title}

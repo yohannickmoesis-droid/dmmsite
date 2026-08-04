@@ -25,8 +25,10 @@ const STAGES: { title: string; time: string; text: string; Icon: LucideIcon }[] 
 
 export default function TransitionTimeline() {
   return (
-    <section className="bg-navy pt-20 sm:pt-28 pb-10 sm:pb-14">
+    <section className="bg-navy py-20 sm:py-24">
       <div className="max-w-[1440px] mx-auto px-5 sm:px-8">
+        <div className="h-px w-full mb-8 bg-gradient-to-r from-transparent via-[#C4A35A]/40 to-transparent" />
+
         <h2 className="font-display text-cream text-4xl sm:text-5xl tracking-wide mb-14 sm:mb-16">
           Où en êtes-vous dans votre transition&nbsp;?
         </h2>
@@ -47,9 +49,7 @@ export default function TransitionTimeline() {
               className="relative rounded-xl p-8 sm:p-10 flex flex-col items-center text-center min-h-[240px] sm:min-h-[270px] overflow-hidden"
               style={{
                 border: "1.5px solid #C4A35A",
-                background: "rgba(30, 26, 100, 0.5)",
-                backdropFilter: "blur(8px)",
-                WebkitBackdropFilter: "blur(8px)",
+                background: "#161066",
                 boxShadow: "0 12px 32px rgba(196,163,90,0.18)",
               }}
             >

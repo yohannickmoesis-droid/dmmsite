@@ -3,8 +3,10 @@ import DiagnosticQuiz from "./DiagnosticQuiz";
 
 export default function TenDefis() {
   return (
-    <section id="defis" className="bg-navy py-20 sm:py-28">
+    <section id="defis" className="bg-navy py-20 sm:py-24">
       <div className="max-w-[1440px] mx-auto px-5 sm:px-8">
+        <div className="h-px w-full mb-8 bg-gradient-to-r from-transparent via-[#C4A35A]/40 to-transparent" />
+
         <h2 className="font-display text-cream text-4xl sm:text-5xl tracking-wide mb-5">
           Les 10 défis invisibles de la reconversion
         </h2>

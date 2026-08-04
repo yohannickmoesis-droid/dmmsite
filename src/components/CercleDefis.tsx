@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 
 type Defi = {
   titre: string;
@@ -55,30 +55,64 @@ const POLARISATION: Defi[] = [
 
 const CREAM = "#EFE7DD";
 
-const GROUPS = [
-  { label: "La militarité", items: MILITARITE, offset: 0, accent: "#C4A35A" },
-  { label: "La polarisation", items: POLARISATION, offset: 5, accent: "#D39318" },
-];
-
-export default function CercleDefis() {
-  const [actif, setActif] = useState<number | null>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    function handleClickOutside(e: MouseEvent) {
-      if (
-        containerRef.current &&
-        !containerRef.current.contains(e.target as Node)
-      ) {
-        setActif(null);
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+function FlipCard({ defi, accent }: { defi: Defi; accent: string }) {
+  const [flipped, setFlipped] = useState(false);
 
   return (
-    <div ref={containerRef} className="w-full max-w-6xl mx-auto">
+    <div
+      onMouseEnter={() => setFlipped(true)}
+      onMouseLeave={() => setFlipped(false)}
+      onClick={() => setFlipped((v) => !v)}
+      className="cursor-pointer"
+      style={{ perspective: "1000px" }}
+    >
+      <div
+        className="relative w-full min-h-[100px] sm:min-h-[110px] transition-transform duration-500"
+        style={{
+          transformStyle: "preserve-3d",
+          transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
+        }}
+      >
+        <div
+          className="absolute inset-0 rounded-lg p-5 flex items-center"
+          style={{
+            backfaceVisibility: "hidden",
+            borderLeft: `3px solid ${accent}`,
+            background: "rgba(239,231,221,0.08)",
+          }}
+        >
+          <span
+            style={{ fontFamily: "'Bebas Neue', sans-serif", color: CREAM }}
+            className="text-lg sm:text-xl font-semibold uppercase leading-tight block"
+          >
+            {defi.titre}
+          </span>
+        </div>
+
+        <div
+          className="absolute inset-0 rounded-lg p-5 flex items-center"
+          style={{
+            backfaceVisibility: "hidden",
+            transform: "rotateY(180deg)",
+            borderLeft: `3px solid ${accent}`,
+            background: "rgba(196,163,90,0.18)",
+          }}
+        >
+          <span
+            style={{ color: "rgba(239,231,221,0.92)" }}
+            className="text-sm sm:text-base leading-relaxed block"
+          >
+            {defi.desc}
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function CercleDefis() {
+  return (
+    <div className="w-full max-w-5xl mx-auto">
       <div className="text-center mb-10">
         <div
           style={{ fontFamily: "'Bebas Neue', sans-serif", color: CREAM }}
@@ -88,54 +122,35 @@ export default function CercleDefis() {
         </div>
       </div>
 
-      {GROUPS.map((group) => (
-        <div key={group.label} className="mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10">
+        <div>
           <div
-            className="text-xs uppercase tracking-wide font-bold mb-3"
-            style={{ color: group.accent }}
+            className="text-base sm:text-lg uppercase tracking-wide font-bold mb-4"
+            style={{ color: "#C4A35A" }}
           >
-            {group.label}
+            La militarité
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 items-start">
-            {group.items.map((d, idx) => {
-              const globalIndex = group.offset + idx;
-              const isActive = actif === globalIndex;
-              return (
-                <button
-                  key={d.titre}
-                  type="button"
-                  onClick={() => setActif(isActive ? null : globalIndex)}
-                  className="text-left rounded-lg p-5 transition-all duration-200"
-                  style={{
-                    borderLeft: `3px solid ${group.accent}`,
-                    background: isActive
-                      ? "rgba(196,163,90,0.18)"
-                      : "rgba(239,231,221,0.08)",
-                  }}
-                >
-                  <span
-                    style={{
-                      fontFamily: "'Bebas Neue', sans-serif",
-                      color: CREAM,
-                    }}
-                    className="text-lg sm:text-xl font-semibold uppercase leading-tight block"
-                  >
-                    {d.titre}
-                  </span>
-                  {isActive && (
-                    <span
-                      style={{ color: "rgba(239,231,221,0.9)" }}
-                      className="block text-sm sm:text-base leading-relaxed mt-3 normal-case"
-                    >
-                      {d.desc}
-                    </span>
-                  )}
-                </button>
-              );
-            })}
+          <div className="flex flex-col gap-4">
+            {MILITARITE.map((d) => (
+              <FlipCard key={d.titre} defi={d} accent="#C4A35A" />
+            ))}
           </div>
         </div>
-      ))}
+
+        <div>
+          <div
+            className="text-base sm:text-lg uppercase tracking-wide font-bold mb-4"
+            style={{ color: "#D39318" }}
+          >
+            La polarisation
+          </div>
+          <div className="flex flex-col gap-4">
+            {POLARISATION.map((d) => (
+              <FlipCard key={d.titre} defi={d} accent="#D39318" />
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

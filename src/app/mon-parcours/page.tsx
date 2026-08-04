@@ -79,7 +79,7 @@ export default function MonParcoursPage() {
             <p className="font-semibold text-navy pt-2">
               Je ne vous aide pas à trouver un emploi.
               <br />
-              Je vous aide à retrouver votre place.
+              Je vous aide à trouver votre place.
             </p>
           </div>
         </div>

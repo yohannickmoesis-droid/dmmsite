@@ -5,7 +5,7 @@ export default function MonParcours() {
         <p className="font-display text-navy text-3xl sm:text-4xl md:text-5xl leading-tight tracking-wide mb-6">
           Je ne vous aide pas à trouver un emploi.
           <br />
-          Je vous aide à retrouver votre place.
+          Je vous aide à trouver votre place.
         </p>
 
         <p className="text-navy/60 text-sm sm:text-base uppercase tracking-wide mb-10">

@@ -67,9 +67,9 @@ const POLARISATION: Defi[] = [
 ];
 
 const CREAM = "#EFE7DD";
-const CARD_BG = "#171057";
 const GOLD_SOFT = "#F0C75D";
 const NAVY = "#0E0857";
+const ICON_GRADIENT_ID = "cercleDefisIconGradient";
 
 const ICONS_MILITARITE: LucideIcon[] = [
   UserX,
@@ -115,11 +115,14 @@ function FlipCard({
         }}
       >
         <div
-          className="absolute inset-0 rounded-lg px-5 py-4 flex items-center gap-4 overflow-hidden transition-shadow duration-300 group-hover:shadow-lg"
+          className="absolute inset-0 rounded-lg px-5 py-4 flex items-center gap-4 overflow-hidden transition-shadow duration-300"
           style={{
             backfaceVisibility: "hidden",
-            border: `3px solid ${accent}`,
-            background: CARD_BG,
+            border: `1.5px solid ${accent}`,
+            background: "rgba(30, 26, 100, 0.5)",
+            backdropFilter: "blur(8px)",
+            WebkitBackdropFilter: "blur(8px)",
+            boxShadow: "0 12px 32px rgba(196,163,90,0.18)",
           }}
         >
           <div
@@ -142,7 +145,11 @@ function FlipCard({
               background: `${accent}26`,
             }}
           >
-            <Icon size={24} strokeWidth={2.25} color={accent} />
+            <Icon
+              size={24}
+              strokeWidth={2.25}
+              color={`url(#${ICON_GRADIENT_ID})`}
+            />
           </div>
           <span
             style={{
@@ -170,8 +177,9 @@ function FlipCard({
           style={{
             backfaceVisibility: "hidden",
             transform: "rotateY(180deg)",
-            border: `3px solid ${accent}`,
+            border: `1.5px solid ${accent}`,
             background: GOLD_SOFT,
+            boxShadow: "0 12px 32px rgba(196,163,90,0.18)",
           }}
         >
           <span
@@ -188,68 +196,98 @@ function FlipCard({
 
 export default function CercleDefis() {
   return (
-    <div className="w-full max-w-5xl mx-auto">
-      <div className="text-center mb-10">
-        <div
-          style={{ fontFamily: "'Bebas Neue', sans-serif", color: CREAM }}
-          className="text-5xl sm:text-6xl uppercase tracking-wide"
-        >
-          Mon identité
-        </div>
-      </div>
+    <div className="relative w-full max-w-5xl mx-auto">
+      {/* Définition du dégradé utilisé par le trait des icônes */}
+      <svg width="0" height="0" style={{ position: "absolute" }}>
+        <defs>
+          <linearGradient id={ICON_GRADIENT_ID} x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#FDE047" />
+            <stop offset="100%" stopColor="#D97706" />
+          </linearGradient>
+        </defs>
+      </svg>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10">
-        <div>
+      {/* Texture de fond subtile : grille pointillée + halo radial */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle, rgba(239,231,221,0.35) 1px, transparent 1px)",
+          backgroundSize: "22px 22px",
+          opacity: 0.06,
+        }}
+      />
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse at 50% 30%, rgba(196,163,90,0.10), transparent 60%)",
+        }}
+      />
+
+      <div className="relative">
+        <div className="text-center mb-10">
           <div
-            className="text-base sm:text-lg uppercase tracking-wide font-bold mb-1 text-center"
-            style={{ color: "#C4A35A" }}
+            style={{ fontFamily: "'Bebas Neue', sans-serif", color: CREAM }}
+            className="text-5xl sm:text-6xl uppercase tracking-wide"
           >
-            La militarité
-          </div>
-          <p
-            className="text-xs sm:text-sm leading-relaxed mb-4 text-center"
-            style={{ color: "rgba(239,231,221,0.85)" }}
-          >
-            Ce que l&apos;armée a construit en vous&nbsp;: votre identité,
-            vos repères, votre façon de voir le monde.
-          </p>
-          <div className="flex flex-col gap-4">
-            {MILITARITE.map((d, i) => (
-              <FlipCard
-                key={d.titre}
-                defi={d}
-                accent="#C4A35A"
-                numero={String(i + 1).padStart(2, "0")}
-                Icon={ICONS_MILITARITE[i]}
-              />
-            ))}
+            Mon identité
           </div>
         </div>
 
-        <div>
-          <div
-            className="text-base sm:text-lg uppercase tracking-wide font-bold mb-1 text-center"
-            style={{ color: "#D39318" }}
-          >
-            La polarisation
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10">
+          <div>
+            <div
+              className="text-base sm:text-lg uppercase tracking-wide font-bold mb-1 text-center"
+              style={{ color: "#C4A35A" }}
+            >
+              La militarité
+            </div>
+            <p
+              className="text-xs sm:text-sm leading-relaxed mb-4 text-center"
+              style={{ color: "rgba(239,231,221,0.85)" }}
+            >
+              Ce que l&apos;armée a construit en vous&nbsp;: votre identité,
+              vos repères, votre façon de voir le monde.
+            </p>
+            <div className="flex flex-col gap-4">
+              {MILITARITE.map((d, i) => (
+                <FlipCard
+                  key={d.titre}
+                  defi={d}
+                  accent="#C4A35A"
+                  numero={String(i + 1).padStart(2, "0")}
+                  Icon={ICONS_MILITARITE[i]}
+                />
+              ))}
+            </div>
           </div>
-          <p
-            className="text-xs sm:text-sm leading-relaxed mb-4 text-center"
-            style={{ color: "rgba(239,231,221,0.85)" }}
-          >
-            Le tiraillement entre ce que vous étiez dans l&apos;armée et ce
-            que vous devez devenir dans le civil.
-          </p>
-          <div className="flex flex-col gap-4">
-            {POLARISATION.map((d, i) => (
-              <FlipCard
-                key={d.titre}
-                defi={d}
-                accent="#D39318"
-                numero={String(i + 6).padStart(2, "0")}
-                Icon={ICONS_POLARISATION[i]}
-              />
-            ))}
+
+          <div>
+            <div
+              className="text-base sm:text-lg uppercase tracking-wide font-bold mb-1 text-center"
+              style={{ color: "#D39318" }}
+            >
+              La polarisation
+            </div>
+            <p
+              className="text-xs sm:text-sm leading-relaxed mb-4 text-center"
+              style={{ color: "rgba(239,231,221,0.85)" }}
+            >
+              Le tiraillement entre ce que vous étiez dans l&apos;armée et ce
+              que vous devez devenir dans le civil.
+            </p>
+            <div className="flex flex-col gap-4">
+              {POLARISATION.map((d, i) => (
+                <FlipCard
+                  key={d.titre}
+                  defi={d}
+                  accent="#D39318"
+                  numero={String(i + 6).padStart(2, "0")}
+                  Icon={ICONS_POLARISATION[i]}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>

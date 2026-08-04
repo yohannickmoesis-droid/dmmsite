@@ -64,14 +64,23 @@ export default function CommentJePeuxAider() {
               <p className="text-navy/80 text-sm leading-relaxed mb-5 text-justify">
                 {INDIVIDUEL.text}
               </p>
-              <ul className="space-y-2">
-                {INDIVIDUEL.steps.map((s) => (
-                  <li key={s} className="flex items-start gap-3 text-navy/70 text-sm leading-relaxed">
-                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-gold-dark shrink-0" />
-                    {s}
-                  </li>
-                ))}
-              </ul>
+
+              <details className="group">
+                <summary className="cursor-pointer list-none flex items-center justify-between text-gold-dark font-semibold text-sm py-2 border-t border-navy/10">
+                  <span>Voir le déroulé des 6 séances</span>
+                  <span className="transition-transform duration-200 group-open:rotate-180">
+                    ▾
+                  </span>
+                </summary>
+                <ul className="space-y-2 pt-3">
+                  {INDIVIDUEL.steps.map((s) => (
+                    <li key={s} className="flex items-start gap-3 text-navy/70 text-sm leading-relaxed">
+                      <span className="mt-2 w-1.5 h-1.5 rounded-full bg-gold-dark shrink-0" />
+                      {s}
+                    </li>
+                  ))}
+                </ul>
+              </details>
             </div>
           </div>
 

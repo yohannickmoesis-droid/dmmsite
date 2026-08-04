@@ -1,10 +1,14 @@
+import { Fingerprint, Compass, Target, Shield, type LucideIcon } from "lucide-react";
+
+const ICON_GRADIENT_ID = "pourquoiIdentiteIconGradient";
+
 const REPERES = ["votre rôle,", "votre collectif,", "votre mission."];
 
-const QUESTIONS = [
-  "Qui suis-je sans mon uniforme ?",
-  "Comment retrouver du sens ?",
-  "Où trouver ma place ?",
-  "Comment recréer un collectif ?",
+const QUESTIONS: { text: string; Icon: LucideIcon }[] = [
+  { text: "Qui suis-je sans mon uniforme ?", Icon: Fingerprint },
+  { text: "Comment retrouver du sens ?", Icon: Compass },
+  { text: "Où trouver ma place ?", Icon: Target },
+  { text: "Comment recréer un collectif ?", Icon: Shield },
 ];
 
 const STATS = [
@@ -37,31 +41,53 @@ export default function PourquoiIdentite() {
           ))}
         </ul>
 
-        <p className="text-cream/70 text-base sm:text-lg leading-relaxed mb-8 max-w-3xl text-justify">
+        <p className="text-cream/70 text-base sm:text-lg leading-relaxed mb-10 max-w-3xl text-justify">
           Le jour où vous quittez l&apos;armée, ces trois repères sont
           bouleversés simultanément. Et surgissent alors des questions
           qu&apos;un contrat de travail ne suffit pas à résoudre.
         </p>
 
-        <ul className="mb-16 space-y-4">
+        <svg width="0" height="0" style={{ position: "absolute" }}>
+          <defs>
+            <linearGradient id={ICON_GRADIENT_ID} x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#FDE047" />
+              <stop offset="100%" stopColor="#D97706" />
+            </linearGradient>
+          </defs>
+        </svg>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-16 max-w-2xl">
           {QUESTIONS.map((q) => (
-            <li
-              key={q}
-              className="flex items-start gap-4 text-cream font-semibold text-lg sm:text-xl leading-relaxed"
+            <div
+              key={q.text}
+              className="rounded-lg p-6 flex flex-col items-start gap-3"
+              style={{
+                background: "#161066",
+                border: "1px solid rgba(196,163,90,0.5)",
+              }}
             >
-              <span className="mt-2.5 w-2 h-2 rounded-full bg-gold shrink-0" />
-              {q}
-            </li>
+              <div
+                className="rounded-full flex items-center justify-center"
+                style={{
+                  width: 40,
+                  height: 40,
+                  background: "rgba(196,163,90,0.15)",
+                }}
+              >
+                <q.Icon size={20} strokeWidth={2} color={`url(#${ICON_GRADIENT_ID})`} />
+              </div>
+              <p className="text-cream font-semibold text-base sm:text-lg leading-snug">
+                {q.text}
+              </p>
+            </div>
           ))}
-        </ul>
+        </div>
 
         <div
           className="rounded-2xl grid sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x overflow-hidden"
           style={{
             border: "1.5px solid #C4A35A",
-            background: "rgba(30, 26, 100, 0.5)",
-            backdropFilter: "blur(8px)",
-            WebkitBackdropFilter: "blur(8px)",
+            background: "#161066",
             boxShadow: "0 12px 32px rgba(196,163,90,0.18)",
           }}
         >

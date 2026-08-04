@@ -196,7 +196,7 @@ function FlipCard({
 
 export default function CercleDefis() {
   return (
-    <div className="relative w-full max-w-5xl mx-auto rounded-3xl overflow-hidden px-6 sm:px-10 py-10 sm:py-14">
+    <div className="relative w-full max-w-5xl mx-auto">
       {/* Définition du dégradé utilisé par le trait des icônes */}
       <svg width="0" height="0" style={{ position: "absolute" }}>
         <defs>
@@ -206,31 +206,6 @@ export default function CercleDefis() {
           </linearGradient>
         </defs>
       </svg>
-
-      {/* Texture de fond subtile : grille pointillée + halo radial */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle, rgba(239,231,221,0.35) 1px, transparent 1px)",
-          backgroundSize: "22px 22px",
-          opacity: 0.06,
-        }}
-      />
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(ellipse 70% 55% at 50% 25%, rgba(212,175,110,0.16), transparent 65%)",
-        }}
-      />
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(ellipse 90% 80% at 50% 60%, transparent 40%, rgba(6,4,40,0.45) 100%)",
-        }}
-      />
 
       <div className="relative">
         <div className="text-center mb-10">
@@ -252,7 +227,7 @@ export default function CercleDefis() {
             </div>
             <p
               className="text-xs sm:text-sm leading-relaxed mb-4 text-center"
-              style={{ color: "rgba(239,231,221,0.85)" }}
+              style={{ color: "#EFE7DD" }}
             >
               Ce que l&apos;armée a construit en vous&nbsp;: votre identité,
               vos repères, votre façon de voir le monde.
@@ -279,7 +254,7 @@ export default function CercleDefis() {
             </div>
             <p
               className="text-xs sm:text-sm leading-relaxed mb-4 text-center"
-              style={{ color: "rgba(239,231,221,0.85)" }}
+              style={{ color: "#EFE7DD" }}
             >
               Le tiraillement entre ce que vous étiez dans l&apos;armée et ce
               que vous devez devenir dans le civil.

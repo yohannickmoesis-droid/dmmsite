@@ -120,14 +120,14 @@ export default function MonParcoursPage() {
             <p className="text-cream/80 text-[15px] sm:text-base leading-relaxed text-justify">
               Sous-officier au sein de l&apos;Armée de Terre, j&apos;ai servi vingt ans
               dans deux unités parachutistes&nbsp;: le 13e Régiment de Dragons
-              Parachutistes, puis le Groupe Commando Parachutiste de la 11e
-              Brigade Parachutiste. Un engagement marqué par 15 opérations
-              extérieures, certaines plus marquantes que d&apos;autres. J&apos;ai
-              servi, commandé, accompagné des hommes dans des contextes
-              extrêmes. Engagé à 18 ans, l&apos;armée m&apos;a forgé, elle m&apos;a donné
-              une identité, un cadre, un collectif, un sens. Pendant 20 ans,
-              je savais exactement qui j&apos;étais et pourquoi je me levais le
-              matin.
+              Parachutistes, puis au Groupement Commando Parachutiste de la
+              11e Brigade Parachutiste. Un engagement marqué par 15
+              opérations extérieures, certaines plus marquantes que
+              d&apos;autres. J&apos;ai servi, commandé, accompagné des hommes dans
+              des contextes extrêmes. Engagé à 18 ans, l&apos;armée m&apos;a forgé,
+              elle m&apos;a donné une identité, un cadre, un collectif, un sens.
+              Pendant 20 ans, je savais exactement qui j&apos;étais et pourquoi
+              je me levais le matin.
             </p>
           </div>
         </div>

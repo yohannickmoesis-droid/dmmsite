@@ -60,20 +60,19 @@ export default function MonParcoursPage() {
               reconversion étaient deux choses différentes.
             </p>
             <p>
-              Quitter l&apos;institution, c&apos;est aussi devoir redéfinir son
-              identité, retrouver du sens, reconstruire des repères et trouver
-              une nouvelle place dans le monde civil.
+              Quitter l&apos;institution, c&apos;est aussi une question
+              d&apos;identité, de sens, de repères et de place dans le monde
+              civil.
             </p>
             <p>
-              Depuis plus de dix ans, j&apos;accompagne des jeunes et des adultes
-              confrontés à des parcours de vie complexes, à des périodes de
-              transition et à la nécessité de se reconstruire ou de se
-              réinventer.
+              Depuis plus de dix ans, j&apos;accompagne des jeunes et des
+              adultes confrontés à des parcours de vie complexes et à des
+              périodes de transition profonde.
             </p>
             <p>
               Aujourd&apos;hui, je mets cette double expérience, militaire et
               civile, au service des militaires confrontés aux défis
-              identitaires de la reconversion, ainsi qu&apos;auprès des
+              identitaires de la transition, ainsi qu&apos;auprès des
               structures qui souhaitent mieux préparer et accompagner leurs
               personnels dans cette étape de vie.
             </p>

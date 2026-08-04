@@ -21,7 +21,7 @@ const QUESTIONS = [
   },
   {
     q: "Est-ce un coaching ou une thérapie\u00a0?",
-    r: "Ni l'un ni l'autre. Il s'agit d'un accompagnement centré sur la compréhension des défis identitaires liés à la transition militaire-civil et sur la mise en action de pistes concrètes pour avancer.",
+    r: "Ni l'un ni l'autre. Il s'agit d'un accompagnement centré sur la compréhension des défis identitaires liés à la transition militaire-civile et sur la mise en action de pistes concrètes pour avancer.",
   },
   {
     q: "Intervenez-vous uniquement auprès des militaires\u00a0?",

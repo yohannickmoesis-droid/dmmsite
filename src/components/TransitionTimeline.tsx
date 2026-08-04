@@ -12,7 +12,7 @@ const STAGES = [
   {
     title: "Vous avez quitté l'institution",
     time: "Le changement est derrière vous",
-    text: "Vous avez du mal à trouver votre place, mais certaines questions restent ouvertes.",
+    text: "Vous avez du mal à trouver votre place et certaines questions restent sans réponse.",
   },
 ];
 

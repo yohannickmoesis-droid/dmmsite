@@ -163,11 +163,13 @@ export default function MonParcoursPage() {
             utile. Cette seconde carrière m&apos;a appris que les plus grands
             combats ne se mènent pas toujours sur un terrain d&apos;opérations.
             Ils se jouent parfois à l&apos;intérieur de soi. C&apos;est aussi durant
-            ces années que j&apos;ai traversé ma propre reconversion, ses doutes,
-            ses remises en question et sa reconstruction. Peu à peu, j&apos;ai
-            compris que ce qui donnait le plus de sens à mon parcours
-            n&apos;était pas de diriger des structures, mais d&apos;accompagner des
-            personnes dans leur propre transition.
+            ces années que j&apos;ai vécu et traversé ma propre reconversion,
+            avec les moments de doute, les remises en question, le besoin
+            d&apos;échange et d&apos;accompagnement, toutes les étapes de la
+            reconstruction. J&apos;ai peu à peu compris, au fil de mes
+            expériences, que, plus que la direction de structures,
+            c&apos;est l&apos;accompagnement des personnes dans leur propre
+            transition qui donne aujourd&apos;hui sens à mon parcours.
           </p>
         </div>
       </section>

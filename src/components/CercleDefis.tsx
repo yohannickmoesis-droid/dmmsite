@@ -54,8 +54,19 @@ const POLARISATION: Defi[] = [
 ];
 
 const CREAM = "#EFE7DD";
+const CARD_BG = "#171057";
+const GOLD_SOFT = "#F0C75D";
+const NAVY = "#0E0857";
 
-function FlipCard({ defi, accent }: { defi: Defi; accent: string }) {
+function FlipCard({
+  defi,
+  accent,
+  numero,
+}: {
+  defi: Defi;
+  accent: string;
+  numero: string;
+}) {
   const [flipped, setFlipped] = useState(false);
 
   return (
@@ -67,40 +78,46 @@ function FlipCard({ defi, accent }: { defi: Defi; accent: string }) {
       style={{ perspective: "1000px" }}
     >
       <div
-        className="relative w-full min-h-[100px] sm:min-h-[110px] transition-transform duration-500"
+        className="relative w-full min-h-[130px] sm:min-h-[150px] transition-transform duration-500"
         style={{
           transformStyle: "preserve-3d",
           transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
         }}
       >
         <div
-          className="absolute inset-0 rounded-lg p-5 flex items-center"
+          className="absolute inset-0 rounded-lg p-5 flex flex-col items-center justify-center text-center"
           style={{
             backfaceVisibility: "hidden",
-            borderLeft: `3px solid ${accent}`,
-            background: "rgba(239,231,221,0.08)",
+            border: `1px solid ${accent}`,
+            background: CARD_BG,
           }}
         >
           <span
+            className="absolute top-3 left-4 text-xs sm:text-sm font-bold"
+            style={{ color: accent }}
+          >
+            {numero}
+          </span>
+          <span
             style={{ fontFamily: "'Bebas Neue', sans-serif", color: CREAM }}
-            className="text-lg sm:text-xl font-semibold uppercase leading-tight block"
+            className="text-xl sm:text-2xl font-bold uppercase leading-tight block"
           >
             {defi.titre}
           </span>
         </div>
 
         <div
-          className="absolute inset-0 rounded-lg p-5 flex items-center"
+          className="absolute inset-0 rounded-lg p-5 flex items-center justify-center text-center"
           style={{
             backfaceVisibility: "hidden",
             transform: "rotateY(180deg)",
-            borderLeft: `3px solid ${accent}`,
-            background: "rgba(196,163,90,0.18)",
+            border: `1px solid ${accent}`,
+            background: GOLD_SOFT,
           }}
         >
           <span
-            style={{ color: "rgba(239,231,221,0.92)" }}
-            className="text-sm sm:text-base leading-relaxed block"
+            style={{ color: NAVY }}
+            className="text-sm sm:text-base font-medium leading-relaxed block"
           >
             {defi.desc}
           </span>
@@ -131,8 +148,13 @@ export default function CercleDefis() {
             La militarité
           </div>
           <div className="flex flex-col gap-4">
-            {MILITARITE.map((d) => (
-              <FlipCard key={d.titre} defi={d} accent="#C4A35A" />
+            {MILITARITE.map((d, i) => (
+              <FlipCard
+                key={d.titre}
+                defi={d}
+                accent="#C4A35A"
+                numero={String(i + 1).padStart(2, "0")}
+              />
             ))}
           </div>
         </div>
@@ -145,8 +167,13 @@ export default function CercleDefis() {
             La polarisation
           </div>
           <div className="flex flex-col gap-4">
-            {POLARISATION.map((d) => (
-              <FlipCard key={d.titre} defi={d} accent="#D39318" />
+            {POLARISATION.map((d, i) => (
+              <FlipCard
+                key={d.titre}
+                defi={d}
+                accent="#D39318"
+                numero={String(i + 6).padStart(2, "0")}
+              />
             ))}
           </div>
         </div>

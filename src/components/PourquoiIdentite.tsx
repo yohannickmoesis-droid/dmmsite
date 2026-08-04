@@ -38,9 +38,9 @@ export default function PourquoiIdentite() {
         </ul>
 
         <p className="text-navy/70 text-base sm:text-lg leading-relaxed mb-8 max-w-3xl text-justify">
-          Le jour où vous quittez l&apos;armée, ces trois repères changent
-          simultanément et c&apos;est souvent là que commencent des questions que
-          l&apos;emploi seul ne résout pas.
+          Le jour où vous quittez l&apos;armée, ces trois repères sont
+          bouleversés simultanément. Et surgissent alors des questions
+          qu&apos;un contrat de travail ne suffit pas à résoudre.
         </p>
 
         <ul className="mb-16 space-y-4">

@@ -85,7 +85,7 @@ function FlipCard({
         }}
       >
         <div
-          className="absolute inset-0 rounded-lg p-5 flex flex-col items-center justify-center text-center"
+          className="absolute inset-0 rounded-lg p-5 flex flex-col items-start justify-center text-left"
           style={{
             backfaceVisibility: "hidden",
             border: `2px solid ${accent}`,
@@ -99,15 +99,25 @@ function FlipCard({
             {numero}
           </span>
           <span
-            style={{ fontFamily: "'Bebas Neue', sans-serif", color: CREAM }}
-            className="text-xl sm:text-2xl font-bold uppercase leading-tight block"
+            style={{
+              fontFamily: "'Bebas Neue', sans-serif",
+              color: CREAM,
+              lineHeight: 1.35,
+            }}
+            className="text-2xl sm:text-3xl font-bold uppercase block pr-6"
           >
             {defi.titre}
+          </span>
+          <span
+            className="absolute bottom-3 right-4 text-lg font-bold leading-none"
+            style={{ color: accent }}
+          >
+            +
           </span>
         </div>
 
         <div
-          className="absolute inset-0 rounded-lg p-5 flex items-center justify-center text-center"
+          className="absolute inset-0 rounded-lg p-5 flex items-center justify-start text-left"
           style={{
             backfaceVisibility: "hidden",
             transform: "rotateY(180deg)",
@@ -116,8 +126,8 @@ function FlipCard({
           }}
         >
           <span
-            style={{ color: NAVY }}
-            className="text-sm sm:text-base font-medium leading-relaxed block"
+            style={{ color: NAVY, lineHeight: 1.6 }}
+            className="text-sm sm:text-base font-medium block"
           >
             {defi.desc}
           </span>

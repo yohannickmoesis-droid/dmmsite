@@ -4,7 +4,7 @@ export default function MonParcours() {
       <div className="max-w-3xl mx-auto px-5 sm:px-8 text-center relative">
         <span
           aria-hidden="true"
-          className="absolute -top-20 sm:-top-28 left-1/2 -translate-x-1/2 select-none pointer-events-none"
+          className="absolute -top-10 sm:-top-14 left-1/2 -translate-x-1/2 select-none pointer-events-none"
           style={{
             fontFamily: "'Bebas Neue', sans-serif",
             fontSize: "8rem",
@@ -22,12 +22,14 @@ export default function MonParcours() {
           Je vous aide à trouver votre place.
         </p>
 
-        <p className="relative text-sm sm:text-base uppercase tracking-wide mb-10">
-          <span className="text-gold">Yohannick Moesis</span>
+        <p className="relative text-sm sm:text-base tracking-wide mb-10">
+          <span className="text-gold font-bold normal-case">
+            Yohannick MOESIS
+          </span>
           <br />
-          <span className="text-cream">Ancien sous-officier parachutiste,</span>
+          <span className="text-cream uppercase">Ancien sous-officier parachutiste,</span>
           <br />
-          <span className="text-cream">aujourd&apos;hui accompagnant de transitions</span>
+          <span className="text-cream uppercase">aujourd&apos;hui accompagnant de transitions</span>
         </p>
 
         <a

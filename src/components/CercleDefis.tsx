@@ -104,7 +104,7 @@ function FlipCard({
       onMouseEnter={() => setFlipped(true)}
       onMouseLeave={() => setFlipped(false)}
       onClick={() => setFlipped((v) => !v)}
-      className="cursor-pointer"
+      className="cursor-pointer group"
       style={{ perspective: "1000px" }}
     >
       <div
@@ -115,20 +115,35 @@ function FlipCard({
         }}
       >
         <div
-          className="absolute inset-0 rounded-lg px-5 py-4 flex items-center gap-4"
+          className="absolute inset-0 rounded-lg px-5 py-4 flex items-center gap-4 overflow-hidden transition-shadow duration-300 group-hover:shadow-lg"
           style={{
             backfaceVisibility: "hidden",
             border: `3px solid ${accent}`,
             background: CARD_BG,
           }}
         >
+          <div
+            className="absolute top-0 left-0 right-0 h-1"
+            style={{
+              background: `linear-gradient(90deg, #C4A35A, #F0C75D, #D39318)`,
+            }}
+          />
           <span
             className="text-xs sm:text-sm font-bold shrink-0"
             style={{ color: accent }}
           >
             {numero}
           </span>
-          <Icon size={30} strokeWidth={2.25} color={accent} className="shrink-0" />
+          <div
+            className="rounded-full flex items-center justify-center shrink-0"
+            style={{
+              width: 44,
+              height: 44,
+              background: `${accent}26`,
+            }}
+          >
+            <Icon size={24} strokeWidth={2.25} color={accent} />
+          </div>
           <span
             style={{
               fontFamily: "'Bebas Neue', sans-serif",

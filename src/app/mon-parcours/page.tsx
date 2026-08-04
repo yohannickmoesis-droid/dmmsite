@@ -8,9 +8,9 @@ export const metadata: Metadata = {
 };
 
 const PARCOURS_MILITAIRE = [
-  "Sous-officier parachutiste",
-  "13e Régiment de Dragons Parachutistes (13e RDP)",
-  "Groupe Commando Parachutiste / 11e Brigade Parachutiste",
+  "20 ans de carrière",
+  "Sous-officier",
+  "Parachutiste",
   "15 opérations extérieures",
 ];
 

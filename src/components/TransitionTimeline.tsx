@@ -1,18 +1,25 @@
-const STAGES = [
+import { CalendarClock, RefreshCw, DoorOpen, type LucideIcon } from "lucide-react";
+
+const ICON_GRADIENT_ID = "transitionIconGradient";
+
+const STAGES: { title: string; time: string; text: string; Icon: LucideIcon }[] = [
   {
     title: "Vous préparez votre départ",
     time: "6 mois à 2 ans avant la sortie",
     text: "Vous commencez à envisager une vie sans uniforme et à vous interroger sur votre avenir.",
+    Icon: CalendarClock,
   },
   {
     title: "Vous êtes en transition",
     time: "Formation, recherche d'emploi ou premiers mois dans le civil",
     text: "Vous construisez de nouveaux repères sans avoir encore trouvé votre équilibre.",
+    Icon: RefreshCw,
   },
   {
     title: "Vous avez quitté l'institution",
     time: "Le changement est derrière vous",
     text: "Vous avez du mal à trouver votre place et certaines questions restent sans réponse.",
+    Icon: DoorOpen,
   },
 ];
 
@@ -24,12 +31,49 @@ export default function TransitionTimeline() {
           Où en êtes-vous dans votre transition&nbsp;?
         </h2>
 
+        <svg width="0" height="0" style={{ position: "absolute" }}>
+          <defs>
+            <linearGradient id={ICON_GRADIENT_ID} x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#FDE047" />
+              <stop offset="100%" stopColor="#D97706" />
+            </linearGradient>
+          </defs>
+        </svg>
+
         <div className="grid sm:grid-cols-3 gap-6 mb-10">
           {STAGES.map((stage) => (
             <div
               key={stage.title}
-              className="bg-navy rounded-xl p-8 sm:p-10 flex flex-col text-center min-h-[220px] sm:min-h-[250px]"
+              className="relative rounded-xl p-8 sm:p-10 flex flex-col items-center text-center min-h-[240px] sm:min-h-[270px] overflow-hidden"
+              style={{
+                border: "1.5px solid #C4A35A",
+                background: "rgba(30, 26, 100, 0.5)",
+                backdropFilter: "blur(8px)",
+                WebkitBackdropFilter: "blur(8px)",
+                boxShadow: "0 12px 32px rgba(196,163,90,0.18)",
+              }}
             >
+              <div
+                className="absolute top-0 left-0 right-0 h-1"
+                style={{
+                  background:
+                    "linear-gradient(90deg, #C4A35A, #F0C75D, #D39318)",
+                }}
+              />
+              <div
+                className="rounded-full flex items-center justify-center mb-4"
+                style={{
+                  width: 52,
+                  height: 52,
+                  background: "rgba(196,163,90,0.15)",
+                }}
+              >
+                <stage.Icon
+                  size={26}
+                  strokeWidth={2}
+                  color={`url(#${ICON_GRADIENT_ID})`}
+                />
+              </div>
               <h3 className="font-display text-gold text-3xl sm:text-[2rem] tracking-wide mb-1">
                 {stage.title}
               </h3>

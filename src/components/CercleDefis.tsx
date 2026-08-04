@@ -88,7 +88,7 @@ function FlipCard({
           className="absolute inset-0 rounded-lg p-5 flex flex-col items-center justify-center text-center"
           style={{
             backfaceVisibility: "hidden",
-            border: `1px solid ${accent}`,
+            border: `2px solid ${accent}`,
             background: CARD_BG,
           }}
         >
@@ -111,7 +111,7 @@ function FlipCard({
           style={{
             backfaceVisibility: "hidden",
             transform: "rotateY(180deg)",
-            border: `1px solid ${accent}`,
+            border: `2px solid ${accent}`,
             background: GOLD_SOFT,
           }}
         >

@@ -196,7 +196,7 @@ function FlipCard({
 
 export default function CercleDefis() {
   return (
-    <div className="relative w-full max-w-5xl mx-auto">
+    <div className="relative w-full max-w-5xl mx-auto rounded-3xl overflow-hidden px-6 sm:px-10 py-10 sm:py-14">
       {/* Définition du dégradé utilisé par le trait des icônes */}
       <svg width="0" height="0" style={{ position: "absolute" }}>
         <defs>

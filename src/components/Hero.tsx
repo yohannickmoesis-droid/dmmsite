@@ -110,7 +110,7 @@ export default function Hero() {
           ))}
         </div>
 
-        <div className="h-[3px] w-full mt-16 bg-gradient-to-r from-transparent via-[#C4A35A]/70 to-transparent" />
+        <div className="h-[3px] w-full mt-6 sm:mt-8 bg-gradient-to-r from-transparent via-[#C4A35A]/70 to-transparent" />
       </div>
 
       {/* Portrait en superposition, hors du flux du texte, pour ne pas reduire sa largeur */}

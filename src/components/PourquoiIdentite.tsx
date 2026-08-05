@@ -12,9 +12,9 @@ const QUESTIONS: { text: string; Icon: LucideIcon }[] = [
 ];
 
 const STATS = [
-  { chiffre: "20 000", legende: "militaires quittent le service chaque année" },
+  { chiffre: "20 000", legende: "militaires entament une reconversion chaque année" },
   { chiffre: "60,3 %", legende: "trouvent un emploi en moins d'un an" },
-  { chiffre: "37,4 %", legende: "le pérennisent après 3 ans" },
+  { chiffre: "37,4 %", legende: "pérennisent leur emploi après 3 ans" },
 ];
 
 export default function PourquoiIdentite() {

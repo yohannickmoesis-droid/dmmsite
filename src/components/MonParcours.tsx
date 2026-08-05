@@ -42,7 +42,7 @@ export default function MonParcours() {
       </div>
 
       <div className="max-w-[1440px] mx-auto px-5 sm:px-8">
-        <div className="h-[3px] w-full mt-10 bg-gradient-to-r from-transparent via-[#C4A35A]/70 to-transparent" />
+        <div className="h-[3px] w-full mt-16 bg-gradient-to-r from-transparent via-[#C4A35A]/70 to-transparent" />
       </div>
     </section>
   );

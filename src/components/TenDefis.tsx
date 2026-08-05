@@ -3,7 +3,7 @@ import DiagnosticQuiz from "./DiagnosticQuiz";
 
 export default function TenDefis() {
   return (
-    <section id="defis" className="bg-navy pt-10 sm:pt-12 pb-20 sm:pb-24">
+    <section id="defis" className="bg-navy pt-16 sm:pt-20 pb-20 sm:pb-24">
       <div className="max-w-[1440px] mx-auto px-5 sm:px-8">
         <h2 className="font-display text-cream text-4xl sm:text-5xl tracking-wide mb-5">
           Les 10 défis invisibles de la reconversion

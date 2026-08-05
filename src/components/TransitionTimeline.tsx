@@ -98,6 +98,8 @@ export default function TransitionTimeline() {
             Voir mes offres
           </a>
         </div>
+
+        <div className="h-[3px] w-full mt-16 bg-gradient-to-r from-transparent via-[#C4A35A]/70 to-transparent" />
       </div>
     </section>
   );

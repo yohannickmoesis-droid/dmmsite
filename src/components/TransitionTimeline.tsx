@@ -80,7 +80,7 @@ export default function TransitionTimeline() {
                   </span>
                 ))}
               </h3>
-              <p className="text-cream/85 text-sm tracking-wide mb-6 min-h-[2.5rem] flex items-start justify-center">
+              <p className="text-cream text-sm tracking-wide mb-6 min-h-[2.5rem] flex items-start justify-center">
                 {stage.time}
               </p>
               <p className="text-gold text-sm font-semibold leading-relaxed">

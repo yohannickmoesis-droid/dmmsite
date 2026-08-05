@@ -12,7 +12,7 @@ export default function FaqCta() {
             boxShadow: "0 12px 32px rgba(196,163,90,0.18)",
           }}
         >
-          <p className="text-cream/85 text-sm sm:text-base">
+          <p className="text-cream text-sm sm:text-base">
             Vous vous demandez si cet accompagnement est fait pour vous&nbsp;?{" "}
             <a
               href="/questions-frequentes"

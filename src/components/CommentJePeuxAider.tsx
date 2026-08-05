@@ -62,7 +62,7 @@ export default function CommentJePeuxAider() {
             <p className="text-gold font-semibold text-lg mb-2">
               {INDIVIDUEL.title}
             </p>
-            <p className="text-cream/75 text-sm leading-relaxed mb-5 text-justify">
+            <p className="text-cream text-sm leading-relaxed mb-5 text-justify">
               {INDIVIDUEL.text}
             </p>
 
@@ -77,7 +77,7 @@ export default function CommentJePeuxAider() {
                 {INDIVIDUEL.steps.map((s) => (
                   <li
                     key={s}
-                    className="flex items-start gap-3 text-cream/70 text-sm leading-relaxed"
+                    className="flex items-start gap-3 text-cream text-sm leading-relaxed"
                   >
                     <span className="mt-2 w-1.5 h-1.5 rounded-full bg-gold shrink-0" />
                     {s}
@@ -124,7 +124,7 @@ export default function CommentJePeuxAider() {
                       {c.duree}
                     </span>
                   </div>
-                  <p className="text-cream/70 text-sm leading-relaxed">
+                  <p className="text-cream text-sm leading-relaxed">
                     {c.text}
                   </p>
                 </div>

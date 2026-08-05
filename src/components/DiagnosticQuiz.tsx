@@ -216,7 +216,7 @@ export default function DiagnosticQuiz() {
             <h3 className="text-cream text-lg font-semibold leading-snug mb-1.5">
               Quel défi est le plus présent dans votre transition aujourd&rsquo;hui&nbsp;?
             </h3>
-            <p className="text-cream/70 text-[13.5px] leading-relaxed mb-5">
+            <p className="text-cream text-[13.5px] leading-relaxed mb-5">
               Répondez à 9 questions rapides pour identifier le défi qui mérite peut-être
               votre attention en ce moment.
             </p>
@@ -256,7 +256,7 @@ export default function DiagnosticQuiz() {
               <button
                 type="button"
                 onClick={handleBackQuestion}
-                className="mt-4 text-cream/55 text-xs hover:text-cream/80 transition-colors"
+                className="mt-4 text-cream text-xs hover:text-cream transition-colors"
               >
                 ← Question précédente
               </button>
@@ -268,7 +268,7 @@ export default function DiagnosticQuiz() {
           <div>
             <h3 className="text-cream text-lg font-semibold mb-4">Presque terminé</h3>
             <div className="mb-3">
-              <label className="block text-cream/70 text-xs mb-1.5" htmlFor="quiz-firstname">
+              <label className="block text-cream text-xs mb-1.5" htmlFor="quiz-firstname">
                 Prénom
               </label>
               <input
@@ -281,7 +281,7 @@ export default function DiagnosticQuiz() {
               />
             </div>
             <div className="mb-3">
-              <label className="block text-cream/70 text-xs mb-1.5" htmlFor="quiz-email">
+              <label className="block text-cream text-xs mb-1.5" htmlFor="quiz-email">
                 Adresse e-mail
               </label>
               <input
@@ -293,7 +293,7 @@ export default function DiagnosticQuiz() {
                 className={inputCls}
               />
             </div>
-            <p className="text-cream/55 text-[11.5px] leading-relaxed my-3">
+            <p className="text-cream text-[11.5px] leading-relaxed my-3">
               Indiquez votre prénom et votre e-mail pour recevoir votre résultat. Aucune
               autre information ne vous sera demandée.
             </p>
@@ -387,9 +387,9 @@ function ResultBlock({
       <h3 className="text-cream text-lg font-semibold leading-snug mb-1.5">{title}</h3>
       {body}
       {showDefi10 && (
-        <p className="text-cream/85 text-sm leading-relaxed mb-4">{DEFI_10}</p>
+        <p className="text-cream text-sm leading-relaxed mb-4">{DEFI_10}</p>
       )}
-      <p className="text-cream/65 text-xs italic leading-relaxed mb-5 border-l-2 border-gold pl-3">
+      <p className="text-cream text-xs italic leading-relaxed mb-5 border-l-2 border-gold pl-3">
         {disclaimer}
       </p>
       <div className="flex flex-col gap-2.5">
@@ -403,7 +403,7 @@ function ResultBlock({
           Échangeons sur votre transition
         </a>
       </div>
-      <p className="text-cream/50 text-xs text-center mt-3.5">
+      <p className="text-cream text-xs text-center mt-3.5">
         {emailSent
           ? "Votre résultat vient également de vous être envoyé par e-mail."
           : "Votre résultat est affiché ci-dessus. L'envoi par e-mail n'a pas pu être confirmé, vérifiez vos spams dans quelques minutes."}

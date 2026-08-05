@@ -25,7 +25,7 @@ export default function PourquoiIdentite() {
           La reconversion ne se résume pas à trouver un emploi.
         </h2>
 
-        <p className="text-cream/70 text-base sm:text-lg leading-relaxed mb-4 max-w-3xl text-justify">
+        <p className="text-cream text-base sm:text-lg leading-relaxed mb-4 max-w-3xl text-justify">
           Pendant des années, votre identité s&apos;est construite autour de :
         </p>
 
@@ -33,7 +33,7 @@ export default function PourquoiIdentite() {
           {REPERES.map((r) => (
             <li
               key={r}
-              className="flex items-start gap-4 text-cream/70 text-base sm:text-lg leading-relaxed"
+              className="flex items-start gap-4 text-cream text-base sm:text-lg leading-relaxed"
             >
               <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-cream/40 shrink-0" />
               {r}
@@ -41,7 +41,7 @@ export default function PourquoiIdentite() {
           ))}
         </ul>
 
-        <p className="text-cream/70 text-base sm:text-lg leading-relaxed mb-10 max-w-3xl text-justify">
+        <p className="text-cream text-base sm:text-lg leading-relaxed mb-10 max-w-3xl text-justify">
           Le jour où vous quittez l&apos;armée, ces trois repères sont
           bouleversés simultanément. Et surgissent alors des questions
           qu&apos;un contrat de travail ne suffit pas à résoudre.
@@ -100,7 +100,7 @@ export default function PourquoiIdentite() {
               <div className="font-display text-gold text-6xl sm:text-7xl tracking-wide leading-none mb-3">
                 {s.chiffre}
               </div>
-              <p className="text-cream/85 text-sm sm:text-base leading-snug">
+              <p className="text-cream text-sm sm:text-base leading-snug">
                 {s.legende}
               </p>
             </div>

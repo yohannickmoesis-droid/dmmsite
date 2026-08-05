@@ -78,10 +78,10 @@ export default function Hero() {
         </p>
 
         <div className="border-l-2 border-gold pl-5 sm:pl-6 max-w-2xl mb-10">
-          <p className="text-cream/90 text-lg sm:text-xl leading-relaxed mb-2">
+          <p className="text-cream text-lg sm:text-xl leading-relaxed mb-2">
             La reconversion ne se résume pas à trouver un emploi.
           </p>
-          <p className="text-cream/90 text-lg sm:text-xl leading-relaxed">
+          <p className="text-cream text-lg sm:text-xl leading-relaxed">
             Elle consiste aussi à retrouver une{" "}
             <span className="text-gold font-semibold">identité</span>, un{" "}
             <span className="text-gold font-semibold">sens</span> et une{" "}
@@ -97,13 +97,13 @@ export default function Hero() {
         <div className="flex flex-wrap gap-x-10 sm:gap-x-0 gap-y-8 sm:divide-x sm:divide-cream/20">
           {REPERES.map((item) => (
             <div key={item.label} className="text-center sm:px-8 first:sm:pl-0">
-              <div className="text-cream/85 mb-3 flex justify-center">
+              <div className="text-cream mb-3 flex justify-center">
                 <item.Icon />
               </div>
               <div className="font-display text-gold text-2xl sm:text-3xl tracking-wide leading-none mb-1">
                 {item.label}
               </div>
-              <div className="text-cream/60 text-xs sm:text-sm uppercase tracking-wide">
+              <div className="text-cream text-xs sm:text-sm uppercase tracking-wide">
                 {item.sub}
               </div>
             </div>

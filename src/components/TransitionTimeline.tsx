@@ -10,7 +10,7 @@ const STAGES: { title: string; time: string; text: string; Icon: LucideIcon }[] 
     Icon: CalendarClock,
   },
   {
-    title: "Vous êtes en transition",
+    title: "Vous êtes en||transition",
     time: "Formation, recherche d'emploi ou premiers mois dans le civil",
     text: "Vous construisez de nouveaux repères sans avoir encore trouvé votre équilibre.",
     Icon: RefreshCw,
@@ -73,7 +73,12 @@ export default function TransitionTimeline() {
                 />
               </div>
               <h3 className="font-display text-gold text-3xl sm:text-[2rem] tracking-wide mb-1">
-                {stage.title}
+                {stage.title.split("||").map((line, i, arr) => (
+                  <span key={i}>
+                    {line}
+                    {i < arr.length - 1 && <br />}
+                  </span>
+                ))}
               </h3>
               <p className="text-cream/85 text-sm tracking-wide mb-6 min-h-[2.5rem] flex items-start justify-center">
                 {stage.time}

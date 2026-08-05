@@ -20,7 +20,7 @@ const STATS = [
 export default function PourquoiIdentite() {
   return (
     <section className="bg-navy">
-      <div className="max-w-[1440px] mx-auto px-5 sm:px-8 pt-10 sm:pt-12 pb-20 sm:pb-28">
+      <div className="max-w-[1440px] mx-auto px-5 sm:px-8 pt-2 sm:pt-3 pb-20 sm:pb-28">
         <h2 className="font-display text-cream text-4xl sm:text-5xl tracking-wide mb-6">
           La reconversion ne se résume pas à trouver un emploi.
         </h2>

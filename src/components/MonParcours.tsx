@@ -16,11 +16,27 @@ export default function MonParcours() {
           &ldquo;
         </span>
 
-        <p className="relative font-display text-cream text-3xl sm:text-4xl md:text-5xl leading-tight tracking-wide mb-6">
-          Je ne vous aide pas à trouver un emploi.
-          <br />
-          Je vous aide à trouver votre place.
-        </p>
+        <div className="relative">
+          <p className="relative font-display text-cream text-3xl sm:text-4xl md:text-5xl leading-tight tracking-wide mb-6">
+            Je ne vous aide pas à trouver un emploi.
+            <br />
+            Je vous aide à trouver votre place.
+          </p>
+
+          <span
+            aria-hidden="true"
+            className="absolute -bottom-6 sm:-bottom-10 right-0 sm:right-4 select-none pointer-events-none"
+            style={{
+              fontFamily: "'Bebas Neue', sans-serif",
+              fontSize: "8rem",
+              lineHeight: 1,
+              color: "#C4A35A",
+              opacity: 0.6,
+            }}
+          >
+            &rdquo;
+          </span>
+        </div>
 
         <p className="relative text-sm sm:text-base tracking-wide mb-10">
           <span className="text-gold font-bold normal-case">

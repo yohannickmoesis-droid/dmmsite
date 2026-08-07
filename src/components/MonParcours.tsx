@@ -32,7 +32,7 @@ export default function MonParcours() {
               lineHeight: 0.4,
               color: "#C4A35A",
               opacity: 0.6,
-              marginTop: "1rem",
+              marginTop: "2.5rem",
             }}
           >
             &rdquo;

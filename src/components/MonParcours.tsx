@@ -1,6 +1,6 @@
 export default function MonParcours() {
   return (
-    <section id="parcours" className="bg-navy py-24 sm:py-32">
+    <section id="parcours" className="bg-navy pt-6 sm:pt-8 pb-24 sm:pb-32">
       <div className="max-w-3xl mx-auto px-5 sm:px-8 text-center relative">
         <span
           aria-hidden="true"

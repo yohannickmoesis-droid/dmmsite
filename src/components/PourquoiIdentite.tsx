@@ -43,7 +43,7 @@ export default function PourquoiIdentite() {
 
         <p className="text-cream text-base sm:text-lg leading-relaxed mb-10 max-w-3xl text-justify">
           Le jour où vous quittez l&apos;armée, ces trois repères sont
-          bouleversés simultanément. Et surgissent alors des questions
+          bouleversés simultanément. Et&nbsp;surgissent alors des questions
           qu&apos;un contrat de travail ne suffit pas à résoudre.
         </p>
 

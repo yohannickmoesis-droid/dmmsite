@@ -8,7 +8,7 @@ const QUESTIONS: { text: string; Icon: LucideIcon }[] = [
   { text: "Qui suis-je sans mon uniforme ?", Icon: Fingerprint },
   { text: "Comment retrouver du sens ?", Icon: Compass },
   { text: "Où trouver ma place ?", Icon: Target },
-  { text: "Comment recréer un collectif ?", Icon: Shield },
+  { text: "Comment recréer un collectif ?", Icon: Shield },
 ];
 
 const STATS = [

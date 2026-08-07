@@ -16,7 +16,7 @@ export default function MonParcours() {
           &ldquo;
         </span>
 
-        <div className="relative mb-16 sm:mb-20">
+        <div className="relative mb-24 sm:mb-32">
           <p className="relative font-display text-cream text-3xl sm:text-4xl md:text-5xl leading-tight tracking-wide mb-6">
             Je ne vous aide pas à trouver un emploi.
             <br />
@@ -25,7 +25,7 @@ export default function MonParcours() {
 
           <span
             aria-hidden="true"
-            className="absolute -bottom-10 sm:-bottom-14 left-1/2 -translate-x-1/2 select-none pointer-events-none"
+            className="absolute -bottom-24 sm:-bottom-32 left-1/2 -translate-x-1/2 select-none pointer-events-none"
             style={{
               fontFamily: "'Bebas Neue', sans-serif",
               fontSize: "8rem",

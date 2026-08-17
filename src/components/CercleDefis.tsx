@@ -81,6 +81,7 @@ const CREAM = "#EFE7DD";
 const CARD_BG = "#171057";
 const GOLD_SOFT = "#F0C75D";
 const NAVY = "#0E0857";
+const ICON_GRADIENT_ID = "cercleDefisIconGradient";
 
 const ICONS_MILITARITE: LucideIcon[] = [
   UserX,
@@ -145,7 +146,20 @@ function FlipCard({
           >
             {numero}
           </span>
-          <Icon size={30} strokeWidth={2.25} color={accent} className="shrink-0" />
+          <div
+            className="rounded-full flex items-center justify-center shrink-0"
+            style={{
+              width: 44,
+              height: 44,
+              background: `${accent}26`,
+            }}
+          >
+            <Icon
+              size={24}
+              strokeWidth={2.25}
+              color={`url(#${ICON_GRADIENT_ID})`}
+            />
+          </div>
           <span
             style={{
               fontFamily: "'Bebas Neue', sans-serif",
@@ -197,6 +211,15 @@ function FlipCard({
 export default function CercleDefis() {
   return (
     <div className="w-full max-w-5xl mx-auto">
+      <svg width="0" height="0" style={{ position: "absolute" }}>
+        <defs>
+          <linearGradient id={ICON_GRADIENT_ID} x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="#FDE047" />
+            <stop offset="100%" stopColor="#D97706" />
+          </linearGradient>
+        </defs>
+      </svg>
+
       <div className="text-center mb-10">
         <div
           style={{ fontFamily: "'Bebas Neue', sans-serif", color: CREAM }}

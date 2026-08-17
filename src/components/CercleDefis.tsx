@@ -34,7 +34,7 @@ const MILITARITE: Defi[] = [
   },
   {
     mecanisme: "La légitimité à reconstruire",
-    defi: "Reconstruire sa légitimité",
+    defi: "Prouver sa valeur autrement",
     desc: "Sur quoi repose ma valeur lorsque l'institution n'est plus là ?",
   },
   {
@@ -52,7 +52,7 @@ const MILITARITE: Defi[] = [
 const POLARISATION: Defi[] = [
   {
     mecanisme: "La perte du socle de valeurs",
-    defi: "Redéfinir son socle de valeurs",
+    defi: "Devenir son propre repère",
     desc: "Définir ce qui compte vraiment lorsque les valeurs ne sont plus imposées par l'institution.",
   },
   {
@@ -62,12 +62,12 @@ const POLARISATION: Defi[] = [
   },
   {
     mecanisme: "Le deuil de l'institution",
-    defi: "Faire le deuil de l'institution",
+    defi: "Avancer sans elle",
     desc: "Accepter la fin d'un chapitre qui a structuré une partie de sa vie.",
   },
   {
     mecanisme: "Les comportements d'évitement",
-    defi: "Sortir des comportements d'évitement",
+    defi: "Oser d'autres voies",
     desc: "Quand on cherche inconsciemment à recréer l'univers militaire ailleurs.",
   },
   {
@@ -119,7 +119,7 @@ function FlipCard({
       style={{ perspective: "1000px" }}
     >
       <div
-        className="relative w-full min-h-[112px] sm:min-h-[122px] transition-transform duration-500"
+        className="relative w-full min-h-[92px] sm:min-h-[100px] transition-transform duration-500"
         style={{
           transformStyle: "preserve-3d",
           transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
@@ -146,24 +146,16 @@ function FlipCard({
             {numero}
           </span>
           <Icon size={30} strokeWidth={2.25} color={accent} className="shrink-0" />
-          <div className="flex-1 text-left">
-            <span
-              style={{
-                fontFamily: "'Bebas Neue', sans-serif",
-                color: CREAM,
-                lineHeight: 1.2,
-              }}
-              className="text-lg sm:text-xl font-bold uppercase tracking-wide block"
-            >
-              {defi.mecanisme}
-            </span>
-            <span
-              style={{ color: accent }}
-              className="text-xs sm:text-sm font-medium italic block mt-0.5"
-            >
-              {defi.defi}
-            </span>
-          </div>
+          <span
+            style={{
+              fontFamily: "'Bebas Neue', sans-serif",
+              color: CREAM,
+              lineHeight: 1.2,
+            }}
+            className="text-lg sm:text-xl font-bold uppercase tracking-wide flex-1 text-left"
+          >
+            {defi.defi}
+          </span>
           <span
             className="text-lg font-bold shrink-0 transition-transform duration-500"
             style={{
@@ -176,7 +168,7 @@ function FlipCard({
         </div>
 
         <div
-          className="absolute inset-0 rounded-lg px-5 py-4 flex items-center justify-start text-left"
+          className="absolute inset-0 rounded-lg px-5 py-4 flex flex-col justify-center text-left"
           style={{
             backfaceVisibility: "hidden",
             transform: "rotateY(180deg)",
@@ -184,6 +176,12 @@ function FlipCard({
             background: GOLD_SOFT,
           }}
         >
+          <span
+            className="text-[10px] font-bold uppercase tracking-wide mb-1"
+            style={{ color: "rgba(14,8,87,0.6)" }}
+          >
+            Mécanisme&nbsp;: {defi.mecanisme}
+          </span>
           <span
             style={{ color: NAVY, lineHeight: 1.5 }}
             className="text-sm sm:text-base font-medium block"

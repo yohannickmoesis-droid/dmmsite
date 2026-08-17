@@ -6,7 +6,7 @@ import {
   ArrowLeftRight,
   Award,
   Compass,
-  Unlink,
+  Unlink2,
   Anchor,
   ShieldAlert,
   Flag,
@@ -71,7 +71,7 @@ const POLARISATION: Defi[] = [
     desc: "Quand on cherche inconsciemment à recréer l'univers militaire ailleurs.",
   },
   {
-    mecanisme: "La résilience",
+    mecanisme: "Accepter d'être accompagné",
     defi: "Accepter d'être accompagné",
     desc: "Sortir du réflexe d'autonomie absolue pour avancer autrement.",
   },
@@ -87,7 +87,7 @@ const ICONS_MILITARITE: LucideIcon[] = [
   ArrowLeftRight,
   Award,
   Compass,
-  Unlink,
+  Unlink2,
 ];
 const ICONS_POLARISATION: LucideIcon[] = [
   Anchor,

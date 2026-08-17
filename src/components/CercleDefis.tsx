@@ -154,7 +154,7 @@ function FlipCard({
             }}
             className="text-lg sm:text-xl font-bold uppercase tracking-wide flex-1 text-left"
           >
-            {defi.defi}
+            {defi.mecanisme}
           </span>
           <span
             className="text-lg font-bold shrink-0 transition-transform duration-500"
@@ -180,7 +180,7 @@ function FlipCard({
             className="text-[10px] font-bold uppercase tracking-wide mb-1"
             style={{ color: "rgba(14,8,87,0.6)" }}
           >
-            Mécanisme&nbsp;: {defi.mecanisme}
+            Défi&nbsp;: {defi.defi}
           </span>
           <span
             style={{ color: NAVY, lineHeight: 1.5 }}

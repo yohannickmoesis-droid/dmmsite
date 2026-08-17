@@ -6,7 +6,7 @@ export default function TenDefis() {
     <section id="defis" className="bg-navy pt-2 sm:pt-3 pb-20 sm:pb-24">
       <div className="max-w-[1440px] mx-auto px-5 sm:px-8">
         <h2 className="font-display text-cream text-4xl sm:text-5xl tracking-wide mb-5">
-          Les 10 défis invisibles de la reconversion
+          Les 10 mécanismes de la reconversion
         </h2>
         <p className="text-cream text-base sm:text-lg leading-relaxed mb-14 max-w-3xl text-justify">
           La transition militaire-civile s&apos;accompagne souvent de défis que l&apos;on

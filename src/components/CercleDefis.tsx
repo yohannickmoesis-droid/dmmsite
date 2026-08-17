@@ -16,60 +16,71 @@ import {
 } from "lucide-react";
 
 type Defi = {
-  titre: string;
+  mecanisme: string;
+  defi: string;
   desc: string;
 };
 
 const MILITARITE: Defi[] = [
   {
-    titre: "Perte d'identité",
+    mecanisme: "La perte d'identité",
+    defi: "Se redéfinir sans l'uniforme",
     desc: "Qui suis-je sans mon uniforme, mon grade ou mon statut ?",
   },
   {
-    titre: "Choc culturel militaire / civil",
+    mecanisme: "Le choc culturel militaire-civil",
+    defi: "Réapprendre les codes civils",
     desc: "Quand les codes appris dans l'institution ne fonctionnent plus dans le monde civil.",
   },
   {
-    titre: "La légitimité à reconstruire",
+    mecanisme: "La légitimité à reconstruire",
+    defi: "Reconstruire sa légitimité",
     desc: "Sur quoi repose ma valeur lorsque l'institution n'est plus là ?",
   },
   {
-    titre: "Perte de sens",
+    mecanisme: "La perte de sens",
+    defi: "Retrouver du sens",
     desc: "Comment retrouver une mission qui donne envie de se lever le matin ?",
   },
   {
-    titre: "Perte du collectif",
+    mecanisme: "La perte du collectif",
+    defi: "Retisser du lien",
     desc: "Recréer du lien après avoir quitté l'esprit de corps.",
   },
 ];
 
 const POLARISATION: Defi[] = [
   {
-    titre: "Vos valeurs, votre socle",
+    mecanisme: "La perte du socle de valeurs",
+    defi: "Redéfinir son socle de valeurs",
     desc: "Définir ce qui compte vraiment lorsque les valeurs ne sont plus imposées par l'institution.",
   },
   {
-    titre: "Le déni de la peur",
+    mecanisme: "Le déni de la peur",
+    defi: "Sortir du mode inhibition",
     desc: "Reconnaître les inquiétudes liées au changement et à l'incertitude.",
   },
   {
-    titre: "Le deuil de l'institution",
+    mecanisme: "Le deuil de l'institution",
+    defi: "Faire le deuil de l'institution",
     desc: "Accepter la fin d'un chapitre qui a structuré une partie de sa vie.",
   },
   {
-    titre: "Les comportements d'évitement",
+    mecanisme: "Les comportements d'évitement",
+    defi: "Sortir des comportements d'évitement",
     desc: "Quand on cherche inconsciemment à recréer l'univers militaire ailleurs.",
   },
   {
-    titre: "Accepter d'être accompagné",
+    mecanisme: "La résilience",
+    defi: "Accepter d'être accompagné",
     desc: "Sortir du réflexe d'autonomie absolue pour avancer autrement.",
   },
 ];
 
 const CREAM = "#EFE7DD";
+const CARD_BG = "#171057";
 const GOLD_SOFT = "#F0C75D";
 const NAVY = "#0E0857";
-const ICON_GRADIENT_ID = "cercleDefisIconGradient";
 
 const ICONS_MILITARITE: LucideIcon[] = [
   UserX,
@@ -108,7 +119,7 @@ function FlipCard({
       style={{ perspective: "1000px" }}
     >
       <div
-        className="relative w-full min-h-[92px] sm:min-h-[100px] transition-transform duration-500"
+        className="relative w-full min-h-[112px] sm:min-h-[122px] transition-transform duration-500"
         style={{
           transformStyle: "preserve-3d",
           transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
@@ -118,11 +129,8 @@ function FlipCard({
           className="absolute inset-0 rounded-lg px-5 py-4 flex items-center gap-4 overflow-hidden transition-shadow duration-300"
           style={{
             backfaceVisibility: "hidden",
-            border: `1.5px solid ${accent}`,
-            background: "rgba(30, 26, 100, 0.5)",
-            backdropFilter: "blur(8px)",
-            WebkitBackdropFilter: "blur(8px)",
-            boxShadow: "0 12px 32px rgba(196,163,90,0.18)",
+            border: `3px solid ${accent}`,
+            background: CARD_BG,
           }}
         >
           <div
@@ -137,30 +145,25 @@ function FlipCard({
           >
             {numero}
           </span>
-          <div
-            className="rounded-full flex items-center justify-center shrink-0"
-            style={{
-              width: 44,
-              height: 44,
-              background: `${accent}26`,
-            }}
-          >
-            <Icon
-              size={24}
-              strokeWidth={2.25}
-              color={`url(#${ICON_GRADIENT_ID})`}
-            />
+          <Icon size={30} strokeWidth={2.25} color={accent} className="shrink-0" />
+          <div className="flex-1 text-left">
+            <span
+              style={{
+                fontFamily: "'Bebas Neue', sans-serif",
+                color: CREAM,
+                lineHeight: 1.2,
+              }}
+              className="text-lg sm:text-xl font-bold uppercase tracking-wide block"
+            >
+              {defi.mecanisme}
+            </span>
+            <span
+              style={{ color: accent }}
+              className="text-xs sm:text-sm font-medium italic block mt-0.5"
+            >
+              {defi.defi}
+            </span>
           </div>
-          <span
-            style={{
-              fontFamily: "'Bebas Neue', sans-serif",
-              color: CREAM,
-              lineHeight: 1.2,
-            }}
-            className="text-lg sm:text-xl font-bold uppercase tracking-wide flex-1 text-left"
-          >
-            {defi.titre}
-          </span>
           <span
             className="text-lg font-bold shrink-0 transition-transform duration-500"
             style={{
@@ -177,9 +180,8 @@ function FlipCard({
           style={{
             backfaceVisibility: "hidden",
             transform: "rotateY(180deg)",
-            border: `1.5px solid ${accent}`,
+            border: `3px solid ${accent}`,
             background: GOLD_SOFT,
-            boxShadow: "0 12px 32px rgba(196,163,90,0.18)",
           }}
         >
           <span
@@ -196,80 +198,68 @@ function FlipCard({
 
 export default function CercleDefis() {
   return (
-    <div className="relative w-full max-w-5xl mx-auto">
-      {/* Définition du dégradé utilisé par le trait des icônes */}
-      <svg width="0" height="0" style={{ position: "absolute" }}>
-        <defs>
-          <linearGradient id={ICON_GRADIENT_ID} x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#FDE047" />
-            <stop offset="100%" stopColor="#D97706" />
-          </linearGradient>
-        </defs>
-      </svg>
+    <div className="w-full max-w-5xl mx-auto">
+      <div className="text-center mb-10">
+        <div
+          style={{ fontFamily: "'Bebas Neue', sans-serif", color: CREAM }}
+          className="text-5xl sm:text-6xl uppercase tracking-wide"
+        >
+          Mon identité
+        </div>
+      </div>
 
-      <div className="relative">
-        <div className="text-center mb-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10">
+        <div>
           <div
-            style={{ fontFamily: "'Bebas Neue', sans-serif", color: CREAM }}
-            className="text-5xl sm:text-6xl uppercase tracking-wide"
+            className="text-base sm:text-lg uppercase tracking-wide font-bold mb-1 text-center"
+            style={{ color: "#C4A35A" }}
           >
-            Mon identité
+            La militarité
+          </div>
+          <p
+            className="text-xs sm:text-sm leading-relaxed mb-4 text-center"
+            style={{ color: "#EFE7DD" }}
+          >
+            Ce que l&apos;armée a construit en vous&nbsp;: votre identité,
+            vos repères, votre façon de voir le monde.
+          </p>
+          <div className="flex flex-col gap-4">
+            {MILITARITE.map((d, i) => (
+              <FlipCard
+                key={d.mecanisme}
+                defi={d}
+                accent="#C4A35A"
+                numero={String(i + 1).padStart(2, "0")}
+                Icon={ICONS_MILITARITE[i]}
+              />
+            ))}
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10">
-          <div>
-            <div
-              className="text-base sm:text-lg uppercase tracking-wide font-bold mb-1 text-center"
-              style={{ color: "#C4A35A" }}
-            >
-              La militarité
-            </div>
-            <p
-              className="text-xs sm:text-sm leading-relaxed mb-4 text-center"
-              style={{ color: "#EFE7DD" }}
-            >
-              Ce que l&apos;armée a construit en vous&nbsp;: votre identité,
-              vos repères, votre façon de voir le monde.
-            </p>
-            <div className="flex flex-col gap-4">
-              {MILITARITE.map((d, i) => (
-                <FlipCard
-                  key={d.titre}
-                  defi={d}
-                  accent="#C4A35A"
-                  numero={String(i + 1).padStart(2, "0")}
-                  Icon={ICONS_MILITARITE[i]}
-                />
-              ))}
-            </div>
+        <div>
+          <div
+            className="text-base sm:text-lg uppercase tracking-wide font-bold mb-1 text-center"
+            style={{ color: "#D39318" }}
+          >
+            La polarisation
           </div>
-
-          <div>
-            <div
-              className="text-base sm:text-lg uppercase tracking-wide font-bold mb-1 text-center"
-              style={{ color: "#D39318" }}
-            >
-              La polarisation
-            </div>
-            <p
-              className="text-xs sm:text-sm leading-relaxed mb-4 text-center"
-              style={{ color: "#EFE7DD" }}
-            >
-              Le tiraillement entre ce que vous étiez dans l&apos;armée et ce
-              que vous devez devenir dans le civil.
-            </p>
-            <div className="flex flex-col gap-4">
-              {POLARISATION.map((d, i) => (
-                <FlipCard
-                  key={d.titre}
-                  defi={d}
-                  accent="#D39318"
-                  numero={String(i + 6).padStart(2, "0")}
-                  Icon={ICONS_POLARISATION[i]}
-                />
-              ))}
-            </div>
+          <p
+            className="text-xs sm:text-sm leading-relaxed mb-4 text-center"
+            style={{ color: "#EFE7DD" }}
+          >
+            Le tiraillement entre ce que vous étiez dans l&apos;armée et ce
+            que vous devez devenir dans le civil.
+          </p>
+          <div className="flex flex-col gap-4">
+            {POLARISATION.map((d, i) => (
+              <FlipCard
+                key={d.mecanisme}
+                defi={d}
+                accent="#D39318"
+                numero={String(i + 6).padStart(2, "0")}
+                Icon={ICONS_POLARISATION[i]}
+              />
+            ))}
           </div>
         </div>
       </div>

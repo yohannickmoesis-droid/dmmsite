@@ -25,12 +25,12 @@ const OPTIONS = [
 ];
 
 const DEFI_10 =
-  "Un dixième défi, différent des neuf premiers, conditionne souvent leur dépassement : accepter d'être accompagné dans cette traversée.";
+  "Un dixième mécanisme, différent des neuf premiers, conditionne souvent leur dépassement : accepter d'être accompagné dans cette traversée.";
 
 const RESULTS: Record<string, { label: string; text: string }> = {
   aucun: {
-    label: "Aucun défi majeur identifié",
-    text: "Vos réponses ne mettent en évidence aucun défi identitaire majeur actuellement. Cela ne veut pas dire que la transition militaire-civile sera sans aucune dimension à observer pour vous, mais simplement qu'à ce jour, ces défis ne semblent pas constituer une source de difficulté. Cette photographie peut évoluer avec le temps, c'est pourquoi il peut être utile d'y revenir périodiquement.",
+    label: "Aucun mécanisme majeur identifié",
+    text: "Vos réponses ne mettent en évidence aucun mécanisme identitaire majeur actuellement. Cela ne veut pas dire que la transition militaire-civile sera sans aucune dimension à observer pour vous, mais simplement qu'à ce jour, ces mécanismes ne semblent pas constituer une source de difficulté. Cette photographie peut évoluer avec le temps, c'est pourquoi il peut être utile d'y revenir périodiquement.",
   },
   identite: {
     label: "Perte d'identité",
@@ -173,10 +173,10 @@ export default function DiagnosticQuiz() {
       labelForPayload = RESULTS[result.theme].label;
     } else if (result.mode === "few") {
       themeForPayload = "plusieurs";
-      labelForPayload = `Plusieurs défis (${result.themes.map((t) => RESULTS[t].label).join(", ")})`;
+      labelForPayload = `Plusieurs mécanismes (${result.themes.map((t) => RESULTS[t].label).join(", ")})`;
     } else if (result.mode === "many") {
       themeForPayload = "reparti";
-      labelForPayload = "Profil réparti sur plusieurs défis";
+      labelForPayload = "Profil réparti sur plusieurs mécanismes";
     }
 
     fetch(APPS_SCRIPT_URL, {
@@ -214,10 +214,10 @@ export default function DiagnosticQuiz() {
         {stage === "intro" && (
           <div>
             <h3 className="text-cream text-lg font-semibold leading-snug mb-1.5">
-              Quel défi est le plus présent dans votre transition aujourd&rsquo;hui&nbsp;?
+              Quel mécanisme est le plus présent dans votre transition aujourd&rsquo;hui&nbsp;?
             </h3>
             <p className="text-cream text-[13.5px] leading-relaxed mb-5">
-              Répondez à 9 questions rapides pour identifier le défi qui mérite peut-être
+              Répondez à 9 questions rapides pour identifier le mécanisme qui mérite peut-être
               votre attention en ce moment.
             </p>
             <button type="button" className={buttonCls} onClick={handleStart}>
@@ -348,11 +348,11 @@ function ResultBlock({
     badge = "Défi identifié";
     title = RESULTS[info.theme].label;
     disclaimer =
-      "Ce résultat ne constitue pas un diagnostic. Il met simplement en lumière un défi qui semble actuellement plus présent dans votre transition. D'autres mécanismes peuvent également être à l'œuvre.";
+      "Ce résultat ne constitue pas un diagnostic. Il met simplement en lumière un mécanisme qui semble actuellement plus présent dans votre transition. D'autres mécanismes peuvent également être à l'œuvre.";
     showDefi10 = true;
     body = <p className="text-cream text-sm leading-relaxed mb-4">{RESULTS[info.theme].text}</p>;
   } else if (info.mode === "few") {
-    title = "Plusieurs défis semblent vous concerner";
+    title = "Plusieurs mécanismes semblent vous concerner";
     const labels = info.themes.map((t) => RESULTS[t].label).join(" · ");
     body = (
       <div>
@@ -360,9 +360,9 @@ function ResultBlock({
           Thèmes les plus présents pour vous&nbsp;: {labels}
         </p>
         <p className="text-cream text-sm leading-relaxed mb-4">
-          Vos réponses ne font pas clairement apparaître un défi qui se détache des autres :
+          Vos réponses ne font pas clairement apparaître un mécanisme qui se détache des autres :
           plusieurs semblent vous concerner à un niveau comparable aujourd&rsquo;hui. C&rsquo;est
-          une situation fréquente, notamment en début de transition, car ces défis sont souvent
+          une situation fréquente, notamment en début de transition, car ces mécanismes sont souvent
           liés entre eux.
         </p>
       </div>
@@ -372,8 +372,8 @@ function ResultBlock({
     body = (
       <p className="text-cream text-sm leading-relaxed mb-4">
         Vos réponses font apparaître une préoccupation assez répartie entre plusieurs dimensions
-        de votre transition, sans qu&rsquo;un défi précis ne se détache nettement. Un
-        accompagnement structuré, qui prend les défis dans leur ensemble, a souvent plus de sens
+        de votre transition, sans qu&rsquo;un mécanisme précis ne se détache nettement. Un
+        accompagnement structuré, qui prend les mécanismes dans leur ensemble, a souvent plus de sens
         qu&rsquo;un travail isolé sur un seul point.
       </p>
     );

@@ -38,14 +38,14 @@ export default function MonParcoursPage() {
       </section>
 
       <section className="bg-cream py-20 sm:py-28">
-        <div className="max-w-[1440px] mx-auto px-5 sm:px-8 grid md:grid-cols-2 gap-10 md:gap-16 items-stretch">
-          <div className="relative w-full aspect-[4/5] md:aspect-auto md:h-full min-h-[420px] rounded-lg overflow-hidden">
+        <div className="max-w-[1440px] mx-auto px-5 sm:px-8 grid md:grid-cols-2 gap-10 md:gap-16 items-start">
+          <div className="relative w-full aspect-[4/5] rounded-lg overflow-hidden">
             <Image
               src="/images/portrait.jpg"
               alt="Yohannick Moesis"
               fill
               sizes="(min-width: 768px) 50vw, 100vw"
-              className="object-cover"
+              className="object-cover object-top"
             />
           </div>
 

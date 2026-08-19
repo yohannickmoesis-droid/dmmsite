@@ -1,6 +1,35 @@
 "use client";
 
 import Image from "next/image";
+import { useEffect, useState } from "react";
+
+const SUFFIXES = ["onsieur", "adame"];
+
+function AnimatedSuffix() {
+  const [index, setIndex] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setVisible(false);
+      const timeout = setTimeout(() => {
+        setIndex((i) => (i + 1) % SUFFIXES.length);
+        setVisible(true);
+      }, 300);
+      return () => clearTimeout(timeout);
+    }, 2500);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <span
+      className="inline-block transition-opacity duration-300"
+      style={{ opacity: visible ? 1 : 0 }}
+    >
+      {SUFFIXES[index]}
+    </span>
+  );
+}
 
 function IconIdentite() {
   return (
@@ -71,7 +100,7 @@ export default function Hero() {
 
       <div className="relative z-10 w-full max-w-[1440px] mx-auto px-5 sm:px-8 pb-16 sm:pb-24 pt-32">
         <h1 className="font-display text-cream text-5xl sm:text-7xl lg:text-8xl leading-[0.95] tracking-wide mb-4 max-w-4xl">
-          De Militaire <span className="text-gold">à Monsieur</span>
+          De Militaire <span className="text-gold">à M<AnimatedSuffix /></span>
         </h1>
         <p className="inline-flex items-center bg-gold text-navy font-semibold tracking-[0.15em] text-sm sm:text-base uppercase px-3 py-2 mb-8 leading-none">
           Votre transition. Votre identité. Votre avenir.

@@ -18,17 +18,17 @@ const COLLECTIVES = [
   {
     title: "Sensibilisation",
     duree: "1h30",
-    text: "Sensibilisation aux défis identitaires de la transition.",
+    text: "Sensibilisation aux mécanismes identitaires de la transition.",
   },
   {
     title: "Atelier thématique",
     duree: "3h",
-    text: "Travail identitaire approfondi avec workbook, centré sur 5 des 10 défis identitaires.",
+    text: "Travail identitaire approfondi avec workbook, centré sur 5 des 10 mécanismes identitaires.",
   },
   {
     title: "Programme complet",
     duree: "2 demi-journées",
-    text: "Accompagnement collectif structuré, parcours complet des 10 défis identitaires.",
+    text: "Accompagnement collectif structuré, parcours complet des 10 mécanismes identitaires.",
   },
 ];
 

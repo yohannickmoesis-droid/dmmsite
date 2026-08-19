@@ -4,31 +4,30 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const SUFFIXES = ["onsieur", "adame"];
-const DISPLAY = [...SUFFIXES, SUFFIXES[0]];
 
 function AnimatedSuffix() {
-  const [pos, setPos] = useState(0);
+  const [index, setIndex] = useState(0);
+  const [shift, setShift] = useState(false);
   const [instant, setInstant] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setPos((p) => p + 1);
-    }, 2500);
-    return () => clearInterval(interval);
-  }, []);
-
-  useEffect(() => {
-    if (pos === DISPLAY.length - 1) {
-      const timeout = setTimeout(() => {
+      setShift(true); // glisse vers le bas
+      const t1 = setTimeout(() => {
         setInstant(true);
-        setPos(0);
+        setIndex((i) => (i + 1) % SUFFIXES.length);
+        setShift(false); // repositionne sans transition (invisible)
         requestAnimationFrame(() => {
           requestAnimationFrame(() => setInstant(false));
         });
       }, 500);
-      return () => clearTimeout(timeout);
-    }
-  }, [pos]);
+      return () => clearTimeout(t1);
+    }, 2500);
+    return () => clearInterval(interval);
+  }, []);
+
+  const current = SUFFIXES[index];
+  const next = SUFFIXES[(index + 1) % SUFFIXES.length];
 
   return (
     <span
@@ -41,13 +40,10 @@ function AnimatedSuffix() {
             ? "flex flex-col"
             : "flex flex-col transition-transform duration-500 ease-in-out"
         }
-        style={{ transform: `translateY(-${pos}em)` }}
+        style={{ transform: `translateY(${shift ? 0 : -1}em)` }}
       >
-        {DISPLAY.map((s, i) => (
-          <span key={i} style={{ height: "1em", lineHeight: "1em" }}>
-            {s}
-          </span>
-        ))}
+        <span style={{ height: "1em", lineHeight: "1em" }}>{next}</span>
+        <span style={{ height: "1em", lineHeight: "1em" }}>{current}</span>
       </span>
     </span>
   );

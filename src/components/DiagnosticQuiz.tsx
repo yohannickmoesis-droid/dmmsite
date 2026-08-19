@@ -25,7 +25,7 @@ const OPTIONS = [
 ];
 
 const DEFI_10 =
-  "Un dixième mécanisme, différent des neuf premiers, conditionne souvent leur dépassement : accepter d'être accompagné dans cette traversée.";
+  "Un dixième mécanisme, différent des neuf premiers, conditionne souvent leur dépassement : accepter d'être accompagné(e) dans cette traversée.";
 
 const RESULTS: Record<string, { label: string; text: string }> = {
   aucun: {

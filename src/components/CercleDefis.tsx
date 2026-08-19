@@ -71,8 +71,8 @@ const POLARISATION: Defi[] = [
     desc: "Quand on cherche inconsciemment à recréer l'univers militaire ailleurs.",
   },
   {
-    mecanisme: "Accepter d'être accompagné",
-    defi: "Accepter d'être accompagné",
+    mecanisme: "Accepter d'être accompagné(e)",
+    defi: "Accepter d'être accompagné(e)",
     desc: "Sortir du réflexe d'autonomie absolue pour avancer autrement.",
   },
 ];

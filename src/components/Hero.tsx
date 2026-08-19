@@ -4,16 +4,31 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const SUFFIXES = ["onsieur", "adame"];
+const DISPLAY = [...SUFFIXES, SUFFIXES[0]];
 
 function AnimatedSuffix() {
-  const [index, setIndex] = useState(0);
+  const [pos, setPos] = useState(0);
+  const [instant, setInstant] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((i) => (i + 1) % SUFFIXES.length);
+      setPos((p) => p + 1);
     }, 2500);
     return () => clearInterval(interval);
   }, []);
+
+  useEffect(() => {
+    if (pos === DISPLAY.length - 1) {
+      const timeout = setTimeout(() => {
+        setInstant(true);
+        setPos(0);
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => setInstant(false));
+        });
+      }, 500);
+      return () => clearTimeout(timeout);
+    }
+  }, [pos]);
 
   return (
     <span
@@ -21,11 +36,15 @@ function AnimatedSuffix() {
       style={{ height: "1em" }}
     >
       <span
-        className="flex flex-col transition-transform duration-500 ease-in-out"
-        style={{ transform: `translateY(-${index * 1}em)` }}
+        className={
+          instant
+            ? "flex flex-col"
+            : "flex flex-col transition-transform duration-500 ease-in-out"
+        }
+        style={{ transform: `translateY(-${pos}em)` }}
       >
-        {SUFFIXES.map((s) => (
-          <span key={s} style={{ height: "1em", lineHeight: "1em" }}>
+        {DISPLAY.map((s, i) => (
+          <span key={i} style={{ height: "1em", lineHeight: "1em" }}>
             {s}
           </span>
         ))}

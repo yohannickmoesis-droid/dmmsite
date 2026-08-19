@@ -7,26 +7,29 @@ const SUFFIXES = ["onsieur", "adame"];
 
 function AnimatedSuffix() {
   const [index, setIndex] = useState(0);
-  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setVisible(false);
-      const timeout = setTimeout(() => {
-        setIndex((i) => (i + 1) % SUFFIXES.length);
-        setVisible(true);
-      }, 300);
-      return () => clearTimeout(timeout);
+      setIndex((i) => (i + 1) % SUFFIXES.length);
     }, 2500);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <span
-      className="inline-block transition-opacity duration-300"
-      style={{ opacity: visible ? 1 : 0 }}
+      className="inline-block overflow-hidden align-top"
+      style={{ height: "1em" }}
     >
-      {SUFFIXES[index]}
+      <span
+        className="flex flex-col transition-transform duration-500 ease-in-out"
+        style={{ transform: `translateY(-${index * 1}em)` }}
+      >
+        {SUFFIXES.map((s) => (
+          <span key={s} style={{ height: "1em", lineHeight: "1em" }}>
+            {s}
+          </span>
+        ))}
+      </span>
     </span>
   );
 }

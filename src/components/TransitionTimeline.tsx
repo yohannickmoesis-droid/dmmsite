@@ -117,18 +117,18 @@ export default function TransitionTimeline() {
           trouver un emploi&nbsp;:
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-16 max-w-2xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
           {QUESTIONS.map((q) => (
             <div
               key={q.text}
-              className="rounded-lg p-6 flex flex-col items-start gap-3"
+              className="rounded-lg p-5 flex items-center gap-4"
               style={{
                 background: "#161066",
                 border: "1px solid rgba(196,163,90,0.5)",
               }}
             >
               <div
-                className="rounded-full flex items-center justify-center"
+                className="rounded-full flex items-center justify-center shrink-0"
                 style={{
                   width: 40,
                   height: 40,
@@ -137,7 +137,7 @@ export default function TransitionTimeline() {
               >
                 <q.Icon size={20} strokeWidth={2} color={`url(#${ICON_GRADIENT_ID})`} />
               </div>
-              <p className="text-cream font-semibold text-base sm:text-lg leading-snug">
+              <p className="text-cream font-semibold text-sm sm:text-base leading-snug">
                 {q.text}
               </p>
             </div>

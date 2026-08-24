@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useImperativeHandle, useRef, useState, forwardRef } from "react";
 
 const APPS_SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbziMfCni5NCQ7DDeQh4q3-RQaKTCNU7X0FX8JiVBIU0m63qvutT0FJVM9Fpek5Ia0gA/exec";
@@ -119,7 +119,14 @@ const optionCls =
 
 type Stage = "intro" | "question" | "form" | "result";
 
-export default function DiagnosticQuiz() {
+export type DiagnosticQuizHandle = {
+  start: () => void;
+};
+
+const DiagnosticQuiz = forwardRef<DiagnosticQuizHandle>(function DiagnosticQuiz(
+  _props,
+  ref
+) {
   const [stage, setStage] = useState<Stage>("intro");
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<number[]>([]);
@@ -136,6 +143,10 @@ export default function DiagnosticQuiz() {
     setAnswers([]);
     setStage("question");
   }, []);
+
+  useImperativeHandle(ref, () => ({
+    start: handleStart,
+  }));
 
   const handleAnswer = useCallback(
     (value: number) => {
@@ -321,7 +332,9 @@ export default function DiagnosticQuiz() {
       </div>
     </div>
   );
-}
+});
+
+export default DiagnosticQuiz;
 
 function ResultBlock({
   info,

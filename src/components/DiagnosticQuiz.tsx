@@ -224,10 +224,7 @@ const DiagnosticQuiz = forwardRef<DiagnosticQuizHandle>(function DiagnosticQuiz(
       <div className={cardCls} style={cardStyle}>
         {stage === "intro" && (
           <div>
-            <h3 className="text-cream text-lg font-semibold leading-snug mb-1.5">
-              Quel mécanisme est le plus présent dans votre transition aujourd&rsquo;hui&nbsp;?
-            </h3>
-            <p className="text-cream text-[13.5px] leading-relaxed mb-5">
+            <p className="text-cream text-base leading-relaxed mb-5">
               Répondez à 9 questions rapides pour identifier le mécanisme qui mérite peut-être
               votre attention en ce moment.
             </p>

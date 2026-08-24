@@ -35,13 +35,9 @@ export default function LesDixMecanismesPage() {
 
       <section className="bg-navy py-20 sm:py-28">
         <div className="max-w-[1440px] mx-auto px-5 sm:px-8">
-          <h2 className="font-display text-cream text-4xl sm:text-5xl tracking-wide mb-4">
+          <h2 className="font-display text-cream text-4xl sm:text-5xl tracking-wide mb-8">
             Quel mécanisme est le plus présent pour vous&nbsp;?
           </h2>
-          <p className="text-cream/80 text-base leading-relaxed mb-8 max-w-2xl">
-            Répondez à 9 questions rapides pour identifier le mécanisme qui
-            mérite peut-être votre attention en ce moment.
-          </p>
           <Suspense fallback={null}>
             <MecanismesQuiz />
           </Suspense>

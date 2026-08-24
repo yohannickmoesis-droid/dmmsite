@@ -35,7 +35,7 @@ const STAGES: { title: string; time: string; text: string; Icon: LucideIcon }[] 
 const QUESTIONS: { text: string; Icon: LucideIcon }[] = [
   { text: "Qui suis-je sans mon uniforme ?", Icon: Fingerprint },
   { text: "Comment retrouver du sens ?", Icon: Compass },
-  { text: "Où trouver ma place ?", Icon: Target },
+  { text: "Où trouver ma place\u00a0?", Icon: Target },
   { text: "Comment recréer un collectif ?", Icon: Shield },
 ];
 

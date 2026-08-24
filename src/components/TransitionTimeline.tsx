@@ -1,13 +1,4 @@
-import {
-  CalendarClock,
-  RefreshCw,
-  DoorOpen,
-  Fingerprint,
-  Compass,
-  Target,
-  Shield,
-  type LucideIcon,
-} from "lucide-react";
+import { CalendarClock, RefreshCw, DoorOpen, type LucideIcon } from "lucide-react";
 
 const ICON_GRADIENT_ID = "transitionIconGradient";
 
@@ -15,34 +6,21 @@ const STAGES: { title: string; time: string; text: string; Icon: LucideIcon }[] 
   {
     title: "Vous préparez votre départ",
     time: "6 mois à 2 ans avant la sortie",
-    text: "Vous commencez à envisager une vie sans uniforme et à vous interroger sur votre avenir.",
+    text: "Vous commencez à envisager la vie sans uniforme et à anticiper le choc culturel.",
     Icon: CalendarClock,
   },
   {
-    title: "Vous êtes en||transition",
-    time: "Formation, recherche d'emploi ou premiers mois dans le civil",
-    text: "Vous construisez de nouveaux repères sans avoir encore trouvé votre équilibre.",
+    title: "Vous êtes en||pleine transition",
+    time: "Formation, recherche d'emploi, premiers mois",
+    text: "Vous construisez vos nouveaux repères mais cherchez encore votre équilibre identitaire.",
     Icon: RefreshCw,
   },
   {
     title: "Vous avez quitté l'institution",
-    time: "Le changement est derrière vous",
-    text: "Vous avez du mal à trouver votre place et certaines questions restent sans réponse.",
+    time: "Le changement est là",
+    text: "Vous ressentez un décalage, un manque de sens ou de collectif dans le civil.",
     Icon: DoorOpen,
   },
-];
-
-const QUESTIONS: { text: string; Icon: LucideIcon }[] = [
-  { text: "Qui suis-je sans mon uniforme ?", Icon: Fingerprint },
-  { text: "Comment retrouver du sens ?", Icon: Compass },
-  { text: "Où trouver ma place\u00a0?", Icon: Target },
-  { text: "Comment recréer un collectif ?", Icon: Shield },
-];
-
-const STATS = [
-  { chiffre: "20 000", legende: "militaires entament une reconversion chaque année" },
-  { chiffre: "60,3 %", legende: "trouvent un emploi en moins d'un an" },
-  { chiffre: "37,4 %", legende: "pérennisent leur emploi après 3 ans" },
 ];
 
 export default function TransitionTimeline() {
@@ -62,7 +40,7 @@ export default function TransitionTimeline() {
           </defs>
         </svg>
 
-        <div className="grid sm:grid-cols-3 gap-6 mb-10">
+        <div className="grid sm:grid-cols-3 gap-6">
           {STAGES.map((stage) => (
             <div
               key={stage.title}
@@ -112,72 +90,7 @@ export default function TransitionTimeline() {
           ))}
         </div>
 
-        <p className="text-cream text-base sm:text-lg leading-relaxed mb-10 max-w-3xl text-justify">
-          Quelle que soit votre étape, la reconversion ne se résume pas à
-          trouver un emploi&nbsp;:
-        </p>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
-          {QUESTIONS.map((q) => (
-            <div
-              key={q.text}
-              className="rounded-lg p-5 flex items-center gap-4"
-              style={{
-                background: "#161066",
-                border: "1px solid rgba(196,163,90,0.5)",
-              }}
-            >
-              <div
-                className="rounded-full flex items-center justify-center shrink-0"
-                style={{
-                  width: 40,
-                  height: 40,
-                  background: "rgba(196,163,90,0.15)",
-                }}
-              >
-                <q.Icon size={20} strokeWidth={2} color={`url(#${ICON_GRADIENT_ID})`} />
-              </div>
-              <p className="text-cream font-semibold text-sm sm:text-base leading-snug">
-                {q.text}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        <div
-          className="rounded-2xl grid sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x overflow-hidden mb-10"
-          style={{
-            border: "1.5px solid #C4A35A",
-            background: "#161066",
-            boxShadow: "0 12px 32px rgba(196,163,90,0.18)",
-          }}
-        >
-          {STATS.map((s) => (
-            <div
-              key={s.legende}
-              className="px-6 py-10 sm:py-12 text-center flex flex-col items-center"
-              style={{ borderColor: "rgba(196,163,90,0.25)" }}
-            >
-              <div className="font-display text-gold text-6xl sm:text-7xl tracking-wide leading-none mb-3">
-                {s.chiffre}
-              </div>
-              <p className="text-cream text-sm sm:text-base leading-snug">
-                {s.legende}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        <div className="text-center">
-          <a
-            href="/#aide"
-            className="inline-flex items-center justify-center rounded-full bg-gold px-8 py-3.5 text-sm font-semibold text-navy hover:bg-gold-light transition-colors"
-          >
-            Voir mes offres
-          </a>
-        </div>
-
-        <div className="h-[3px] w-full mt-6 sm:mt-8 bg-gradient-to-r from-transparent via-[#C4A35A]/70 to-transparent" />
+        <div className="h-[3px] w-full mt-10 sm:mt-12 bg-gradient-to-r from-transparent via-[#C4A35A]/70 to-transparent" />
       </div>
     </section>
   );

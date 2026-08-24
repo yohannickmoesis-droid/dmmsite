@@ -1,55 +1,25 @@
 import DiagnosticQuiz from "./DiagnosticQuiz";
 
-const MECANISMES = [
-  "La perte d'identité",
-  "Le choc culturel militaire-civil",
-  "La légitimité à reconstruire",
-  "La perte de sens",
-  "La perte du collectif",
-  "La perte du socle de valeurs",
-  "Le déni de la peur",
-  "Le deuil de l'institution",
-  "Les comportements d'évitement",
-  "Accepter d'être accompagné(e)",
-];
-
 export default function TenDefis() {
   return (
     <section id="defis" className="bg-navy pt-2 sm:pt-3 pb-20 sm:pb-24">
       <div className="max-w-[1440px] mx-auto px-5 sm:px-8">
         <h2 className="font-display text-cream text-4xl sm:text-5xl tracking-wide mb-5">
-          Les 10 mécanismes invisibles de la reconversion
+          Les mécanismes invisibles de la reconversion
         </h2>
-        <p className="text-cream text-base sm:text-lg leading-relaxed mb-10 max-w-3xl text-justify">
-          Dix mécanismes identitaires reviennent le plus souvent dans les
-          parcours de reconversion. Voici un aperçu&nbsp;: le détail de chacun
-          se trouve sur la page dédiée.
+        <p className="text-cream text-base sm:text-lg leading-relaxed mb-8 max-w-3xl text-justify">
+          Dix mécanismes identitaires reviennent fréquemment lors du passage
+          au civil (perte d&apos;identité, du collectif, de la légitimité...).
+          Identifiez ce qui joue dans votre parcours actuel.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8 max-w-4xl mx-auto">
-          {MECANISMES.map((m, i) => (
-            <div
-              key={m}
-              className="flex items-center gap-3 rounded-lg px-4 py-3"
-              style={{
-                background: "#161066",
-                border: "1px solid rgba(196,163,90,0.35)",
-              }}
-            >
-              <span
-                className="text-xs font-bold shrink-0"
-                style={{ color: "#C4A35A" }}
-              >
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <span className="text-cream text-sm sm:text-base font-medium text-left">
-                {m}
-              </span>
-            </div>
-          ))}
-        </div>
-
-        <div className="text-center mb-14">
+        <div className="flex flex-wrap gap-4 mb-16">
+          <a
+            href="#quiz-diagnostic"
+            className="inline-flex items-center justify-center rounded-full bg-gold px-8 py-3.5 text-sm font-semibold text-navy hover:bg-gold-light transition-colors"
+          >
+            Faire le test rapide (3 min)
+          </a>
           <a
             href="/les-10-mecanismes"
             className="inline-flex items-center gap-2 text-gold font-semibold text-sm sm:text-base border-b-2 border-gold pb-1 hover:text-gold-light transition-colors"
@@ -59,9 +29,11 @@ export default function TenDefis() {
           </a>
         </div>
 
-        <div className="text-center">
+        <div id="quiz-diagnostic" className="text-center scroll-mt-24">
           <DiagnosticQuiz />
         </div>
+
+        <div className="h-[3px] w-full mt-16 bg-gradient-to-r from-transparent via-[#C4A35A]/70 to-transparent" />
       </div>
     </section>
   );

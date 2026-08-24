@@ -163,19 +163,22 @@ export default function Hero() {
       {/* Portrait en superposition, hors du flux du texte, pour ne pas reduire sa largeur */}
       <div
         className="hidden lg:block absolute z-10"
-        style={{ right: "3rem", bottom: "9rem", width: "260px" }}
+        style={{ right: "2rem", bottom: "7rem", width: "320px" }}
       >
-        <div
-          className="relative w-full aspect-[3/4] rounded-xl overflow-hidden"
-          style={{ border: "2px solid #C4A35A" }}
-        >
+        <div className="relative w-full aspect-[3/4]">
           <Image
-            src="/images/portrait.jpg"
+            src="/images/portrait-hero.jpg"
             alt="Yohannick Moesis"
             fill
-            sizes="260px"
+            sizes="320px"
             className="object-cover"
-            style={{ objectPosition: "center 15%" }}
+            style={{
+              objectPosition: "center 15%",
+              maskImage:
+                "linear-gradient(200deg, black 40%, black 60%, transparent 95%)",
+              WebkitMaskImage:
+                "linear-gradient(200deg, black 40%, black 60%, transparent 95%)",
+            }}
           />
         </div>
       </div>

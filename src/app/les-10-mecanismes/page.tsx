@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import CercleDefis from "@/components/CercleDefis";
+import MecanismesQuiz from "@/components/MecanismesQuiz";
 
 export const metadata: Metadata = {
   title: "Les 10 mécanismes invisibles de la reconversion | De Militaire à Monsieur",
@@ -40,14 +42,9 @@ export default function LesDixMecanismesPage() {
             Répondez à 9 questions rapides pour identifier le mécanisme qui
             mérite peut-être votre attention en ce moment.
           </p>
-          <div className="text-center">
-            <a
-              href="/#defis"
-              className="inline-flex items-center justify-center rounded-full bg-gold px-8 py-3.5 text-sm font-semibold text-navy hover:bg-gold-light transition-colors"
-            >
-              Faire le quiz sur l&apos;accueil
-            </a>
-          </div>
+          <Suspense fallback={null}>
+            <MecanismesQuiz />
+          </Suspense>
         </div>
       </section>
     </>

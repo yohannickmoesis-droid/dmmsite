@@ -11,16 +11,10 @@ export default function TenDefis() {
           Identifiez ce qui joue dans votre parcours actuel.
         </p>
 
-        <div className="flex flex-wrap gap-4 mb-4">
-          <a
-            href="/les-10-mecanismes?quiz=1#quiz-diagnostic"
-            className="inline-flex items-center justify-center rounded-full bg-gold px-8 py-3.5 text-sm font-semibold text-navy hover:bg-gold-light transition-colors"
-          >
-            Faire le test rapide (3 min)
-          </a>
+        <div className="mb-4">
           <a
             href="/les-10-mecanismes"
-            className="inline-flex items-center justify-center gap-2 rounded-full px-8 py-3.5 text-sm font-semibold text-cream border border-gold hover:bg-gold/10 transition-colors"
+            className="inline-flex items-center justify-center rounded-full bg-gold px-8 py-3.5 text-sm font-semibold text-navy hover:bg-gold-light transition-colors"
           >
             Découvrir les 10 mécanismes en détail
           </a>

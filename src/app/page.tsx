@@ -1,6 +1,5 @@
 import Hero from "@/components/Hero";
 import TransitionTimeline from "@/components/TransitionTimeline";
-import PourquoiIdentite from "@/components/PourquoiIdentite";
 import TenDefis from "@/components/TenDefis";
 import MonParcours from "@/components/MonParcours";
 import CommentJePeuxAider from "@/components/CommentJePeuxAider";
@@ -12,7 +11,6 @@ export default function Home() {
     <>
       <Hero />
       <TransitionTimeline />
-      <PourquoiIdentite />
       <TenDefis />
       <MonParcours />
       <CommentJePeuxAider />

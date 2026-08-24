@@ -6,17 +6,26 @@ export default function BookingCta() {
           Prêt à mettre des mots sur ce que vous traversez&nbsp;?
         </h2>
         <p className="text-cream/80 text-base leading-relaxed mb-8 max-w-2xl text-justify">
-          Chaque transition est unique. Si vous sentez que l&rsquo;emploi ne suffit pas à
-          retrouver votre place, commençons par un échange simple pour clarifier votre
-          situation.
+          Chaque transition est unique. Si vous sentez que l&rsquo;emploi ne
+          suffit pas à retrouver votre place, commençons par un échange
+          simple.
         </p>
         <div className="text-center">
           <a
             href="/contact"
             className="inline-flex items-center justify-center rounded-full bg-gold px-8 py-3.5 text-sm font-semibold text-navy hover:bg-gold-light transition-colors"
           >
-            Me contacter
+            Prendre rendez-vous
           </a>
+          <p className="mt-5 text-cream/70 text-sm">
+            Vous avez des questions&nbsp;?{" "}
+            <a
+              href="/questions-frequentes"
+              className="text-gold font-semibold underline underline-offset-2 hover:text-gold-light transition-colors"
+            >
+              Consultez la FAQ
+            </a>
+          </p>
         </div>
       </div>
     </section>

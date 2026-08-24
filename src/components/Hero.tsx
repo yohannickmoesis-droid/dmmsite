@@ -175,9 +175,9 @@ export default function Hero() {
             style={{
               objectPosition: "center 15%",
               maskImage:
-                "linear-gradient(200deg, black 40%, black 60%, transparent 95%)",
+                "linear-gradient(to right, transparent 0%, black 35%, black 100%)",
               WebkitMaskImage:
-                "linear-gradient(200deg, black 40%, black 60%, transparent 95%)",
+                "linear-gradient(to right, transparent 0%, black 35%, black 100%)",
             }}
           />
         </div>

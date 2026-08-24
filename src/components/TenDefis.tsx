@@ -21,11 +21,9 @@ export default function TenDefis() {
           Les 10 mécanismes invisibles de la reconversion
         </h2>
         <p className="text-cream text-base sm:text-lg leading-relaxed mb-10 max-w-3xl text-justify">
-          La transition militaire-civile met en jeu des mécanismes que l&apos;on
-          n&apos;avait pas anticipés. Certains apparaissent dès la préparation du
-          départ, d&apos;autres se révèlent une fois dans le monde civil. Les
-          reconnaître est une première étape pour mieux comprendre ce que l&apos;on
-          traverse.
+          Certains apparaissent dès la préparation du départ, d&apos;autres se
+          révèlent une fois dans le monde civil. Les reconnaître est une
+          première étape pour mieux comprendre ce que l&apos;on traverse.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8 max-w-4xl mx-auto">

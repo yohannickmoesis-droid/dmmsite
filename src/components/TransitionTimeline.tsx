@@ -1,4 +1,13 @@
-import { CalendarClock, RefreshCw, DoorOpen, type LucideIcon } from "lucide-react";
+import {
+  CalendarClock,
+  RefreshCw,
+  DoorOpen,
+  Fingerprint,
+  Compass,
+  Target,
+  Shield,
+  type LucideIcon,
+} from "lucide-react";
 
 const ICON_GRADIENT_ID = "transitionIconGradient";
 
@@ -21,6 +30,19 @@ const STAGES: { title: string; time: string; text: string; Icon: LucideIcon }[] 
     text: "Vous avez du mal à trouver votre place et certaines questions restent sans réponse.",
     Icon: DoorOpen,
   },
+];
+
+const QUESTIONS: { text: string; Icon: LucideIcon }[] = [
+  { text: "Qui suis-je sans mon uniforme ?", Icon: Fingerprint },
+  { text: "Comment retrouver du sens ?", Icon: Compass },
+  { text: "Où trouver ma place ?", Icon: Target },
+  { text: "Comment recréer un collectif ?", Icon: Shield },
+];
+
+const STATS = [
+  { chiffre: "20 000", legende: "militaires entament une reconversion chaque année" },
+  { chiffre: "60,3 %", legende: "trouvent un emploi en moins d'un an" },
+  { chiffre: "37,4 %", legende: "pérennisent leur emploi après 3 ans" },
 ];
 
 export default function TransitionTimeline() {
@@ -90,6 +112,62 @@ export default function TransitionTimeline() {
           ))}
         </div>
 
+        <p className="text-cream text-base sm:text-lg leading-relaxed mb-10 max-w-3xl text-justify">
+          Quelle que soit votre étape, la reconversion ne se résume pas à
+          trouver un emploi&nbsp;:
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-16 max-w-2xl">
+          {QUESTIONS.map((q) => (
+            <div
+              key={q.text}
+              className="rounded-lg p-6 flex flex-col items-start gap-3"
+              style={{
+                background: "#161066",
+                border: "1px solid rgba(196,163,90,0.5)",
+              }}
+            >
+              <div
+                className="rounded-full flex items-center justify-center"
+                style={{
+                  width: 40,
+                  height: 40,
+                  background: "rgba(196,163,90,0.15)",
+                }}
+              >
+                <q.Icon size={20} strokeWidth={2} color={`url(#${ICON_GRADIENT_ID})`} />
+              </div>
+              <p className="text-cream font-semibold text-base sm:text-lg leading-snug">
+                {q.text}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <div
+          className="rounded-2xl grid sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x overflow-hidden mb-10"
+          style={{
+            border: "1.5px solid #C4A35A",
+            background: "#161066",
+            boxShadow: "0 12px 32px rgba(196,163,90,0.18)",
+          }}
+        >
+          {STATS.map((s) => (
+            <div
+              key={s.legende}
+              className="px-6 py-10 sm:py-12 text-center flex flex-col items-center"
+              style={{ borderColor: "rgba(196,163,90,0.25)" }}
+            >
+              <div className="font-display text-gold text-6xl sm:text-7xl tracking-wide leading-none mb-3">
+                {s.chiffre}
+              </div>
+              <p className="text-cream text-sm sm:text-base leading-snug">
+                {s.legende}
+              </p>
+            </div>
+          ))}
+        </div>
+
         <div className="text-center">
           <a
             href="/#aide"
@@ -99,7 +177,7 @@ export default function TransitionTimeline() {
           </a>
         </div>
 
-        <div className="h-[3px] w-full mt-16 bg-gradient-to-r from-transparent via-[#C4A35A]/70 to-transparent" />
+        <div className="h-[3px] w-full mt-6 sm:mt-8 bg-gradient-to-r from-transparent via-[#C4A35A]/70 to-transparent" />
       </div>
     </section>
   );

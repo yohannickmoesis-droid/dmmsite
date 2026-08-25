@@ -219,7 +219,6 @@ export default function Hero() {
             className="object-cover"
             style={{
               objectPosition: "center 15%",
-              transform: "scaleX(-1)",
             }}
           />
         </div>

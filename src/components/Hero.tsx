@@ -164,7 +164,7 @@ export default function Hero() {
           </p>
           <p className="text-cream text-lg sm:text-xl leading-relaxed">
             Elle consiste aussi à retrouver une{" "}
-            <span className="text-gold font-semibold">identité</span>, un{" "}
+            <span className="text-gold font-semibold">identité sociale</span>, un{" "}
             <span className="text-gold font-semibold">sens</span> et une{" "}
             <span className="text-gold font-semibold">place</span> dans le
             monde civil.

@@ -165,7 +165,21 @@ export default function Hero() {
         className="hidden lg:block absolute z-10"
         style={{ right: "1.5rem", bottom: "0", width: "340px" }}
       >
-        <div className="relative w-full" style={{ height: "480px" }}>
+        {/* Halo creme localise derriere la photo, effet fond de studio */}
+        <div
+          className="absolute"
+          style={{
+            right: "-40px",
+            bottom: "-30px",
+            width: "460px",
+            height: "560px",
+            background:
+              "radial-gradient(ellipse at 55% 65%, rgba(239,231,221,0.85) 0%, rgba(239,231,221,0.45) 40%, transparent 72%)",
+            filter: "blur(18px)",
+            zIndex: 0,
+          }}
+        />
+        <div className="relative w-full" style={{ height: "480px", zIndex: 1 }}>
           <Image
             src="/images/portrait-hero-cutout.png"
             alt="Yohannick Moesis"

@@ -7,7 +7,9 @@ export default function TenDefis() {
         </h2>
         <p className="text-cream text-base sm:text-lg leading-relaxed mb-8 max-w-3xl text-justify">
           Dix mécanismes identitaires reviennent fréquemment lors du passage
-          au civil (perte d&apos;identité, du collectif, de la légitimité...).
+          au civil (perte d&apos;identité sociale, perte du collectif, perte
+          de sens, la légitimité à reconstruire...).
+          <br />
           Identifiez ce qui joue dans votre parcours actuel.
         </p>
 

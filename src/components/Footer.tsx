@@ -6,7 +6,7 @@ export default function Footer() {
           <img src="/images/logo-dmm.png" alt="De Militaire à Monsieur" className="h-9 w-auto shrink-0" />
         </p>
         <p className="text-cream/50 text-xs text-center sm:text-right">
-          © {new Date().getFullYear()} De Militaire à Monsieur. Tous droits réservés.
+          © {new Date().getFullYear()} DMM. Tous droits réservés.
         </p>
       </div>
     </footer>

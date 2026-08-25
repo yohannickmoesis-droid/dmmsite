@@ -24,12 +24,12 @@ export default function LesDixMecanismesPage() {
           </p>
         </div>
       </section>
-      <section className="bg-navy pb-20 sm:pb-28">
+      <section className="bg-navy pb-14 sm:pb-16">
         <div className="max-w-[1440px] mx-auto px-5 sm:px-8 text-center">
           <CercleDefis />
         </div>
       </section>
-      <section className="bg-navy py-20 sm:py-28">
+      <section className="bg-navy pt-0 pb-20 sm:pb-28">
         <div className="max-w-[1440px] mx-auto px-5 sm:px-8">
           <h2 className="font-display text-cream text-4xl sm:text-5xl tracking-wide mb-8">
             Quel mécanisme est le plus présent pour vous&nbsp;?

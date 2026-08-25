@@ -10,8 +10,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default:
-      "De Militaire à Monsieur | Votre transition. Votre identité. Votre avenir.",
-    template: "%s | De Militaire à Monsieur",
+      "DMM | Votre transition. Votre identité. Votre avenir.",
+    template: "%s | DMM",
   },
   description:
     "Militaire en reconversion ? Découvrez les défis invisibles de la transition et comment les traverser. Accompagnement identitaire pour militaires en transition vers le civil.",
@@ -35,8 +35,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "fr_FR",
     url: siteUrl,
-    siteName: "De Militaire à Monsieur",
-    title: "De Militaire à Monsieur | Votre transition. Votre identité. Votre avenir.",
+    siteName: "DMM",
+    title: "DMM | Votre transition. Votre identité. Votre avenir.",
     description:
       "Militaire en reconversion ? Découvrez les défis invisibles de la transition et comment les traverser.",
     images: [
@@ -44,13 +44,13 @@ export const metadata: Metadata = {
         url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "De Militaire à Monsieur",
+        alt: "DMM",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "De Militaire à Monsieur",
+    title: "DMM",
     description:
       "Militaire en reconversion ? Découvrez les défis invisibles de la transition et comment les traverser.",
     images: ["/images/og-image.jpg"],

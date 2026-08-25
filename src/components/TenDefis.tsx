@@ -13,7 +13,7 @@ export default function TenDefis() {
           Identifiez ce qui joue dans votre parcours actuel.
         </p>
 
-        <div className="mb-4">
+        <div className="mb-4 text-center sm:text-left">
           <a
             href="/les-10-mecanismes"
             className="inline-flex items-center justify-center rounded-full bg-gold px-8 py-3.5 text-sm font-semibold text-navy hover:bg-gold-light transition-colors"

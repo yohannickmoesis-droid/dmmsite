@@ -147,10 +147,10 @@ export default function Hero() {
           ref={titleRef}
           className="font-display text-cream text-5xl sm:text-7xl lg:text-8xl leading-[0.95] tracking-wide mb-4 max-w-4xl"
         >
-          <span className="text-6xl sm:text-8xl lg:text-9xl">D</span>e{" "}
-          <span className="text-6xl sm:text-8xl lg:text-9xl">M</span>ilitaire{" "}
+          <span className="text-5xl sm:text-8xl lg:text-9xl">D</span>e{" "}
+          <span className="text-5xl sm:text-8xl lg:text-9xl">M</span>ilitaire{" "}
           <span className="text-gold">
-            à <span className="text-6xl sm:text-8xl lg:text-9xl">M</span>
+            à <span className="text-5xl sm:text-8xl lg:text-9xl">M</span>
             <AnimatedSuffix />
           </span>
         </h1>

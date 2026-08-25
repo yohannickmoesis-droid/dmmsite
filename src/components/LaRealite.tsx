@@ -36,7 +36,7 @@ export default function LaRealite() {
           ))}
         </div>
 
-        <p className="text-cream font-medium text-base sm:text-lg leading-relaxed whitespace-nowrap">
+        <p className="text-cream font-medium text-base sm:text-lg leading-relaxed sm:whitespace-nowrap">
           Trouver un emploi est une chose, s&apos;ancrer durablement dans sa
           nouvelle vie en est une autre.
         </p>

@@ -34,16 +34,15 @@ export default function MonParcoursPage() {
       </section>
       <section className="bg-cream py-20 sm:py-28">
         <div className="max-w-3xl mx-auto px-5 sm:px-8">
-          <p className="text-gold-dark text-sm sm:text-base uppercase tracking-wide mb-4 text-center">
-            Portrait
-          </p>
-          <div className="relative w-full aspect-[3/2] rounded-lg overflow-hidden mb-10">
+          <div className="w-full rounded-lg overflow-hidden mb-10">
             <Image
               src="/images/portrait-parcours.jpg"
               alt="Yohannick Moesis"
-              fill
+              width={1214}
+              height={981}
               sizes="(min-width: 1024px) 768px, 100vw"
-              className="object-cover"
+              className="w-full h-auto"
+              quality={100}
               priority
             />
           </div>

@@ -1,12 +1,9 @@
 "use client";
-
 import { useCallback, useImperativeHandle, useRef, useState, forwardRef } from "react";
-
 const APPS_SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbziMfCni5NCQ7DDeQh4q3-RQaKTCNU7X0FX8JiVBIU0m63qvutT0FJVM9Fpek5Ia0gA/exec";
-
 const QUESTIONS = [
-  { text: "Avez-vous parfois du mal à dire qui vous êtes en dehors de votre grade, de votre fonction ou de votre parcours militaire ?", theme: "identite" },
+  { text: "Avez-vous parfois du mal à dire qui vous êtes en dehors de votre uniforme, de votre fonction ou de votre parcours militaire ?", theme: "identite" },
   { text: "Avez-vous le sentiment que les codes du monde civil (communication, hiérarchie, prise de décision) sont différents de ceux que vous connaissez ou avez connus dans l'armée ?", theme: "choc" },
   { text: "Vous arrive-t-il de vous demander comment votre expérience militaire sera, ou est, perçue et valorisée dans le monde civil ?", theme: "legitimite" },
   { text: "Vous demandez-vous parfois ce qui donnera autant de sens à votre vie après l'armée, ou ce qui lui en donne aujourd'hui ?", theme: "sens" },
@@ -16,17 +13,14 @@ const QUESTIONS = [
   { text: "Ressentez-vous, par moments, que cette transition représente bien plus qu'un simple changement de travail ?", theme: "deuil" },
   { text: "Avez-vous tendance à privilégier des secteurs ou des environnements qui ressemblent à ce que vous connaissez ou avez connu dans l'armée ?", theme: "evitement" },
 ] as const;
-
 const OPTIONS = [
   { label: "Oui, souvent", value: 3 },
   { label: "Oui, parfois", value: 2 },
   { label: "Rarement", value: 1 },
   { label: "Jamais", value: 0 },
 ];
-
 const DEFI_10 =
   "Un dixième mécanisme, différent des neuf premiers, conditionne souvent leur dépassement : accepter d'être accompagné(e) dans cette traversée.";
-
 const RESULTS: Record<string, { label: string; text: string }> = {
   aucun: {
     label: "Aucun mécanisme majeur identifié",
@@ -69,16 +63,13 @@ const RESULTS: Record<string, { label: string; text: string }> = {
     text: "Il est fréquent de se diriger vers des secteurs qui ressemblent à ce que l'on connaît déjà. Ce choix peut être pertinent, mais mérite d'être interrogé : réflexe ou décision réfléchie ?",
   },
 };
-
 const THEME_KEYS = ["identite", "choc", "legitimite", "sens", "collectif", "valeurs", "peur", "deuil", "evitement"];
 const TIE_EPSILON = 0.001;
-
 type ResultInfo =
   | { mode: "aucun"; maxAvg: number }
   | { mode: "single"; theme: string; maxAvg: number }
   | { mode: "few"; themes: string[]; maxAvg: number }
   | { mode: "many"; maxAvg: number };
-
 function computeDominantTheme(answers: number[]): ResultInfo {
   const sums: Record<string, number> = {};
   const counts: Record<string, number> = {};
@@ -101,7 +92,6 @@ function computeDominantTheme(answers: number[]): ResultInfo {
   if (candidates.length <= 3) return { mode: "few", themes: candidates, maxAvg };
   return { mode: "many", maxAvg };
 }
-
 const cardStyle = {
   border: "1.5px solid #C4A35A",
   background: "rgba(30, 26, 100, 0.5)",
@@ -115,14 +105,11 @@ const buttonCls =
 const inputCls =
   "w-full rounded-lg border border-gold/30 bg-white px-3.5 py-2.5 text-sm text-navy placeholder:text-navy/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-dark";
 const optionCls =
-  "w-full text-left rounded-lg border border-gold/25 bg-white px-4 py-3 text-sm text-navy hover:border-gold-dark hover:bg-gold/10 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-dark";
-
+  "w-full text-left rounded-lg border border-gold/25 bg-white px-4 py-3 text-sm text-navy hover:border-gold-dark hover:bg-gold-light transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold-dark";
 type Stage = "intro" | "question" | "form" | "result";
-
 export type DiagnosticQuizHandle = {
   start: () => void;
 };
-
 const DiagnosticQuiz = forwardRef<DiagnosticQuizHandle>(function DiagnosticQuiz(
   _props,
   ref
@@ -137,17 +124,14 @@ const DiagnosticQuiz = forwardRef<DiagnosticQuizHandle>(function DiagnosticQuiz(
   const [emailSent, setEmailSent] = useState(true);
   const [resultInfo, setResultInfo] = useState<ResultInfo | null>(null);
   const topRef = useRef<HTMLDivElement>(null);
-
   const handleStart = useCallback(() => {
     setStep(0);
     setAnswers([]);
     setStage("question");
   }, []);
-
   useImperativeHandle(ref, () => ({
     start: handleStart,
   }));
-
   const handleAnswer = useCallback(
     (value: number) => {
       const next = answers.slice();
@@ -161,11 +145,9 @@ const DiagnosticQuiz = forwardRef<DiagnosticQuizHandle>(function DiagnosticQuiz(
     },
     [answers, step]
   );
-
   const handleBackQuestion = useCallback(() => {
     setStep((s) => Math.max(0, s - 1));
   }, []);
-
   const handleSubmitForm = useCallback(() => {
     const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
     if (!firstname.trim() || !emailOk) {
@@ -176,7 +158,6 @@ const DiagnosticQuiz = forwardRef<DiagnosticQuizHandle>(function DiagnosticQuiz(
     setSending(true);
     const result = computeDominantTheme(answers);
     setResultInfo(result);
-
     let themeForPayload = "aucun";
     let labelForPayload = RESULTS.aucun.label;
     if (result.mode === "single") {
@@ -189,7 +170,6 @@ const DiagnosticQuiz = forwardRef<DiagnosticQuizHandle>(function DiagnosticQuiz(
       themeForPayload = "reparti";
       labelForPayload = "Profil réparti sur plusieurs mécanismes";
     }
-
     fetch(APPS_SCRIPT_URL, {
       method: "POST",
       headers: { "Content-Type": "text/plain;charset=utf-8" },
@@ -211,14 +191,6 @@ const DiagnosticQuiz = forwardRef<DiagnosticQuizHandle>(function DiagnosticQuiz(
         setStage("result");
       });
   }, [answers, email, firstname]);
-
-  const handleBackHome = useCallback(() => {
-    setStage("intro");
-    setStep(0);
-    setAnswers([]);
-    topRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-  }, []);
-
   return (
     <div ref={topRef} className="w-full max-w-[440px] mx-auto">
       <div className={cardCls} style={cardStyle}>
@@ -233,7 +205,6 @@ const DiagnosticQuiz = forwardRef<DiagnosticQuizHandle>(function DiagnosticQuiz(
             </button>
           </div>
         )}
-
         {stage === "question" && (
           <div>
             <div className="flex gap-1 mb-5" role="progressbar" aria-valuenow={step + 1} aria-valuemin={1} aria-valuemax={QUESTIONS.length}>
@@ -271,7 +242,6 @@ const DiagnosticQuiz = forwardRef<DiagnosticQuizHandle>(function DiagnosticQuiz(
             )}
           </div>
         )}
-
         {stage === "form" && (
           <div>
             <h3 className="text-cream text-lg font-semibold mb-4">Presque terminé</h3>
@@ -318,29 +288,23 @@ const DiagnosticQuiz = forwardRef<DiagnosticQuizHandle>(function DiagnosticQuiz(
             )}
           </div>
         )}
-
         {stage === "result" && resultInfo && (
           <ResultBlock
             info={resultInfo}
             emailSent={emailSent}
-            onBackHome={handleBackHome}
           />
         )}
       </div>
     </div>
   );
 });
-
 export default DiagnosticQuiz;
-
 function ResultBlock({
   info,
   emailSent,
-  onBackHome,
 }: {
   info: ResultInfo;
   emailSent: boolean;
-  onBackHome: () => void;
 }) {
   let badge = "Résultat";
   let title = "";
@@ -348,7 +312,6 @@ function ResultBlock({
     "Ce résultat ne constitue pas un diagnostic. Il reflète les thèmes qui ressortent le plus de vos réponses à un instant donné, sans hiérarchie stricte entre eux.";
   let showDefi10 = false;
   let body: React.ReactNode = null;
-
   if (info.mode === "aucun") {
     title = RESULTS.aucun.label;
     disclaimer =
@@ -388,7 +351,6 @@ function ResultBlock({
       </p>
     );
   }
-
   return (
     <div>
       <span className="inline-block bg-gold text-navy text-[11px] font-semibold uppercase tracking-wide px-2.5 py-1 rounded-full mb-3">
@@ -403,11 +365,14 @@ function ResultBlock({
         {disclaimer}
       </p>
       <div className="flex flex-col gap-2.5">
-        <button type="button" className={buttonCls} onClick={onBackHome}>
-          Retour à l&rsquo;accueil
-        </button>
         <a
-          href="mailto:yohannick.moesis@gmail.com"
+          href="/"
+          className={`${buttonCls} block text-center`}
+        >
+          Retour à l&rsquo;accueil
+        </a>
+        <a
+          href="/contact"
           className="block w-full text-center rounded-lg py-3 text-sm font-semibold text-cream border border-cream/30 hover:bg-cream/10 transition-colors"
         >
           Échangeons sur votre transition

@@ -142,7 +142,7 @@ export default function Hero() {
         />
       </div>
 
-      <div className="relative z-10 w-full max-w-[1440px] mx-auto px-5 sm:px-8 pb-16 sm:pb-24 pt-32">
+      <div className="relative z-10 w-full max-w-[1440px] mx-auto px-5 sm:px-8 pb-6 sm:pb-8 pt-32">
         <h1
           ref={titleRef}
           className="font-display text-cream text-5xl sm:text-7xl lg:text-8xl leading-[0.95] tracking-wide mb-4 max-w-4xl"

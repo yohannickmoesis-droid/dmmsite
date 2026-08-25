@@ -6,7 +6,7 @@ const STATS = [
 
 export default function LaRealite() {
   return (
-    <section className="bg-navy pt-2 sm:pt-3 pb-20 sm:pb-24">
+    <section className="bg-navy pt-0 pb-20 sm:pb-24">
       <div className="max-w-[1440px] mx-auto px-5 sm:px-8">
         <h2 className="font-display text-cream text-4xl sm:text-5xl tracking-wide mb-10 sm:mb-12">
           La réalité de la reconversion

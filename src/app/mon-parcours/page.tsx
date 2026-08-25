@@ -1,19 +1,16 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-
 export const metadata: Metadata = {
   title: "Mon parcours | De Militaire à Monsieur",
   description:
     "20 ans au sein de l'Armée de Terre, 10 ans d'accompagnement dans le civil. Découvrez le parcours de Yohannick Moesis, fondateur de De Militaire à Monsieur.",
 };
-
 const PARCOURS_MILITAIRE = [
   "20 ans de carrière",
   "Sous-officier",
   "Parachutiste",
   "15 opérations extérieures",
 ];
-
 const PARCOURS_CIVIL = [
   "Plus de 10 ans dans l'accompagnement et l'insertion",
   "Éducateur, chef de service puis directeur d'établissement",
@@ -21,7 +18,6 @@ const PARCOURS_CIVIL = [
   "Management d'équipes pluridisciplinaires",
   "Conduite du changement et accompagnement des parcours",
 ];
-
 export default function MonParcoursPage() {
   return (
     <>
@@ -36,19 +32,21 @@ export default function MonParcoursPage() {
           </p>
         </div>
       </section>
-
       <section className="bg-cream py-20 sm:py-28">
-        <div className="max-w-[1440px] mx-auto px-5 sm:px-8 grid md:grid-cols-2 gap-10 md:gap-16 items-start">
-          <div className="relative w-full aspect-[4/5] rounded-lg overflow-hidden">
+        <div className="max-w-3xl mx-auto px-5 sm:px-8">
+          <p className="text-gold-dark text-sm sm:text-base uppercase tracking-wide mb-4 text-center">
+            Portrait
+          </p>
+          <div className="relative w-full aspect-[3/2] rounded-lg overflow-hidden mb-10">
             <Image
-              src="/images/portrait.jpg"
+              src="/images/portrait-parcours.jpg"
               alt="Yohannick Moesis"
               fill
-              sizes="(min-width: 768px) 50vw, 100vw"
-              className="object-cover object-top"
+              sizes="(min-width: 1024px) 768px, 100vw"
+              className="object-cover"
+              priority
             />
           </div>
-
           <div className="text-navy/85 text-[15px] sm:text-base leading-relaxed text-justify space-y-4">
             <p>
               J&apos;ai vécu ce que vivent aujourd&apos;hui de nombreux militaires en
@@ -76,7 +74,7 @@ export default function MonParcoursPage() {
               structures qui souhaitent mieux préparer et accompagner leurs
               personnels dans cette étape de vie.
             </p>
-            <p className="font-semibold text-navy pt-2">
+            <p className="font-semibold text-navy pt-2 text-center">
               Je ne vous aide pas à trouver un emploi.
               <br />
               Je vous aide à trouver votre place.
@@ -84,7 +82,6 @@ export default function MonParcoursPage() {
           </div>
         </div>
       </section>
-
       <section className="bg-navy py-20 sm:py-28">
         <div className="max-w-[1440px] mx-auto px-5 sm:px-8 grid md:grid-cols-2 gap-10 md:gap-16 items-stretch">
           <div className="relative w-full aspect-square rounded-lg overflow-hidden bg-navy order-2 md:order-1">
@@ -96,7 +93,6 @@ export default function MonParcoursPage() {
               className="object-contain"
             />
           </div>
-
           <div className="order-1 md:order-2">
             <h2 className="font-display text-cream text-3xl sm:text-4xl tracking-wide mb-2">
               Mon parcours militaire
@@ -104,7 +100,6 @@ export default function MonParcoursPage() {
             <p className="text-gold text-sm sm:text-base uppercase tracking-wide mb-8">
               Armée de Terre
             </p>
-
             <ul className="space-y-3 mb-8">
               {PARCOURS_MILITAIRE.map((item) => (
                 <li
@@ -116,7 +111,6 @@ export default function MonParcoursPage() {
                 </li>
               ))}
             </ul>
-
             <p className="text-cream/80 text-[15px] sm:text-base leading-relaxed text-justify">
               Sous-officier au sein de l&apos;Armée de Terre, j&apos;ai servi vingt ans
               dans deux unités parachutistes&nbsp;: le 13e Régiment de Dragons
@@ -132,7 +126,6 @@ export default function MonParcoursPage() {
           </div>
         </div>
       </section>
-
       <section className="bg-cream py-20 sm:py-28">
         <div className="max-w-[1440px] mx-auto px-5 sm:px-8">
           <h2 className="font-display text-navy text-3xl sm:text-4xl tracking-wide mb-2">
@@ -141,7 +134,6 @@ export default function MonParcoursPage() {
           <p className="text-gold-dark text-sm sm:text-base uppercase tracking-wide mb-8">
             10 ans d&apos;accompagnement
           </p>
-
           <ul className="space-y-3 mb-8 max-w-2xl">
             {PARCOURS_CIVIL.map((item) => (
               <li
@@ -153,7 +145,6 @@ export default function MonParcoursPage() {
               </li>
             ))}
           </ul>
-
           <p className="text-navy/85 text-[15px] sm:text-base leading-relaxed max-w-2xl text-justify">
             Après avoir quitté l&apos;armée, j&apos;ai choisi de continuer à servir
             autrement. Pendant plus de dix ans, j&apos;ai accompagné des jeunes,
@@ -173,7 +164,6 @@ export default function MonParcoursPage() {
           </p>
         </div>
       </section>
-
       <section className="bg-navy py-20 sm:py-28">
         <div className="max-w-[1440px] mx-auto px-5 sm:px-8">
           <h2 className="font-display text-cream text-4xl sm:text-5xl tracking-wide mb-4">

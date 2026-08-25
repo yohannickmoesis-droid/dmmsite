@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import {
   UserX,
@@ -14,16 +13,14 @@ import {
   Handshake,
   type LucideIcon,
 } from "lucide-react";
-
 type Defi = {
   mecanisme: string;
   defi: string;
   desc: string;
 };
-
 const MILITARITE: Defi[] = [
   {
-    mecanisme: "La perte d'identité",
+    mecanisme: "La perte d'identité militaire",
     defi: "Se redéfinir sans l'uniforme",
     desc: "Qui suis-je sans mon uniforme, mon grade ou mon statut ?",
   },
@@ -48,7 +45,6 @@ const MILITARITE: Defi[] = [
     desc: "Recréer du lien après avoir quitté l'esprit de corps.",
   },
 ];
-
 const POLARISATION: Defi[] = [
   {
     mecanisme: "La perte du socle de valeurs",
@@ -76,13 +72,11 @@ const POLARISATION: Defi[] = [
     desc: "Sortir du réflexe d'autonomie absolue pour avancer autrement.",
   },
 ];
-
 const CREAM = "#EFE7DD";
 const CARD_BG = "#171057";
 const GOLD_SOFT = "#F0C75D";
 const NAVY = "#0E0857";
 const ICON_GRADIENT_ID = "cercleDefisIconGradient";
-
 const ICONS_MILITARITE: LucideIcon[] = [
   UserX,
   ArrowLeftRight,
@@ -97,7 +91,6 @@ const ICONS_POLARISATION: LucideIcon[] = [
   Route,
   Handshake,
 ];
-
 function FlipCard({
   defi,
   accent,
@@ -110,7 +103,6 @@ function FlipCard({
   Icon: LucideIcon;
 }) {
   const [flipped, setFlipped] = useState(false);
-
   return (
     <div
       onMouseEnter={() => setFlipped(true)}
@@ -180,7 +172,6 @@ function FlipCard({
             +
           </span>
         </div>
-
         <div
           className="absolute inset-0 rounded-lg px-5 py-4 flex flex-col justify-center text-left"
           style={{
@@ -207,7 +198,6 @@ function FlipCard({
     </div>
   );
 }
-
 export default function CercleDefis() {
   return (
     <div className="w-full max-w-5xl mx-auto">
@@ -219,16 +209,14 @@ export default function CercleDefis() {
           </linearGradient>
         </defs>
       </svg>
-
       <div className="text-center mb-10">
         <div
           style={{ fontFamily: "'Bebas Neue', sans-serif", color: CREAM }}
           className="text-5xl sm:text-6xl uppercase tracking-wide"
         >
-          Mon identité
+          Mon identité professionnelle
         </div>
       </div>
-
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10">
         <div>
           <div
@@ -256,7 +244,6 @@ export default function CercleDefis() {
             ))}
           </div>
         </div>
-
         <div>
           <div
             className="text-base sm:text-lg uppercase tracking-wide font-bold mb-1 text-center"

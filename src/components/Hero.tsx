@@ -160,20 +160,20 @@ export default function Hero() {
         <div className="h-[3px] w-full mt-6 sm:mt-8 bg-gradient-to-r from-transparent via-[#C4A35A]/70 to-transparent" />
       </div>
 
-      {/* Portrait detoure, integre directement sur le fond navy du Hero */}
+      {/* Portrait original avec fond gris, sans detourage */}
       <div
         className="hidden lg:block absolute z-10"
-        style={{ right: "1.5rem", bottom: "4rem", width: "340px" }}
+        style={{ right: "1.5rem", bottom: "4rem", width: "320px" }}
       >
-        <div className="relative w-full" style={{ height: "480px" }}>
+        <div className="relative w-full aspect-[3/4]">
           <Image
-            src="/images/portrait-hero-cutout.png"
+            src="/images/portrait-hero.jpg"
             alt="Yohannick Moesis"
             fill
-            sizes="340px"
-            className="object-contain object-bottom"
+            sizes="320px"
+            className="object-cover"
             style={{
-              filter: "drop-shadow(0 25px 35px rgba(0,0,0,0.45))",
+              objectPosition: "center 15%",
               transform: "scaleX(-1)",
             }}
           />

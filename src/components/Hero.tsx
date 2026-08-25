@@ -31,7 +31,7 @@ function AnimatedSuffix() {
 
   return (
     <span
-      className="inline-block overflow-hidden align-top"
+      className="inline-block overflow-hidden align-bottom"
       style={{ height: "1em" }}
     >
       <span

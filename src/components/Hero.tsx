@@ -30,22 +30,28 @@ function AnimatedSuffix() {
   const next = SUFFIXES[(index + 1) % SUFFIXES.length];
 
   return (
-    <span
-      className="inline-block overflow-hidden"
-      style={{ height: "1em", verticalAlign: "-0.21em" }}
-    >
+    <>
+      {/* Mobile : texte statique, sans effet de défilement, pour éviter tout bug d'affichage */}
+      <span className="sm:hidden">{current}</span>
+
+      {/* Tablette / desktop : effet de défilement animé */}
       <span
-        className={
-          instant
-            ? "flex flex-col"
-            : "flex flex-col transition-transform duration-500 ease-in-out"
-        }
-        style={{ transform: `translateY(${shift ? 0 : -1}em)` }}
+        className="hidden sm:inline-block overflow-hidden"
+        style={{ height: "1em", verticalAlign: "-0.21em" }}
       >
-        <span style={{ height: "1em", lineHeight: "1em" }}>{next}</span>
-        <span style={{ height: "1em", lineHeight: "1em" }}>{current}</span>
+        <span
+          className={
+            instant
+              ? "flex flex-col"
+              : "flex flex-col transition-transform duration-500 ease-in-out"
+          }
+          style={{ transform: `translateY(${shift ? 0 : -1}em)` }}
+        >
+          <span style={{ height: "1em", lineHeight: "1em" }}>{next}</span>
+          <span style={{ height: "1em", lineHeight: "1em" }}>{current}</span>
+        </span>
       </span>
-    </span>
+    </>
   );
 }
 
@@ -147,10 +153,10 @@ export default function Hero() {
           ref={titleRef}
           className="font-display text-cream text-5xl sm:text-7xl lg:text-8xl leading-[0.95] tracking-wide mb-4 max-w-4xl"
         >
-          <span className="text-5xl sm:text-8xl lg:text-9xl">D</span>e{" "}
-          <span className="text-5xl sm:text-8xl lg:text-9xl">M</span>ilitaire{" "}
+          <span className="text-[3.4rem] sm:text-8xl lg:text-9xl">D</span>e{" "}
+          <span className="text-[3.4rem] sm:text-8xl lg:text-9xl">M</span>ilitaire{" "}
           <span className="text-gold">
-            à <span className="text-5xl sm:text-8xl lg:text-9xl">M</span>
+            à <span className="text-[3.4rem] sm:text-8xl lg:text-9xl">M</span>
             <AnimatedSuffix />
           </span>
         </h1>

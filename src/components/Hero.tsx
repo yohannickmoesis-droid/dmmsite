@@ -163,7 +163,7 @@ export default function Hero() {
       {/* Portrait original avec fond gris, sans detourage */}
       <div
         className="hidden lg:block absolute z-10"
-        style={{ right: "1.5rem", bottom: "10rem", width: "320px" }}
+        style={{ right: "1.5rem", bottom: "8rem", width: "320px" }}
       >
         <div className="relative w-full aspect-[3/4]">
           <Image

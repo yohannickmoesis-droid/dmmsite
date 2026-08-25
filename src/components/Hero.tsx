@@ -215,7 +215,8 @@ export default function Hero() {
             src="/images/portrait-hero.jpg"
             alt="Yohannick Moesis"
             fill
-            sizes="230px"
+            sizes="(min-width: 1024px) 400px, 230px"
+            quality={100}
             className="object-cover"
             style={{
               objectPosition: "center 15%",

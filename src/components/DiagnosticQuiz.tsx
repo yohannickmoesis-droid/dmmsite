@@ -1,7 +1,7 @@
 "use client";
 import { useCallback, useImperativeHandle, useRef, useState, forwardRef } from "react";
 const APPS_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbziMfCni5NCQ7DDeQh4q3-RQaKTCNU7X0FX8JiVBIU0m63qvutT0FJVM9Fpek5Ia0gA/exec";
+  "https://script.google.com/macros/s/AKfycbyGoVNgasSw5ZZoTPcpcxyrmgSrH4SvNVjyjl9xnz18hcbBSzsDQEGc1he_aLnz3ftQ/exec";
 const QUESTIONS = [
   { text: "Avez-vous parfois du mal à dire qui vous êtes en dehors de votre uniforme, de votre fonction ou de votre parcours militaire ?", theme: "identite" },
   { text: "Avez-vous le sentiment que les codes du monde civil (communication, hiérarchie, prise de décision) sont différents de ceux que vous connaissez ou avez connus dans l'armée ?", theme: "choc" },
@@ -318,7 +318,7 @@ function ResultBlock({
       "Ce résultat ne constitue pas un diagnostic. Il reflète vos réponses à un instant donné ; d'autres dimensions de votre transition peuvent évoluer dans le temps.";
     body = <p className="text-cream text-sm leading-relaxed mb-4">{RESULTS.aucun.text}</p>;
   } else if (info.mode === "single") {
-    badge = "Défi identifié";
+    badge = "Mécanisme identifié";
     title = RESULTS[info.theme].label;
     disclaimer =
       "Ce résultat ne constitue pas un diagnostic. Il met simplement en lumière un mécanisme qui semble actuellement plus présent dans votre transition. D'autres mécanismes peuvent également être à l'œuvre.";

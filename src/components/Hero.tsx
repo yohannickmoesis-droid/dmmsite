@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const SUFFIXES = ["onsieur", "adame"];
 
@@ -89,8 +89,34 @@ const REPERES = [
 ];
 
 export default function Hero() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const repereRowRef = useRef<HTMLDivElement>(null);
+  const [photoBox, setPhotoBox] = useState<{ top: number; height: number } | null>(
+    null
+  );
+
+  useEffect(() => {
+    function measure() {
+      if (!sectionRef.current || !titleRef.current || !repereRowRef.current) {
+        return;
+      }
+      const sectionTop = sectionRef.current.getBoundingClientRect().top;
+      const titleBottom = titleRef.current.getBoundingClientRect().bottom;
+      const repereBottom = repereRowRef.current.getBoundingClientRect().bottom;
+      setPhotoBox({
+        top: titleBottom - sectionTop,
+        height: repereBottom - titleBottom,
+      });
+    }
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, []);
+
   return (
     <section
+      ref={sectionRef}
       id="top"
       className="relative min-h-[100svh] flex items-end overflow-hidden bg-navy"
     >
@@ -117,7 +143,10 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 w-full max-w-[1440px] mx-auto px-5 sm:px-8 pb-16 sm:pb-24 pt-32">
-        <h1 className="font-display text-cream text-5xl sm:text-7xl lg:text-8xl leading-[0.95] tracking-wide mb-4 max-w-4xl">
+        <h1
+          ref={titleRef}
+          className="font-display text-cream text-5xl sm:text-7xl lg:text-8xl leading-[0.95] tracking-wide mb-4 max-w-4xl"
+        >
           De Militaire <span className="text-gold">à M<AnimatedSuffix /></span>
         </h1>
         <p className="inline-flex items-center bg-gold text-navy font-semibold tracking-[0.15em] text-sm sm:text-base uppercase px-3 py-2 mb-8 leading-none">
@@ -141,7 +170,10 @@ export default function Hero() {
           Un accompagnement dédié à votre transition militaire-civile
         </p>
 
-        <div className="flex flex-wrap gap-x-10 sm:gap-x-0 gap-y-8 sm:divide-x sm:divide-cream/20">
+        <div
+          ref={repereRowRef}
+          className="flex flex-wrap gap-x-10 sm:gap-x-0 gap-y-8 sm:divide-x sm:divide-cream/20"
+        >
           {REPERES.map((item) => (
             <div key={item.label} className="text-center sm:px-8 first:sm:pl-0">
               <div className="text-cream mb-3 flex justify-center">
@@ -160,12 +192,20 @@ export default function Hero() {
         <div className="h-[3px] w-full mt-6 sm:mt-8 bg-gradient-to-r from-transparent via-[#C4A35A]/70 to-transparent" />
       </div>
 
-      {/* Portrait original avec fond gris, sans detourage */}
+      {/* Portrait original avec fond gris, sans detourage.
+          Position calculee automatiquement: le haut s'aligne sur le bas du titre,
+          le bas s'aligne sur le bas de la ligne des reperes. */}
       <div
         className="hidden lg:block absolute z-10"
-        style={{ right: "1.5rem", bottom: "8rem", width: "230px" }}
+        style={{
+          right: "1.5rem",
+          top: photoBox ? `${photoBox.top}px` : undefined,
+          height: photoBox ? `${photoBox.height}px` : "300px",
+          width: photoBox ? `${(photoBox.height * 3) / 4}px` : "225px",
+          visibility: photoBox ? "visible" : "hidden",
+        }}
       >
-        <div className="relative w-full aspect-[3/4]">
+        <div className="relative w-full h-full">
           <Image
             src="/images/portrait-hero.jpg"
             alt="Yohannick Moesis"

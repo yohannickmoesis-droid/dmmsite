@@ -31,10 +31,9 @@ const COLLECTIVES = [
   },
 ];
 const CARD_BASE = {
-  background: "rgba(255,255,255,0.05)",
-  backdropFilter: "blur(8px)",
-  WebkitBackdropFilter: "blur(8px)",
-  border: "1px solid rgba(196,163,90,0.3)",
+  border: "1.5px solid #C4A35A",
+  background: "#161066",
+  boxShadow: "0 12px 32px rgba(196,163,90,0.18)",
 } as const;
 export default function CommentJePeuxAider() {
   return (
@@ -46,12 +45,15 @@ export default function CommentJePeuxAider() {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
           {/* Colonne individuelle — parcours phare */}
           <div
-            className="rounded-xl p-6 sm:p-8 flex flex-col"
-            style={{
-              ...CARD_BASE,
-              border: "2px solid #C4A35A",
-            }}
+            className="relative rounded-xl p-6 sm:p-8 flex flex-col overflow-hidden"
+            style={CARD_BASE}
           >
+            <div
+              className="absolute top-0 left-0 right-0 h-1"
+              style={{
+                background: "linear-gradient(90deg, #C4A35A, #F0C75D, #D39318)",
+              }}
+            />
             <h3 className="text-cream text-sm sm:text-base font-semibold uppercase tracking-wide mb-1">
               Accompagnement individuel
             </h3>
@@ -89,12 +91,15 @@ export default function CommentJePeuxAider() {
           </div>
           {/* Colonne collective */}
           <div
-            className="rounded-xl p-6 sm:p-8 flex flex-col"
-            style={{
-              ...CARD_BASE,
-              border: "2px solid #C4A35A",
-            }}
+            className="relative rounded-xl p-6 sm:p-8 flex flex-col overflow-hidden"
+            style={CARD_BASE}
           >
+            <div
+              className="absolute top-0 left-0 right-0 h-1"
+              style={{
+                background: "linear-gradient(90deg, #C4A35A, #F0C75D, #D39318)",
+              }}
+            />
             <h3 className="text-cream text-sm sm:text-base font-semibold uppercase tracking-wide mb-5">
               Interventions collectives
             </h3>

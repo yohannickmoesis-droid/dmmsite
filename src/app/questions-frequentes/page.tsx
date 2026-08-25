@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
-
 export const metadata: Metadata = {
   title: "Questions fréquentes | De Militaire à Monsieur",
   description:
     "Les réponses aux questions les plus fréquemment posées sur l'accompagnement identitaire proposé par De Militaire à Monsieur.",
 };
-
 const QUESTIONS = [
   {
     q: "Je ne suis pas encore en reconversion. Cet accompagnement est-il fait pour moi\u00a0?",
@@ -17,7 +15,7 @@ const QUESTIONS = [
   },
   {
     q: "En quoi votre accompagnement est-il différent de Défense Mobilité\u00a0?",
-    r: "Défense Mobilité accompagne les militaires sur les aspects techniques de la reconversion : projet professionnel, formation, CV, recherche d'emploi. Mon accompagnement est complémentaire. Il porte sur les enjeux identitaires de la transition : identité, sens, légitimité, collectif, adaptation au monde civil.",
+    r: "Défense Mobilité accompagne les militaires sur l'ensemble de la reconversion, y compris sa dimension humaine. Mon accompagnement se concentre spécifiquement sur les enjeux identitaires de la transition (identité, sens, légitimité, collectif, adaptation au monde civil), avec des séances entièrement dédiées à ce travail. Il vient en complément de l'accompagnement de Défense Mobilité, pas en remplacement.",
   },
   {
     q: "Est-ce un coaching ou une thérapie\u00a0?",
@@ -36,7 +34,6 @@ const QUESTIONS = [
     r: "Le plus simple est d'échanger. Un premier contact permet de faire le point sur votre situation, vos attentes et de voir si mon accompagnement correspond à vos besoins.",
   },
 ];
-
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -49,7 +46,6 @@ const faqJsonLd = {
     },
   })),
 };
-
 export default function QuestionsFrequentesPage() {
   return (
     <>
@@ -57,7 +53,6 @@ export default function QuestionsFrequentesPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-
       <section className="bg-navy pt-32 pb-16 sm:pb-20">
         <div className="max-w-[1440px] mx-auto px-5 sm:px-8">
           <h1 className="font-display text-cream text-5xl sm:text-6xl tracking-wide">
@@ -65,7 +60,6 @@ export default function QuestionsFrequentesPage() {
           </h1>
         </div>
       </section>
-
       <section className="bg-cream pt-16 sm:pt-20 pb-20 sm:pb-28">
         <div className="max-w-[1440px] mx-auto px-5 sm:px-8">
           <div className="max-w-3xl space-y-10">
@@ -82,7 +76,6 @@ export default function QuestionsFrequentesPage() {
           </div>
         </div>
       </section>
-
       <section className="bg-navy py-20 sm:py-28">
         <div className="max-w-[1440px] mx-auto px-5 sm:px-8">
           <h2 className="font-display text-cream text-4xl sm:text-5xl tracking-wide mb-4">

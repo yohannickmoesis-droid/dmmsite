@@ -1,6 +1,6 @@
 export default function TenDefis() {
   return (
-    <section id="defis" className="bg-navy pt-2 sm:pt-3 pb-20 sm:pb-24">
+    <section id="defis" className="bg-navy pt-2 sm:pt-3 pb-14 sm:pb-16">
       <div className="max-w-[1440px] mx-auto px-5 sm:px-8">
         <h2 className="font-display text-cream text-4xl sm:text-5xl tracking-wide mb-5">
           Les mécanismes invisibles de la reconversion

@@ -1,6 +1,6 @@
 export default function BookingCta() {
   return (
-    <section id="reserver" className="bg-navy py-20 sm:py-28">
+    <section id="reserver" className="bg-navy pt-0 pb-20 sm:pb-28">
       <div className="max-w-[1440px] mx-auto px-5 sm:px-8">
         <h2 className="font-display text-cream text-4xl sm:text-5xl tracking-wide mb-4">
           Prêt à mettre des mots sur ce que vous traversez&nbsp;?

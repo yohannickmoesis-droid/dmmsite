@@ -1,7 +1,7 @@
 const INDIVIDUEL = {
   title: "Trouver sa place",
   text:
-    "3 mois pour retrouver votre place dans le civil. 6 séances individuelles d'1h15 toutes les 2 semaines, un point d'étape et un bilan de suivi inclus.",
+    "3 mois pour accompagner dans cette transition militaire-civile. 6 séances individuelles d'1h15 toutes les 2 semaines, un point d'étape et un bilan de suivi inclus.",
   steps: [
     "Séance 1 : Comprendre où j'en suis (diagnostic identitaire).",
     "Séance 2 : Ce que l'armée a construit (distinguer l'institution de la personne).",
@@ -52,7 +52,7 @@ export default function CommentJePeuxAider() {
               border: "2px solid #C4A35A",
             }}
           >
-            <h3 className="text-cream text-xs font-semibold uppercase tracking-wide mb-1">
+            <h3 className="text-cream text-sm sm:text-base font-semibold uppercase tracking-wide mb-1">
               Accompagnement individuel
             </h3>
             <p className="text-gold font-semibold text-lg mb-2">
@@ -95,8 +95,8 @@ export default function CommentJePeuxAider() {
               border: "2px solid #C4A35A",
             }}
           >
-            <h3 className="text-cream text-xs font-semibold uppercase tracking-wide mb-5">
-              Interventions collectives à destination des partenaires
+            <h3 className="text-cream text-sm sm:text-base font-semibold uppercase tracking-wide mb-5">
+              Interventions collectives
             </h3>
             <div className="flex flex-col gap-4 flex-1">
               {COLLECTIVES.map((c) => (

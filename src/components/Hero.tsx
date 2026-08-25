@@ -203,7 +203,7 @@ export default function Hero() {
       <div
         className="hidden lg:block absolute z-10"
         style={{
-          right: "1.5rem",
+          right: "6rem",
           top: photoBox ? `${photoBox.top}px` : undefined,
           height: photoBox ? `${photoBox.height}px` : "300px",
           width: photoBox ? `${(photoBox.height * 3) / 4}px` : "225px",

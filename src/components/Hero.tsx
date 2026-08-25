@@ -153,14 +153,14 @@ export default function Hero() {
           ref={titleRef}
           className="font-display text-cream text-5xl sm:text-7xl lg:text-8xl leading-[0.95] tracking-wide mb-4 max-w-4xl"
         >
-          <span className="text-[3.4rem] sm:text-8xl lg:text-9xl">D</span>e{" "}
-          <span className="text-[3.4rem] sm:text-8xl lg:text-9xl">M</span>ilitaire{" "}
+          <span className="text-[4rem] sm:text-8xl lg:text-9xl">D</span>e{" "}
+          <span className="text-[4rem] sm:text-8xl lg:text-9xl">M</span>ilitaire{" "}
           <span className="text-gold">
-            à <span className="text-[3.4rem] sm:text-8xl lg:text-9xl">M</span>
+            à <span className="text-[4rem] sm:text-8xl lg:text-9xl">M</span>
             <AnimatedSuffix />
           </span>
         </h1>
-        <p className="inline-flex items-center bg-gold text-navy font-semibold tracking-[0.15em] text-sm sm:text-base uppercase px-3 py-2 mb-8 leading-none">
+        <p className="inline-flex items-center bg-gold text-navy font-semibold tracking-[0.15em] text-sm sm:text-base uppercase px-3 py-2 mb-8 leading-none text-balance">
           Votre transition. Votre identité. Votre avenir.
         </p>
 
@@ -183,7 +183,7 @@ export default function Hero() {
 
         <div
           ref={repereRowRef}
-          className="flex flex-wrap gap-x-10 sm:gap-x-0 gap-y-8 sm:divide-x sm:divide-cream/20"
+          className="grid grid-cols-2 gap-x-6 gap-y-8 sm:flex sm:flex-wrap sm:gap-x-0 sm:divide-x sm:divide-cream/20"
         >
           {REPERES.map((item) => (
             <div key={item.label} className="text-center sm:px-8 first:sm:pl-0">

@@ -197,8 +197,10 @@ const DiagnosticQuiz = forwardRef<DiagnosticQuizHandle>(function DiagnosticQuiz(
         {stage === "intro" && (
           <div>
             <p className="text-cream text-base leading-relaxed mb-5">
-              Répondez à 9 questions rapides pour identifier le mécanisme qui mérite peut-être
-              votre attention en ce moment.
+              Ces dix mécanismes se recoupent souvent, s&apos;enchaînent, se
+              renforcent entre eux. Répondez à 9 questions rapides pour
+              identifier celui qui mérite peut-être votre attention en ce
+              moment.
             </p>
             <button type="button" className={buttonCls} onClick={handleStart}>
               Commencer (moins de 3 minutes)

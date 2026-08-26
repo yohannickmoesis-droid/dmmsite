@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 export const metadata: Metadata = {
-  title: "Mon parcours | De Militaire à Monsieur",
+  title: "Yohannick Moesis | Ancien Militaire & Coach en Transition",
   description:
-    "20 ans au sein de l'Armée de Terre, 10 ans d'accompagnement dans le civil. Découvrez le parcours de Yohannick Moesis, fondateur de De Militaire à Monsieur.",
+    "Découvrez le parcours de Yohannick Moesis, ancien sous-officier parachutiste. Un accompagnement fondé sur l'expérience du terrain et du monde civil.",
 };
 const PARCOURS_MILITAIRE = [
   "20 ans de carrière",

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact | De Militaire à Monsieur",
+  title: "Prendre Rendez-vous | Accompagnement Reconversion DMM",
   description:
-    "Une question, un projet de transition ou un besoin d'accompagnement ? Contactez Yohannick Moesis, fondateur de De Militaire à Monsieur.",
+    "Besoin d'échanger sur votre départ de l'armée ou votre transition ? Prenez rendez-vous pour faire le point sur votre situation et vos besoins.",
 };
 
 export default function ContactPage() {

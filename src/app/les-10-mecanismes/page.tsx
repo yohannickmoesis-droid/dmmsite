@@ -3,9 +3,9 @@ import { Suspense } from "react";
 import CercleDefis from "@/components/CercleDefis";
 import MecanismesQuiz from "@/components/MecanismesQuiz";
 export const metadata: Metadata = {
-  title: "Les 10 mécanismes invisibles de la reconversion | De Militaire à Monsieur",
+  title: "Choc Culturel Militaire-Civil : Les 10 Mécanismes | DMM",
   description:
-    "Découvrez les 10 mécanismes identitaires qui traversent la transition militaire-civile, et les défis associés à chacun.",
+    "Perte de sens, du collectif, légitimité à reconstruire : découvrez les 10 mécanismes identitaires qui touchent les militaires lors du retour à la vie civile.",
 };
 export default function LesDixMecanismesPage() {
   return (

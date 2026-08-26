@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Questions fréquentes | De Militaire à Monsieur",
+  title: "FAQ Reconversion Militaire : Vos Questions sur la Transition",
   description:
-    "Les réponses aux questions les plus fréquemment posées sur l'accompagnement identitaire proposé par De Militaire à Monsieur.",
+    "Toutes les réponses sur l'accompagnement DMM : durée, déroulé des séances, financement et méthodes pour réussir sa transition de l'armée vers le civil.",
 };
 const QUESTIONS = [
   {

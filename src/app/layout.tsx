@@ -10,11 +10,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default:
-      "DMM | Votre transition. Votre identité. Votre avenir.",
+      "Reconversion Militaire : Transition & Identité | DMM",
     template: "%s | DMM",
   },
   description:
-    "Militaire en reconversion ? Découvrez les défis invisibles de la transition et comment les traverser. Accompagnement identitaire pour militaires en transition vers le civil.",
+    "Accompagnement dédié aux militaires pour réussir le passage au civil. Retrouvez votre place, votre sens et vos repères au-delà de l'uniforme. Contactez DMM.",
   keywords: [
     "reconversion militaire",
     "transition militaire civile",
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: siteUrl,
     siteName: "DMM",
-    title: "DMM | Votre transition. Votre identité. Votre avenir.",
+    title: "Reconversion Militaire : Transition & Identité | DMM",
     description:
-      "Militaire en reconversion ? Découvrez les défis invisibles de la transition et comment les traverser.",
+      "Accompagnement dédié aux militaires pour réussir le passage au civil. Retrouvez votre place, votre sens et vos repères au-delà de l'uniforme. Contactez DMM.",
     images: [
       {
         url: "/images/og-image.jpg",

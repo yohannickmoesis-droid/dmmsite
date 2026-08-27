@@ -6,6 +6,11 @@ export const metadata: Metadata = {
   title: "Choc Culturel Militaire-Civil : Les 10 Mécanismes | DMM",
   description:
     "Perte de sens, du collectif, légitimité à reconstruire : découvrez les 10 mécanismes identitaires qui touchent les militaires lors du retour à la vie civile.",
+  openGraph: {
+    title: "10 mécanismes invisibles qui freinent la transition militaire-civile",
+    description:
+      "Perte de sens, du collectif, légitimité à reconstruire : découvrez les 10 mécanismes identitaires qui touchent les militaires lors du retour à la vie civile.",
+  },
 };
 export default function LesDixMecanismesPage() {
   return (
@@ -13,7 +18,7 @@ export default function LesDixMecanismesPage() {
       <section className="bg-navy pt-32 pb-16 sm:pb-20">
         <div className="max-w-[1440px] mx-auto px-5 sm:px-8">
           <h1 className="font-display text-cream text-5xl sm:text-6xl tracking-wide mb-4">
-            Les 10 mécanismes invisibles de la reconversion
+            Les 10 mécanismes identitaires de la reconversion militaire
           </h1>
           <p className="text-cream/85 text-base sm:text-lg max-w-2xl leading-relaxed">
             La transition militaire-civile met en jeu des mécanismes

@@ -152,16 +152,16 @@ function FlipCard({
               color={`url(#${ICON_GRADIENT_ID})`}
             />
           </div>
-          <span
+          <h3
             style={{
               fontFamily: "'Bebas Neue', sans-serif",
               color: CREAM,
               lineHeight: 1.2,
             }}
-            className="text-lg sm:text-xl font-bold uppercase tracking-wide flex-1 text-left"
+            className="text-lg sm:text-xl font-bold uppercase tracking-wide flex-1 text-left m-0"
           >
             {defi.mecanisme}
-          </span>
+          </h3>
           <span
             className="text-lg font-bold shrink-0 transition-transform duration-500"
             style={{
@@ -210,21 +210,21 @@ export default function CercleDefis() {
         </defs>
       </svg>
       <div className="text-center mb-10">
-        <div
+        <h2
           style={{ fontFamily: "'Bebas Neue', sans-serif", color: CREAM }}
-          className="text-5xl sm:text-6xl uppercase tracking-wide"
+          className="text-5xl sm:text-6xl uppercase tracking-wide m-0"
         >
           Mon identité professionnelle
-        </div>
+        </h2>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10">
         <div>
-          <div
+          <h2
             className="text-base sm:text-lg uppercase tracking-wide font-bold mb-1 text-center"
             style={{ color: "#C4A35A" }}
           >
             La militarité
-          </div>
+          </h2>
           <p
             className="text-xs sm:text-sm leading-relaxed mb-4 text-center"
             style={{ color: "#EFE7DD" }}
@@ -245,12 +245,12 @@ export default function CercleDefis() {
           </div>
         </div>
         <div>
-          <div
+          <h2
             className="text-base sm:text-lg uppercase tracking-wide font-bold mb-1 text-center"
             style={{ color: "#D39318" }}
           >
             La polarisation
-          </div>
+          </h2>
           <p
             className="text-xs sm:text-sm leading-relaxed mb-4 text-center"
             style={{ color: "#EFE7DD" }}

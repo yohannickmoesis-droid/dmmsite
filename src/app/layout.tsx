@@ -7,14 +7,14 @@ import "./globals.css";
 const bebasNeue = Bebas_Neue({
   weight: "400",
   subsets: ["latin"],
-  variable: "--font-display",
+  variable: "--font-bebas",
   display: "swap",
 });
 
 const montserrat = Montserrat({
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-montserrat",
   display: "swap",
 });
 

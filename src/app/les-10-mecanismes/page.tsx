@@ -27,6 +27,10 @@ export default function LesDixMecanismesPage() {
             monde civil. Les reconnaître est une première étape pour mieux
             comprendre ce que l&apos;on traverse.
           </p>
+          <h2 className="sr-only">
+            Pourquoi la transition dépasse la simple recherche
+            d&apos;emploi
+          </h2>
         </div>
       </section>
       <section className="bg-navy pb-14 sm:pb-16">

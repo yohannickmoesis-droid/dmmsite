@@ -209,6 +209,7 @@ export default function CercleDefis() {
           </linearGradient>
         </defs>
       </svg>
+      <h2 className="sr-only">Les 10 mécanismes identitaires en détail</h2>
       <div className="text-center mb-10">
         <h2
           style={{ fontFamily: "'Bebas Neue', sans-serif", color: CREAM }}

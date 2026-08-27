@@ -1,7 +1,22 @@
 import type { Metadata } from "next";
+import { Bebas_Neue, Montserrat } from "next/font/google";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import "./globals.css";
+
+const bebasNeue = Bebas_Neue({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+});
+
+const montserrat = Montserrat({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+});
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://dmmsite.vercel.app";
@@ -63,19 +78,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className="h-full antialiased">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html
+      lang="fr"
+      className={`h-full antialiased ${bebasNeue.variable} ${montserrat.variable}`}
+    >
       <body className="min-h-full flex flex-col bg-cream text-ink">
         <Nav />
         <main className="flex-1">{children}</main>

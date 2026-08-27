@@ -16,8 +16,8 @@
   --color-gold-light: var(--gold-light);
   --color-gold-dark: var(--gold-dark);
   --color-ink: var(--ink);
-  --font-display: "Bebas Neue", sans-serif;
-  --font-sans: "Montserrat", sans-serif;
+  --font-display: var(--font-bebas), sans-serif;
+  --font-sans: var(--font-montserrat), sans-serif;
 }
 
 html {
@@ -27,7 +27,7 @@ html {
 body {
   background: var(--cream);
   color: var(--ink);
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;

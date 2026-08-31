@@ -163,6 +163,9 @@ export default function Hero() {
         <h2 className="sr-only">
           Accompagnement à la transition et reconversion militaire-civile
         </h2>
+        <p className="sr-only">
+          DMM, De Militaire à Monsieur, De Militaire à Madame
+        </p>
         <p className="inline-flex items-center bg-gold text-navy font-semibold tracking-[0.15em] text-sm sm:text-base uppercase px-3 py-2 mb-8 leading-none text-balance">
           Votre transition. Votre identité. Votre avenir.
         </p>

@@ -18,6 +18,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${siteUrl}/les-10-mecanismes`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
       url: `${siteUrl}/questions-frequentes`,
       lastModified: new Date(),
       changeFrequency: "monthly",
@@ -28,6 +34,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 0.7,
+    },
+    {
+      url: `${siteUrl}/articles/reconversion-pas-que-un-emploi`,
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.6,
+    },
+    {
+      url: `${siteUrl}/articles/competences-militaires-cv`,
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.6,
     },
   ];
 }

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Hero from "@/components/Hero";
 import LaRealite from "@/components/LaRealite";
 import TransitionTimeline from "@/components/TransitionTimeline";
@@ -5,6 +6,12 @@ import TenDefis from "@/components/TenDefis";
 import MonParcours from "@/components/MonParcours";
 import CommentJePeuxAider from "@/components/CommentJePeuxAider";
 import BookingCta from "@/components/BookingCta";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+};
 
 export default function Home() {
   return (

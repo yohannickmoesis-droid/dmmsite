@@ -4,6 +4,34 @@ export const metadata: Metadata = {
   title: "Ancien militaire : pourquoi vos compétences ne se voient pas sur un CV classique",
   description:
     "Traduire ses galons en équivalences civiles ne suffit pas. Un CV civil ne résoudra jamais une crise d'identité militaire. Comprendre pourquoi, et le piège de la sur-performance.",
+  alternates: {
+    canonical: "/articles/competences-militaires-cv",
+  },
+  openGraph: {
+    type: "article",
+    locale: "fr_FR",
+    siteName: "DMM",
+    url: "/articles/competences-militaires-cv",
+    title: "Ancien militaire : pourquoi vos compétences ne se voient pas sur un CV classique",
+    description:
+      "Traduire ses galons en équivalences civiles ne suffit pas. Un CV civil ne résoudra jamais une crise d'identité militaire. Comprendre pourquoi, et le piège de la sur-performance.",
+    authors: ["Yohannick Moesis"],
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "DMM",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ancien militaire : pourquoi vos compétences ne se voient pas sur un CV classique",
+    description:
+      "Traduire ses galons en équivalences civiles ne suffit pas. Un CV civil ne résoudra jamais une crise d'identité militaire. Comprendre pourquoi, et le piège de la sur-performance.",
+    images: ["/images/og-image.jpg"],
+  },
 };
 
 export default function ArticleCompetencesCvPage() {

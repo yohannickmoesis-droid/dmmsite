@@ -4,6 +4,34 @@ export const metadata: Metadata = {
   title: "Pourquoi la reconversion militaire ne se résume pas à trouver un emploi",
   description:
     "60,3% des militaires en reconversion retrouvent un emploi dans l'année. Seuls 37,4% le conservent 3 ans après. Ce n'est pas un problème de compétences, c'est un problème d'identité.",
+  alternates: {
+    canonical: "/articles/reconversion-pas-que-un-emploi",
+  },
+  openGraph: {
+    type: "article",
+    locale: "fr_FR",
+    siteName: "DMM",
+    url: "/articles/reconversion-pas-que-un-emploi",
+    title: "Pourquoi la reconversion militaire ne se résume pas à trouver un emploi",
+    description:
+      "60,3% des militaires en reconversion retrouvent un emploi dans l'année. Seuls 37,4% le conservent 3 ans après. Ce n'est pas un problème de compétences, c'est un problème d'identité.",
+    authors: ["Yohannick Moesis"],
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "DMM",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pourquoi la reconversion militaire ne se résume pas à trouver un emploi",
+    description:
+      "60,3% des militaires en reconversion retrouvent un emploi dans l'année. Seuls 37,4% le conservent 3 ans après. Ce n'est pas un problème de compétences, c'est un problème d'identité.",
+    images: ["/images/og-image.jpg"],
+  },
 };
 
 export default function ArticlePasQuunEmploiPage() {

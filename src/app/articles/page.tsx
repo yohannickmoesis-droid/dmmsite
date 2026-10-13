@@ -5,6 +5,33 @@ export const metadata: Metadata = {
   title: "Ressources | Comprendre la transition militaire-civile",
   description:
     "Articles sur la reconversion militaire, l'identité, la légitimité et les compétences transférables vers le monde civil.",
+  alternates: {
+    canonical: "/articles",
+  },
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    siteName: "DMM",
+    url: "/articles",
+    title: "Ressources | Comprendre la transition militaire-civile",
+    description:
+      "Articles sur la reconversion militaire, l'identité, la légitimité et les compétences transférables vers le monde civil.",
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "DMM",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ressources | Comprendre la transition militaire-civile",
+    description:
+      "Articles sur la reconversion militaire, l'identité, la légitimité et les compétences transférables vers le monde civil.",
+    images: ["/images/og-image.jpg"],
+  },
 };
 
 const ARTICLES = [

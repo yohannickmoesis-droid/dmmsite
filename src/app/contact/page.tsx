@@ -2,9 +2,36 @@ import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Prendre Rendez-vous | Accompagnement Reconversion DMM",
+  title: "Prendre Rendez-vous | Accompagnement Reconversion",
   description:
     "Besoin d'échanger sur votre départ de l'armée ou votre transition ? Prenez rendez-vous pour faire le point sur votre situation et vos besoins.",
+  alternates: {
+    canonical: "/contact",
+  },
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    siteName: "DMM",
+    url: "/contact",
+    title: "Prendre Rendez-vous | Accompagnement Reconversion DMM",
+    description:
+      "Besoin d'échanger sur votre départ de l'armée ou votre transition ? Prenez rendez-vous pour faire le point sur votre situation et vos besoins.",
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "DMM",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Prendre Rendez-vous | Accompagnement Reconversion DMM",
+    description:
+      "Besoin d'échanger sur votre départ de l'armée ou votre transition ? Prenez rendez-vous pour faire le point sur votre situation et vos besoins.",
+    images: ["/images/og-image.jpg"],
+  },
 };
 
 export default function ContactPage() {

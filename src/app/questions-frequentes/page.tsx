@@ -1,9 +1,38 @@
 import type { Metadata } from "next";
+
 export const metadata: Metadata = {
   title: "FAQ Reconversion Militaire : Vos Questions sur la Transition",
   description:
     "Toutes les réponses sur l'accompagnement DMM : durée, déroulé des séances, financement et méthodes pour réussir sa transition de l'armée vers le civil.",
+  alternates: {
+    canonical: "/questions-frequentes",
+  },
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    siteName: "DMM",
+    url: "/questions-frequentes",
+    title: "FAQ Reconversion Militaire : Vos Questions sur la Transition",
+    description:
+      "Toutes les réponses sur l'accompagnement DMM : durée, déroulé des séances, financement et méthodes pour réussir sa transition de l'armée vers le civil.",
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "DMM",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FAQ Reconversion Militaire : Vos Questions sur la Transition",
+    description:
+      "Toutes les réponses sur l'accompagnement DMM : durée, déroulé des séances, financement et méthodes pour réussir sa transition de l'armée vers le civil.",
+    images: ["/images/og-image.jpg"],
+  },
 };
+
 const QUESTIONS = [
   {
     q: "Je ne suis pas encore en reconversion. Cet accompagnement est-il fait pour moi\u00a0?",
@@ -34,6 +63,7 @@ const QUESTIONS = [
     r: "Le plus simple est d'échanger. Un premier contact permet de faire le point sur votre situation, vos attentes et de voir si mon accompagnement correspond à vos besoins.",
   },
 ];
+
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -46,6 +76,7 @@ const faqJsonLd = {
     },
   })),
 };
+
 export default function QuestionsFrequentesPage() {
   return (
     <>

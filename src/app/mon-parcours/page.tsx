@@ -1,16 +1,46 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+
 export const metadata: Metadata = {
   title: "Yohannick Moesis | Ancien Militaire & Coach en Transition",
   description:
     "Découvrez le parcours de Yohannick Moesis, ancien sous-officier parachutiste. Un accompagnement fondé sur l'expérience du terrain et du monde civil.",
+  alternates: {
+    canonical: "/mon-parcours",
+  },
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    siteName: "DMM",
+    url: "/mon-parcours",
+    title: "Yohannick Moesis | Ancien Militaire & Coach en Transition",
+    description:
+      "Découvrez le parcours de Yohannick Moesis, ancien sous-officier parachutiste. Un accompagnement fondé sur l'expérience du terrain et du monde civil.",
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "DMM",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Yohannick Moesis | Ancien Militaire & Coach en Transition",
+    description:
+      "Découvrez le parcours de Yohannick Moesis, ancien sous-officier parachutiste. Un accompagnement fondé sur l'expérience du terrain et du monde civil.",
+    images: ["/images/og-image.jpg"],
+  },
 };
+
 const PARCOURS_MILITAIRE = [
   "20 ans de carrière",
   "Sous-officier",
   "Parachutiste",
   "15 opérations extérieures",
 ];
+
 const PARCOURS_CIVIL = [
   "Plus de 10 ans dans l'accompagnement et l'insertion",
   "Éducateur, chef de service puis directeur d'établissement",
@@ -18,6 +48,7 @@ const PARCOURS_CIVIL = [
   "Management d'équipes pluridisciplinaires",
   "Conduite du changement et accompagnement des parcours",
 ];
+
 export default function MonParcoursPage() {
   return (
     <>

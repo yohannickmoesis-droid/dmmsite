@@ -2,16 +2,40 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import CercleDefis from "@/components/CercleDefis";
 import MecanismesQuiz from "@/components/MecanismesQuiz";
+
 export const metadata: Metadata = {
-  title: "Choc Culturel Militaire-Civil : Les 10 Mécanismes | DMM",
+  title: "Choc Culturel Militaire-Civil : Les 10 Mécanismes",
   description:
     "Perte de sens, du collectif, légitimité à reconstruire : découvrez les 10 mécanismes identitaires qui touchent les militaires lors du retour à la vie civile.",
+  alternates: {
+    canonical: "/les-10-mecanismes",
+  },
   openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    siteName: "DMM",
+    url: "/les-10-mecanismes",
     title: "10 mécanismes invisibles qui freinent la transition militaire-civile",
     description:
       "Perte de sens, du collectif, légitimité à reconstruire : découvrez les 10 mécanismes identitaires qui touchent les militaires lors du retour à la vie civile.",
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "DMM",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "10 mécanismes invisibles qui freinent la transition militaire-civile",
+    description:
+      "Perte de sens, du collectif, légitimité à reconstruire : découvrez les 10 mécanismes identitaires qui touchent les militaires lors du retour à la vie civile.",
+    images: ["/images/og-image.jpg"],
   },
 };
+
 export default function LesDixMecanismesPage() {
   return (
     <>

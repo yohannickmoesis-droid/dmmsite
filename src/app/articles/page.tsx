@@ -36,10 +36,16 @@ export const metadata: Metadata = {
 
 const ARTICLES = [
   {
+    href: "/articles/choc-culturel-militaire-civil",
+    title: "Ancien militaire : quand les codes de l'armée ne s'appliquent plus dans le civil",
+    excerpt:
+      "Horaires, compte rendu, décisions partagées : trois scènes vécues pour comprendre le choc culturel militaire-civil et le mode réplication.",
+  },
+  {
     href: "/articles/reconversion-pas-que-un-emploi",
     title: "Pourquoi la reconversion militaire ne se résume pas à trouver un emploi",
     excerpt:
-      "60,3% des militaires en reconversion retrouvent un emploi dans l'année. Seuls 37,4% le conservent 3 ans après. Ce n'est pas un problème de compétences, c'est un problème d'identité.",
+      "Retrouver un emploi ne suffit pas toujours à sécuriser la reconversion. Ce qui se joue ensuite relève de l'identité, de la place que l'on trouve dans le monde civil.",
   },
   {
     href: "/articles/competences-militaires-cv",

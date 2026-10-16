@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Pourquoi la reconversion militaire ne se résume pas à trouver un emploi",
   description:
-    "60,3% des militaires en reconversion retrouvent un emploi dans l'année. Seuls 37,4% le conservent 3 ans après. Ce n'est pas un problème de compétences, c'est un problème d'identité.",
+    "Retrouver un emploi ne suffit pas toujours à sécuriser la reconversion. Ce qui se joue ensuite relève de l'identité, de la place que l'on trouve dans le monde civil.",
   alternates: {
     canonical: "/articles/reconversion-pas-que-un-emploi",
   },
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     url: "/articles/reconversion-pas-que-un-emploi",
     title: "Pourquoi la reconversion militaire ne se résume pas à trouver un emploi",
     description:
-      "60,3% des militaires en reconversion retrouvent un emploi dans l'année. Seuls 37,4% le conservent 3 ans après. Ce n'est pas un problème de compétences, c'est un problème d'identité.",
+      "Retrouver un emploi ne suffit pas toujours à sécuriser la reconversion. Ce qui se joue ensuite relève de l'identité, de la place que l'on trouve dans le monde civil.",
     authors: ["Yohannick Moesis"],
     images: [
       {
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Pourquoi la reconversion militaire ne se résume pas à trouver un emploi",
     description:
-      "60,3% des militaires en reconversion retrouvent un emploi dans l'année. Seuls 37,4% le conservent 3 ans après. Ce n'est pas un problème de compétences, c'est un problème d'identité.",
+      "Retrouver un emploi ne suffit pas toujours à sécuriser la reconversion. Ce qui se joue ensuite relève de l'identité, de la place que l'on trouve dans le monde civil.",
     images: ["/images/og-image.jpg"],
   },
 };
@@ -65,15 +65,16 @@ export default function ArticlePasQuunEmploiPage() {
               Ce que disent les chiffres
             </h2>
             <p>
-              Une thèse sur la reconversion militaire (Dominique Lecerf,
-              Université de Montpellier, 2020) montre que 60,3&nbsp;% des
-              militaires qui quittent l&apos;institution retrouvent un
-              emploi dans l&apos;année. Mais seuls 37,4&nbsp;% le maintiennent
-              encore 3 ans après.
+              Une thèse sur la reconversion militaire (Dominique Lecerf,{" "}
+              <em>Reconversion militaire et polarisation identitaire</em>,
+              Université de Montpellier, 2020) montre que 60&nbsp;% des
+              militaires accompagnés accèdent à un emploi, et que
+              62&nbsp;% d&apos;entre eux le pérennisent.
             </p>
             <p>
-              Ce n&apos;est pas un problème de compétences. C&apos;est un
-              problème d&apos;identité.
+              Trouver un emploi ne suffit donc pas toujours à sécuriser la
+              transition. Ce qui se joue ensuite tient moins aux
+              compétences qu&apos;à l&apos;identité.
             </p>
 
             <h2 className="font-display text-navy text-2xl sm:text-3xl tracking-wide pt-4">

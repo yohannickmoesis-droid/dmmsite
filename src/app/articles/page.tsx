@@ -37,9 +37,9 @@ export const metadata: Metadata = {
 const ARTICLES = [
   {
     href: "/articles/choc-culturel-militaire-civil",
-    title: "Ancien militaire : quand les codes de l'armée ne s'appliquent plus dans le civil",
+    title: "Reconversion militaire : quand les codes de l'armée ne s'appliquent plus dans le civil",
     excerpt:
-      "Horaires, compte rendu, décisions partagées : trois scènes vécues pour comprendre le choc culturel militaire-civil et le mode réplication.",
+      "Reconversion militaire : horaires, compte rendu, décisions partagées. Trois scènes vécues pour comprendre ce qui change en arrivant dans la vie civile.",
   },
   {
     href: "/articles/reconversion-pas-que-un-emploi",

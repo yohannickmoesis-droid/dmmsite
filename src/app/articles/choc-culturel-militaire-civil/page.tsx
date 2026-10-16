@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Ancien militaire : quand les codes de l'armée ne s'appliquent plus dans le civil",
+  title: "Reconversion militaire : quand les codes de l'armée ne s'appliquent plus dans le civil",
   description:
-    "Horaires, compte rendu, décisions partagées : trois scènes vécues pour comprendre le choc culturel militaire-civil et le mode réplication.",
+    "Reconversion militaire : horaires, compte rendu, décisions partagées. Trois scènes vécues pour comprendre ce qui change en arrivant dans la vie civile.",
   alternates: {
     canonical: "/articles/choc-culturel-militaire-civil",
   },
@@ -12,9 +12,9 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     siteName: "DMM",
     url: "/articles/choc-culturel-militaire-civil",
-    title: "Ancien militaire : quand les codes de l'armée ne s'appliquent plus dans le civil",
+    title: "Reconversion militaire : quand les codes de l'armée ne s'appliquent plus dans le civil",
     description:
-      "Horaires, compte rendu, décisions partagées : trois scènes vécues pour comprendre le choc culturel militaire-civil et le mode réplication.",
+      "Reconversion militaire : horaires, compte rendu, décisions partagées. Trois scènes vécues pour comprendre ce qui change en arrivant dans la vie civile.",
     authors: ["Yohannick Moesis"],
     images: [
       {
@@ -27,9 +27,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ancien militaire : quand les codes de l'armée ne s'appliquent plus dans le civil",
+    title: "Reconversion militaire : quand les codes de l'armée ne s'appliquent plus dans le civil",
     description:
-      "Horaires, compte rendu, décisions partagées : trois scènes vécues pour comprendre le choc culturel militaire-civil et le mode réplication.",
+      "Reconversion militaire : horaires, compte rendu, décisions partagées. Trois scènes vécues pour comprendre ce qui change en arrivant dans la vie civile.",
     images: ["/images/og-image.jpg"],
   },
 };
@@ -40,7 +40,7 @@ export default function ArticleChocCulturelPage() {
       <section className="bg-navy pt-32 pb-16 sm:pb-20">
         <div className="max-w-[1440px] mx-auto px-5 sm:px-8">
           <h1 className="font-display text-cream text-4xl sm:text-5xl lg:text-6xl tracking-wide max-w-4xl leading-tight">
-            Ancien militaire&nbsp;: quand les codes de l&apos;armée ne
+            Reconversion militaire&nbsp;: quand les codes de l&apos;armée ne
             s&apos;appliquent plus dans le civil
           </h1>
         </div>
@@ -50,7 +50,7 @@ export default function ArticleChocCulturelPage() {
         <div className="max-w-3xl mx-auto px-5 sm:px-8">
           <div className="text-navy/85 text-base sm:text-lg leading-relaxed text-justify space-y-6">
             <p>
-              Quand on quitte l&apos;armée, on s&apos;attend à changer de
+              Dans une reconversion militaire, on s&apos;attend à changer de
               métier. On s&apos;attend moins à changer de codes. C&apos;est
               pourtant là que les premiers mois se compliquent
               souvent&nbsp;: dans des situations ordinaires, où ce qui
